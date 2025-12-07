@@ -8,7 +8,7 @@ from datetime import datetime, timezone, timedelta
 JSON_URL = os.getenv("JSON_URL")
 EPG_URL = os.getenv("EPG_URL")
 
-# ✅ OUTPUT FILE RENAMED TO master.m3u
+# ✅ Final Output File
 OUTPUT_FILE = "master.m3u"
 
 HEADERS = {
@@ -16,6 +16,7 @@ HEADERS = {
     "Accept": "application/json,text/plain,*/*",
     "Referer": "https://playify.pages.dev/"
 }
+
 
 def fetch_json():
     try:
@@ -122,13 +123,13 @@ def create_m3u(categories):
             channel_blocks += f'{link}\n\n'
             total_written += 1
 
-    # ✅ Final Header with Branding + Auto Count + Updated Time
+    # ✅ ✅ FINAL HEADER WITH YOUR EXACT FORMAT + EMPTY LINE
     header = (
         '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"\n'
         '# Pushed and Updated by Kittujk\n'
         '# Coded & Maintained @RJMBTS\n'
-        f'# Include channels - Total : {total_written} | Updated : {last_updated}\n'
-        '\n\n'
+        f'# Channels : Total - {total_written} | Updated - {total_written}\n'
+        f'# Last Updated on : {last_updated}\n\n'
         f'#EXTM3U x-tvg-url="{EPG_URL}"\n\n'
     )
 
