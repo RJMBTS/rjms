@@ -1,4 +1,4 @@
-name: Auto M3U Generator
+name: RJMS Generator
 
 on:
   workflow_dispatch:
