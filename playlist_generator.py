@@ -6,7 +6,7 @@ from collections import defaultdict
 # ✅ Read from GitHub Secrets (Environment Variables)
 JSON_URL = os.getenv("JSON_URL")
 EPG_URL = os.getenv("EPG_URL")
-OUTPUT_FILE = "rjmtv.m3u"
+OUTPUT_FILE = "rjms.m3u"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
