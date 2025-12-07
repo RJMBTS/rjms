@@ -1,0 +1,189 @@
+# 🔹 Pushed and Updated by Kittujk
+# 🔸 Coded & Maintained by @RJMBTS
+# 🕒 Last updated: 2025-12-08 02:05:20 IST
+# 📺 Tamil Channels : 91
+
+#EXTM3U
+
+#EXTINF:-1 tvg-chno="1" tvg-id="AasaiTV" tvg-logo="https://i.imgur.com/5p42C3t.jpg" group-title="Karur",Aasai TV
+https://notvstream.in/aasaitv/aasaitv.m3u8
+#EXTINF:-1 tvg-chno="2" tvg-id="AmmaVision" group-title="Unknown",Amma Vision
+https://view.rcserver.in/tmp_hls19/ammavision/index.m3u8
+#EXTINF:-1 tvg-chno="3" tvg-id="AnandamAbiTV" tvg-logo="" group-title="Madurai",Anandam Abi TV
+#EXTVLCOPT:http-referrer=https://oxolive.com
+#EXTINF:-1 tvg-chno="4" tvg-id="AnandamUTV" tvg-logo="" group-title="Madurai",Anandam UTV
+#EXTVLCOPT:http-referrer=https://oxolive.com
+#EXTINF:-1 tvg-chno="5" tvg-id="AppleTV2" group-title="Unknown",Apple TV
+https://view.rcserver.in/tmp_hls18/index.m3u8
+#EXTINF:-1 tvg-chno="6" tvg-id="BKTV" group-title="Unknown",BK TV
+https://view.apserver.in/tmp_hls3/bktv/index.m3u8
+#EXTINF:-1 tvg-chno="7" tvg-id="CTNConoor" group-title="Coonoor, Nilgiris Dist.",CTN Conoor
+https://rtmp.bmlive.net/ctn/ctntn/stream.m3u8
+#EXTINF:-1 tvg-chno="8" tvg-id="ChenPlus" group-title="Unknown",Chen Plus
+https://view.apserver.in/tmp_hls7/chenplus/index.m3u8
+#EXTINF:-1 tvg-chno="9" tvg-id="ChenTV" group-title="Unknown",Chen TV
+https://view.apserver.in/tmp_hls16/chentv/index.m3u8
+#EXTINF:-1 tvg-chno="10" tvg-id="DeavathaiTV" tvg-logo="" group-title="Unknown",Deavathai TV
+https://hdbox.singamcloud.in/Deavathaitv/Deavathaitv/index.m3u8
+#EXTINF:-1 tvg-chno="11" tvg-id="DeivaOli" group-title="Unknown",Deiva Oli
+https://stream.sscloud7.in/live/deivaoli/index.m3u8
+#EXTINF:-1 tvg-chno="12" tvg-id="DeltaTV" group-title="Unknown",Delta TV
+https://stream.onecloudlive.in/deltatv/deltatvhd/index.m3u8
+#EXTINF:-1 tvg-chno="13" tvg-id="DeviTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1724773261.png" group-title="Rajapalayam",Devi TV
+http://server.mindspell.in/live/devitv/index.m3u8
+#EXTINF:-1 tvg-chno="14" tvg-id="DhejesTV" group-title="Unknown",Dhejes TV
+https://view.apserver.in/tmp_hls4/lingaatv/index.m3u8
+#EXTINF:-1 tvg-chno="15" tvg-id="EasonTV" group-title="Unknown",Eason TV
+https://amigofx.com:1936/easontv/easontv/playlist.m3u8
+#EXTINF:-1 tvg-chno="16" tvg-id="EmperorTV" group-title="Unknown",Emperor TV
+https://rtmp.bmlive.net/bms/emperortv/stream.m3u8
+#EXTINF:-1 tvg-chno="17" tvg-id="EnthiranTV" tvg-logo="https://play-lh.googleusercontent.com/epEjdtuFkTZxmirMjLmL75RB3qpTByhZ1rFGQvWrLV5Y5UjytOYJ_OUAz9PQExkFpqw=s512-rw" group-title="Kanyakumari",Enthiran TV
+https://live.applelive.in/enthirantv/enthirantv/index.m3u8
+#EXTINF:-1 tvg-chno="18" tvg-id="EverestTV" group-title="Unknown",Everest TV
+https://view.apserver.in/tmp_hls11/everesttv/index.m3u8
+#EXTINF:-1 tvg-chno="19" tvg-id="GEMTV" tvg-logo="" group-title="Unknown",GEM TV
+https://gemtv.circle7stream.com/gem/fcce47a8559e30755582c396ce7fce9e.sdp/playlist.m3u8
+#EXTINF:-1 tvg-chno="20" tvg-id="GMusic" group-title="Unknown",G Music
+https://rtmp.applelive.in/gmusic/gmusic/index.m3u8
+#EXTINF:-1 tvg-chno="21" tvg-id="IrattaipathaiTV" group-title="Unknown",Irattaipaathai TV
+https://account31.livebox.co.in/IRATTAIPAATHAITVhls/live.m3u8
+#EXTINF:-1 tvg-chno="22" tvg-id="IzzathTV" tvg-logo="https://play-lh.googleusercontent.com/i6ayGB9xkokVYhImjd57dY34siZdEy9Eyfsz5gbWASEVVwM1IZ5JFzE8DrKwOz5avw" group-title="Unknown",Izzath TV
+https://live.olidigital.in/izzathtv/izzathtv/index.m3u8
+#EXTINF:-1 tvg-chno="23" tvg-id="JRMalarTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1721812585.png" group-title="Alangulam; Tenkasi Dist.",JR Malar TV
+https://server.sscloud7.in/live/malartv/index.m3u8
+#EXTINF:-1 tvg-chno="24" tvg-id="JayamTV" group-title="Unknown",Jayam TV
+https://ipcloud.live/jayamtv/jayamtvhd/index.m3u8
+#EXTINF:-1 tvg-chno="25" tvg-id="JayamTV2" group-title="Unknown",Jayam TV
+https://view.rcserver.in/tmp_hls20/index.m3u8
+#EXTINF:-1 tvg-chno="26" tvg-id="JayamTVNamakkal" group-title="Namakkal",Jayam TV Namakkal
+https://rtmp.bmlive.net/bms/jayamtv/stream.m3u8
+#EXTINF:-1 tvg-chno="27" tvg-id="JeyasubbuTV" group-title="Unknown",Jeyasubbu TV
+https://view.rcserver.in/tmp_hls13/jeyasubbumovies/index.m3u8
+#EXTINF:-1 tvg-chno="28" tvg-id="JithTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1735924218.PNG" group-title="Vasudevanallur; Tenkasi Dist.",Jith TV
+https://sscloud7.com/live/jithtv/index.m3u8
+#EXTINF:-1 tvg-chno="29" tvg-id="KaalaiTV" group-title="Unknown",Kaalai TV
+https://view.rcserver.in/tmp_hls22/kaalaitv/index.m3u8
+#EXTINF:-1 tvg-chno="30" tvg-id="KarurCity" group-title="Karur",Karur City
+https://view.rcserver.in/tmp_hls17/karurcity/index.m3u8
+#EXTINF:-1 tvg-chno="31" tvg-id="KarurTV" group-title="Karur",Karur TV
+https://view.rcserver.in/tmp_hls16/karurtv/index.m3u8
+#EXTINF:-1 tvg-chno="32" tvg-id="KingTVAlangulam" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1721812585.PNG" group-title="Alangulam; Tenkasi Dist.",King TV Alangulam
+https://server.sscloud7.in/kingtv/kingtv/index.m3u8
+#EXTINF:-1 tvg-chno="33" tvg-id="KovaiTV" group-title="Coimbatore",Kovai TV
+https://account31.livebox.co.in/Kovaitvhls/live.m3u8
+#EXTINF:-1 tvg-chno="34" tvg-id="KumariTV" tvg-logo="" group-title="Unknown",Kumari TV
+https://rtmp.applelive.in/gvkumaritv/gvkumaritv/index.m3u8
+#EXTINF:-1 tvg-chno="35" tvg-id="LikeTV" group-title="Unknown",Like TV [Not 24/7]
+https://view.apserver.in/tmp_hls9/liketv/index.m3u8
+#EXTINF:-1 tvg-chno="36" tvg-id="MCNTV" group-title="Unknown",MCN TV
+https://play.applelive.in/mcntv/mcntv.m3u8
+#EXTINF:-1 tvg-chno="37" tvg-id="MDNTV" group-title="Unknown",MDN TV
+https://account18.livebox.co.in/IMAGESEQUENCEhls/live.m3u8
+#EXTINF:-1 tvg-chno="38" tvg-id="MNTV" tvg-logo="https://mntv.in/style/images/logo-dark.png" group-title="Dharmapuri",MN TV
+https://mntv.livebox.co.in/mntvhls/live.m3u8
+#EXTINF:-1 tvg-chno="39" tvg-id="MRTV" group-title="Unknown",MR TV
+https://view.apserver.in/tmp_hls8/mrtv/index.m3u8
+#EXTINF:-1 tvg-chno="40" tvg-id="MSMathanTV" group-title="Unknown",MS Mathan TV
+http://madhantv.phoenixcreations.online/madhantv/madhantv/index.m3u8
+#EXTINF:-1 tvg-chno="41" tvg-id="MalligaiTV" group-title="Unknown",Malligai TV
+https://server.sscloud7.in/live/malligai/index.m3u8
+#EXTINF:-1 tvg-chno="42" tvg-id="ManasuTV" tvg-logo="" group-title="Unknown",Manasu TV
+https://stream6.livebox.co.in/manasutvhls/live.m3u8
+#EXTINF:-1 tvg-chno="43" tvg-id="MaranTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1721757327.PNG" group-title="Tenkasi",Maran TV
+https://server.sscloud7.in/marantv/marantv/index.m3u8
+#EXTINF:-1 tvg-chno="44" tvg-id="MeiAlai" group-title="Unknown",Mei Alai
+https://view.rcserver.in/tmp_hls24/meialai/index.m3u8
+#EXTINF:-1 tvg-chno="45" tvg-id="MoonTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/MoonTV.png" group-title="Tirunelveli",Moon TV
+https://live.maxtn.in/moontv/moontv/index.m3u8
+#EXTINF:-1 tvg-chno="46" tvg-id="OPVTV" group-title="Unknown",OPV TV
+https://view.apserver.in/tmp_hls5/opvtv/index.m3u8
+#EXTINF:-1 tvg-chno="47" tvg-id="OliTV" tvg-logo="https://i.ibb.co/XfvTQyJn/main-removebg-preview.png" group-title="Unknown",Oli TV
+https://live.olidigital.in/olitv/olitv/index.m3u8
+#EXTINF:-1 tvg-chno="48" tvg-id="PanjamiTV" group-title="TCCL platform",Panjami TV
+https://uiptv.iptv.pics/hls/tcclamman/index.m3u8
+#EXTINF:-1 tvg-chno="49" tvg-id="PrimeTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1752744323.jpg" group-title="Unknown",Prime TV
+https://live.applelive.in/primetv/primetv/index.m3u8
+#EXTINF:-1 tvg-chno="50" tvg-id="QMaxPlus" group-title="Unknown",QMax Plus
+https://view.rcserver.in/tmp_hls21/qmaxtv/index.m3u8
+#EXTINF:-1 tvg-chno="51" tvg-id="RCMusic" group-title="Unknown",RC Music
+https://view.rcserver.in/tmp_hls2/stream/index.m3u8
+#EXTINF:-1 tvg-chno="52" tvg-id="RagaTV" tvg-logo="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/logos/RagaTV.png" group-title="Unknown",Raga TV
+https://live.onecloudlive.in/ragatv/ragatvhd/index.m3u8
+#EXTINF:-1 tvg-chno="53" tvg-id="RaghulTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1721757628.PNG" group-title="Unknown",Raghul TV
+http://alk.sscloud7.in:1935/live/raghultv/index.m3u8
+#EXTINF:-1 tvg-chno="54" tvg-id="RaghulTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv1721757628.PNG" group-title="Alangulam; Tenkasi Dist.",Raghul TV
+http://alk.sscloud7.in/live/raghultv/index.m3u8
+#EXTINF:-1 tvg-chno="55" tvg-id="RainbowTVGandarvakottai" tvg-logo="" group-title="Gandarvakottai; Thanjavur Dist.",Rainbow TV Gandarvakottai
+https://notvstream.in/rainbowtv/rainbowtv.m3u8
+#EXTINF:-1 tvg-chno="56" tvg-id="SKMusic" group-title="Unknown",SK Music
+https://view.rcserver.in/tmp_hls26/skmusic/index.m3u8
+#EXTINF:-1 tvg-chno="57" tvg-id="SKTV2" group-title="Unknown",SK TV
+https://view.rcserver.in/tmp_hls23/sktv/index.m3u8
+#EXTINF:-1 tvg-chno="58" tvg-id="SSMusic" tvg-logo="" group-title="Unknown",SS Music
+https://stream.advikadigital.in/advika/ssmusic/index.m3u8
+#EXTINF:-1 tvg-chno="59" tvg-id="SSTV2" group-title="Unknown",SS TV
+https://mumbai-edge.smartplaytv.in/sstvTamil/index.m3u8
+#EXTINF:-1 tvg-chno="60" tvg-id="SSTVNagercoil" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1721756371.PNG" group-title="Nagercoil; Kanyakumari Dist.",SS TV Nagercoil
+https://server.sscloud7.in/live/sshd/playlist.m3u8
+#EXTINF:-1 tvg-chno="61" tvg-id="STNTV" group-title="Unknown",STN TV
+https://play.applelive.in/stntv/stntv.m3u8
+#EXTINF:-1 tvg-chno="62" tvg-id="SaamiTV" group-title="Cuddalore",Saami TV
+https://ipcloud.live/msntv/saamitv/index.m3u8
+#EXTINF:-1 tvg-chno="63" tvg-id="SakthiTV" group-title="Unknown",Sakthi TV
+https://live.sscloud7.in/live/sakthitv/index.m3u8
+#EXTINF:-1 tvg-chno="64" tvg-id="SentamilTV" group-title="Unknown",Sentamil TV
+https://view.rcserver.in/tmp_hls15/senthamiltv/index.m3u8
+#EXTINF:-1 tvg-chno="65" tvg-id="ShaTV" tvg-logo="https://play-lh.googleusercontent.com/YFCBVclNFznGAyBf1EdTdpeIvkf-poU1k_YiCRFJky3_1f-UZXiIho2cCobvgsno-wIA" group-title="Thuckalay; Kanyakumari Dist.",Sha TV
+https://play.applelive.in/shatv/shatv.m3u8
+#EXTINF:-1 tvg-chno="66" tvg-id="SkyTVKarur" group-title="Karur",Sky TV Karur
+https://view.rcserver.in/tmp_hls6/skytv/index.m3u8
+#EXTINF:-1 tvg-chno="67" tvg-id="SkyTVTCCL" group-title="TCCL platform",Sky TV (TCCL)
+https://uiptv.iptv.pics/hls/skytv/index.m3u8
+#EXTINF:-1 tvg-chno="68" tvg-id="SmileyTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1721756996.PNG" group-title="Tenkasi",Smiley TV
+https://live1.sscloud7.com/live/smileytv/index.m3u8
+#EXTINF:-1 tvg-chno="69" tvg-id="SreeSaravanaaTV" tvg-logo="" group-title="Unknown",Sree Saravanaa TV
+https://stream.advikadigital.in/advika/saravana/index.m3u8
+#EXTINF:-1 tvg-chno="70" tvg-id="SriThangamalaiMuruganTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1752476824.jpeg" group-title="Unknown",Sri Thangamalai Murugan Tv
+http://server3.sscloud7.in:1935/stmtv/srithangamalaimurugantv/playlist.m3u8
+#EXTINF:-1 tvg-chno="71" tvg-id="SubinTV" tvg-logo="https://subintv.in/SUBINLOGO.png" group-title="Alangulam; Tenkasi Dist.",Subin TV (GalaxyOTT/Jio)
+https://stream.galaxyott.live/live/subintv/index.m3u8
+#EXTINF:-1 tvg-chno="72" tvg-id="SubinTVCloud7" tvg-logo="https://subintv.in/SUBINLOGO.png" group-title="Alangulam; Tenkasi Dist.",Subin TV (Cloud7)
+https://sscloud7.com/live/subintv/index.m3u8
+#EXTINF:-1 tvg-chno="73" tvg-id="SuccesTVTamil" tvg-logo="" group-title="Unknown",Succes TV Tamil
+https://stream.onecloudlive.in/successtv/successtvhd/index.m3u8
+#EXTINF:-1 tvg-chno="74" tvg-id="SuriyanTV2" group-title="Unknown",Suriyan TV
+https://view.rcserver.in/tmp_hls9/suriyantv/index.m3u8
+#EXTINF:-1 tvg-chno="75" tvg-id="SuryaTVDigital" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1721757744.png" group-title="Unknown",Surya TV Digital
+https://live.sscloud7.in/live/suryatv/index.m3u8
+#EXTINF:-1 tvg-chno="76" tvg-id="TDN" group-title="Unknown",TDN
+https://live.maxtn.in/tdn/tdn/index.m3u8
+#EXTINF:-1 tvg-chno="77" tvg-id="TamilnesanTV" group-title="Unknown",Tamilnesan TV
+https://view.rcserver.in/tmp_hls14/tntv/index.m3u8
+#EXTINF:-1 tvg-chno="78" tvg-id="ThentamilTV" group-title="Other platform",Thentamil TV
+https://gem.inet.moe/hls/thentamill.m3u8
+#EXTINF:-1 tvg-chno="79" tvg-id="ThiraiIsai" group-title="Unknown",Thirai Isai
+https://view.apserver.in/tmp_hls1/thiraitvplus/index.m3u8
+#EXTINF:-1 tvg-chno="80" tvg-id="ThiraiTV" group-title="Unknown",Thirai TV
+https://view.apserver.in/tmp_hls2/thiraitv/index.m3u8
+#EXTINF:-1 tvg-chno="81" tvg-id="ThirumalaiTVVadipatti" tvg-logo="" group-title="Vadipatti; Madurai Dist.",Thirumalai TV Vadipatti
+https://ipcloud.live/thirumalaitv/madurai/index.m3u8
+#EXTINF:-1 tvg-chno="82" tvg-id="UdhayamTV2" group-title="Unknown",Udhayam TV
+https://view.rcserver.in/tmp_hls8/udhayamtv/index.m3u8
+#EXTINF:-1 tvg-chno="83" tvg-id="VTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1752744217.jpg" group-title="Unknown",V TV
+https://live.applelive.in/vtv/vtv/index.m3u8
+#EXTINF:-1 tvg-chno="84" tvg-id="VasanthamTV" tvg-logo="" group-title="Unknown",Vasantham TV
+https://stream.onecloudlive.in/dhandapani/vasanthamtv/index.m3u8
+#EXTINF:-1 tvg-chno="85" tvg-id="VedhaTV" group-title="Unknown",Vedha TV
+https://skystream.in/live/vedha6528/index.m3u8
+#EXTINF:-1 tvg-chno="86" tvg-id="VelanTV" group-title="Unknown",Velan TV
+http://velantv.phoenixcreations.online/velantv/velantv/index.m3u8
+#EXTINF:-1 tvg-chno="87" tvg-id="VelavanTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1755348568.png" group-title="Unknown",Velavan TV
+http://velavantv.sscloud7.in/live/velavantv/index.m3u8
+#EXTINF:-1 tvg-chno="88" tvg-id="VinayagaTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1724773424.PNG" group-title="Rajapalayam; Virudhunagar Dist.",Vinayaga TV
+http://server.mindspell.in/live/vinayagatv/index.m3u8
+#EXTINF:-1 tvg-chno="89" tvg-id="VinayakaTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1724773424.PNG" group-title="Rajapalayam",Vinayaka TV
+http://server.mindspell.in/live/vinayagatv/index.m3u8
+#EXTINF:-1 tvg-chno="90" tvg-id="VisilTV" tvg-logo="https://sscloud7.in/app/sscloud7/assets/tvchannels/phoenixtv-tvchannelavathar-phoenixtv1725798337.PNG" group-title="Virudhunagar",Visil TV
+https://stream.sscloud7.in/live/vishiltv1/index.m3u8
+#EXTINF:-1 tvg-chno="91" tvg-id="YaalTV" group-title="Unknown",Yaal TV
+http://198.144.149.206:8080/NOTV/YAALTV/index.m3u8?token=GTR
