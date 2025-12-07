@@ -1,0 +1,166 @@
+name: Souloc Master 🌐
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+concurrency:
+  group: souloc-m3u
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🧩 Build Souloctn & soulocmly M3Us
+        shell: bash
+        env:
+          TZ: "Asia/Kolkata"
+        run: |
+          set -euxo pipefail
+
+          tmpdir=$(mktemp -d)
+          trap "rm -rf $tmpdir" EXIT
+
+          TAMIL_SOURCE="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/channels.m3u"
+          MALAYALAM_SOURCE="https://raw.githubusercontent.com/usernameplay/playlistghd.m3u/refs/heads/main/mallutv.m3u"
+
+          TAMIL_OUT="Souloctn.m3u"
+          MALAY_OUT="soulocmly.m3u"
+          timestamp=$(date +"%Y-%m-%d %H:%M:%S %Z")
+
+          echo "🔹 Fetching Tamil source..."
+          curl -fsSL "$TAMIL_SOURCE" | grep -v '^#EXTM3U' > "$tmpdir/tamil_raw.m3u"
+
+          echo "🔹 Fetching Malayalam source..."
+          curl -fsSL "$MALAYALAM_SOURCE" | grep -v '^#EXTM3U' > "$tmpdir/malay_raw.m3u"
+
+          # ----- FORCE ALL MALLU CHANNELS INTO MALAYALAM GROUP -----
+          awk '
+            /^#EXTINF/ {
+              info=$0
+              gsub(/group-title="[^"]*"/, "", info)
+              sub(/^#EXTINF:-1/, "#EXTINF:-1 group-title=\"Malayalam\"", info)
+              print info
+              getline url
+              print url
+            }
+          ' "$tmpdir/malay_raw.m3u" > "$tmpdir/malay_forced.m3u"
+
+          # ----- MERGE & CLEAN -----
+          cat "$tmpdir/tamil_raw.m3u" "$tmpdir/malay_forced.m3u" \
+            | grep -v -Ei 'adult|xxx|24x7' > "$tmpdir/merged.m3u"
+
+          # ----- DEDUPLICATE -----
+          awk '
+            /^#EXTINF/ {
+              info=$0
+              getline url
+              key = info "|" url
+              if (!(key in seen)) {
+                seen[key]=1
+                print info
+                print url
+              }
+            }
+          ' "$tmpdir/merged.m3u" > "$tmpdir/unique.m3u"
+
+          # ----- SPLIT INTO TAMIL & MALAYALAM -----
+          awk '
+            /^#EXTINF/ {
+              info=$0
+              getline url
+
+              if (info ~ /group-title="Malayalam"/i) {
+                print info >> "'"$tmpdir/malay_final.m3u"'"
+                print url  >> "'"$tmpdir/malay_final.m3u"'"
+              } else {
+                print info >> "'"$tmpdir/tamil_final.m3u"'"
+                print url  >> "'"$tmpdir/tamil_final.m3u"'"
+              }
+            }
+          ' "$tmpdir/unique.m3u"
+
+          tamil_count=$(grep -c '^#EXTINF' "$tmpdir/tamil_final.m3u" || echo 0)
+          malay_count=$(grep -c '^#EXTINF' "$tmpdir/malay_final.m3u" || echo 0)
+
+          make_header() {
+            file=$1
+            title=$2
+            count=$3
+            {
+              echo "# 🔹 Pushed and Updated by Kittujk"
+              echo "# 🔸 Coded & Maintained by @RJMBTS"
+              echo "# 🕒 Last updated: $timestamp"
+              echo "# 📺 $title Channels : $count"
+              echo ""
+              echo "#EXTM3U"
+              echo ""
+            } > "$file"
+          }
+
+          make_header "$TAMIL_OUT" "Tamil" "$tamil_count"
+          make_header "$MALAY_OUT" "Malayalam" "$malay_count"
+
+          process_file() {
+            infile=$1
+            outfile=$2
+            awk '
+              /^#EXTINF/ {
+                info=$0
+                getline url
+                data[info]=url
+              }
+              END {
+                n=asorti(data, sorted)
+                ch=1
+                for (i=1; i<=n; i++) {
+                  info=sorted[i]
+                  url=data[info]
+                  if (info !~ /tvg-chno=/)
+                    sub(/^#EXTINF:-1/, sprintf("#EXTINF:-1 tvg-chno=\"%d\"", ch), info)
+                  print info
+                  print url
+                  ch++
+                }
+              }
+            ' "$infile" >> "$outfile"
+          }
+
+          process_file "$tmpdir/tamil_final.m3u" "$TAMIL_OUT"
+          process_file "$tmpdir/malay_final.m3u" "$MALAY_OUT"
+
+          {
+            echo "## 🌐 Souloc Master — Two File Build"
+            echo "| File | Channels |"
+            echo "|------|----------:|"
+            echo "| Souloctn.m3u | $tamil_count |"
+            echo "| soulocmly.m3u | $malay_count |"
+            echo ""
+            echo "🕒 Updated: $timestamp"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          echo "✅ Souloctn.m3u & soulocmly.m3u built successfully."
+
+      - name: 🚀 Commit & Push Both Files
+        run: |
+          git config user.name "RJMBTS Auto Builder"
+          git config user.email "actions@github.com"
+          git add Souloctn.m3u soulocmly.m3u || true
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "🔄 Auto-update Souloctn & soulocmly playlists"
+            git pull --rebase origin main || git rebase --abort
+            git push origin main
+          fi
