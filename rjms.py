@@ -2,6 +2,7 @@ import requests
 import json
 import os
 from collections import defaultdict
+from datetime import datetime, timezone, timedelta
 
 # ✅ Read from GitHub Secrets (Environment Variables)
 JSON_URL = os.getenv("JSON_URL")
@@ -49,17 +50,17 @@ def categorize_channels(channels):
     categories = defaultdict(list)
 
     rules = {
-        "Sports": ['sport','cricket','football','tennis','kabaddi','wwe','f1','moto'],
-        "Kids": ['kids','cartoon','nick','disney','pogo','hungama','sonic','junior'],
-        "Movies": ['movie','cinema','gold','max','flix','film','action','thriller'],
-        "News": ['news','aaj','ndtv','abp','india','republic','times','cnbc','zee','tv9'],
-        "Music": ['music','mtv','9xm','b4u','zoom'],
-        "Religious": ['bhakti','religious','aastha','sanskar','vedic'],
-        "Entertainment": ['colors','zee','star','sony','sab','&tv','life','dangal']
+        "Sports": ['sport', 'cricket', 'football', 'tennis', 'kabaddi', 'wwe', 'f1', 'moto'],
+        "Kids": ['kids', 'cartoon', 'nick', 'disney', 'pogo', 'hungama', 'sonic', 'junior'],
+        "Movies": ['movie', 'cinema', 'gold', 'max', 'flix', 'film', 'action', 'thriller'],
+        "News": ['news', 'aaj', 'ndtv', 'abp', 'india', 'republic', 'times', 'cnbc', 'zee', 'tv9'],
+        "Music": ['music', 'mtv', '9xm', 'b4u', 'zoom'],
+        "Religious": ['bhakti', 'religious', 'aastha', 'sanskar', 'vedic'],
+        "Entertainment": ['colors', 'zee', 'star', 'sony', 'sab', '&tv', 'life', 'dangal']
     }
 
     for ch in channels:
-        name = ch.get("name","").lower()
+        name = ch.get("name", "").lower()
         category = "Others"
         for cat, keys in rules.items():
             if any(k in name for k in keys):
@@ -75,8 +76,20 @@ def create_m3u(categories):
         print("❌ EPG_URL secret is missing!")
         return "#EXTM3U\n"
 
-    m3u = f'#EXTM3U x-tvg-url="{EPG_URL}"\n\n'
-    order = ['Entertainment','Movies','Sports','Kids','News','Music','Religious','Others']
+    # ✅ Auto IST Timestamp
+    ist = timezone(timedelta(hours=5, minutes=30))
+    last_updated = datetime.now(ist).strftime("%Y-%m-%d %H:%M:%S IST")
+
+    # ✅ Custom Branded Header
+    m3u = (
+        '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"\n'
+        '# Pushed and Updated by Kittujk\n'
+        '# Coded & Maintained @RJMBTS\n'
+        f'# Last updated: {last_updated}\n'
+        f'#EXTM3U x-tvg-url="{EPG_URL}"\n\n'
+    )
+
+    order = ['Entertainment', 'Movies', 'Sports', 'Kids', 'News', 'Music', 'Religious', 'Others']
 
     total_written = 0
     used_links = set()
@@ -86,14 +99,14 @@ def create_m3u(categories):
             continue
 
         for ch in categories[cat]:
-            name = ch.get("name","Unknown")
-            logo = ch.get("logo","")
-            link = ch.get("link","")
-            cookie = ch.get("cookie","")
-            drm = ch.get("drmScheme","")
-            license_url = ch.get("drmLicense","")
+            name = ch.get("name", "Unknown")
+            logo = ch.get("logo", "")
+            link = ch.get("link", "")
+            cookie = ch.get("cookie", "")
+            drm = ch.get("drmScheme", "")
+            license_url = ch.get("drmLicense", "")
 
-            if not isinstance(link,str) or not link.startswith("http"):
+            if not isinstance(link, str) or not link.startswith("http"):
                 continue
 
             if link in used_links:
@@ -109,7 +122,7 @@ def create_m3u(categories):
                 m3u += f'#KODIPROP:inputstream.adaptive.license_key={license_url}\n'
 
             if cookie:
-                cookie = cookie.replace('"','').strip()
+                cookie = cookie.replace('"', '').strip()
                 m3u += f'#EXTHTTP:{{"cookie":"{cookie}"}}\n'
 
             m3u += f'{link}\n\n'
@@ -124,14 +137,14 @@ def main():
 
     if not data:
         print("❌ JSON EMPTY — writing header only")
-        with open(OUTPUT_FILE,"w",encoding="utf-8") as f:
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             f.write("#EXTM3U\n")
         return
 
     categories = categorize_channels(data)
     playlist = create_m3u(categories)
 
-    with open(OUTPUT_FILE,"w",encoding="utf-8") as f:
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(playlist)
 
     print("✅ Final Playlist Saved:", OUTPUT_FILE)
