@@ -26,13 +26,17 @@ jobs:
           pip install requests
 
       - name: Generate Playlist
+        env:
+          JSON_URL: ${{ secrets.JSON_URL }}
+          EPG_URL: ${{ secrets.EPG_URL }}
         run: |
           python playlist_generator.py
+
 
       - name: Commit & Push Playlist
         run: |
           git config --global user.name "playlist-bot"
           git config --global user.email "bot@github.com"
-          git add rjmtv.m3u
+          git add rjms.m3u
           git commit -m "Auto update playlist" || true
           git push
