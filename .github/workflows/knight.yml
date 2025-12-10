@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build knight.m3u (Clean Grouping + Auto Sort + YGX/@ygxworld Removed)
+      - name: Build knight.m3u (Grouped + Network Merge + NO Dedupe + Counts)
         run: |
           set -e
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
@@ -35,12 +35,16 @@ jobs:
           fi
 
           grep -v '^$' base.txt > "$tmpdir/sources.txt"
-          mkdir -p "$tmpdir/groups"
 
-          echo "🌐 Fetching, filtering, grouping & sorting..."
+          # Temp raw file (no header yet)
+          : > "$tmpdir/raw.m3u"
 
+          echo "🌐 Fetching and grouping sources..."
+
+          i=0
           while read -r url; do
             [[ -z "$url" ]] && continue
+            i=$((i+1))
 
             fname=$(basename "${url%%\?*}")
             rawgroup=$(echo "${fname%.m3u}" | tr '[:lower:]' '[:upper:]')
@@ -62,70 +66,40 @@ jobs:
               group="$rawgroup"
             fi
 
-            outfile="$tmpdir/groups/$group.m3u"
+            echo "" >> "$tmpdir/raw.m3u"
+            echo "################### $group ###################" >> "$tmpdir/raw.m3u"
 
-            # ✅ HARD BLOCK: YGX WORLD + @ygxworld (removes EXTINF + URL safely)
-            curl -fs --connect-timeout 10 --max-time 20 "$url" | \
-              grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' | \
-              awk '
-                BEGIN{IGNORECASE=1}
+            if curl -fs "$url" | \
+              grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
+              > "$tmpdir/part_$i.m3u"; then
 
-                /^#EXTINF/ {
-                  if ($0 ~ /YGX[[:space:]]*WORLD/ || $0 ~ /@YGXWORLD/) {
-                    getline   # skip its URL also
-                    next
-                  }
-                  print $0
-                  getline
-                  if ($0 !~ /YGX[[:space:]]*WORLD/ && $0 !~ /@YGXWORLD/) {
-                    print $0
-                  }
-                }
-              ' >> "$outfile" || true
-
-            echo "✅ Collected: $group"
-
+              cat "$tmpdir/part_$i.m3u" >> "$tmpdir/raw.m3u"
+              echo "✅ Grouped: $group"
+            else
+              echo "# ⚠️ Failed: $url" >> "$tmpdir/raw.m3u"
+              echo "⚠️ Failed: $group"
+            fi
           done < "$tmpdir/sources.txt"
 
-          # ✅ WRITE FINAL HEADER
+          # ✅ Count channels (NO dedupe → Total = Updated)
+          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/raw.m3u" || true)
+          TOTAL="$UPDATED"
+
+          # ✅ Write FINAL HEADER with COUNTS
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
             echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated: $timestamp"
+            echo "# Include Channels : Total - $TOTAL | Updated - $UPDATED"
             echo ""
           } > knight.m3u
 
-          TOTAL=0
-          UPDATED=0
-
-          # ✅ APPEND EACH GROUP ONCE (AUTO A–Z SORT)
-          for file in "$tmpdir/groups/"*.m3u; do
-            [ ! -s "$file" ] && continue
-
-            groupname=$(basename "$file" .m3u)
-
-            echo "" >> knight.m3u
-            echo "################### $groupname ###################" >> knight.m3u
-
-            awk '
-              /^#EXTINF/ { meta=$0; getline url; print meta "\n" url }
-            ' "$file" | sort -f >> knight.m3u
-
-            count=$(grep -c '^#EXTINF' "$file" || true)
-            UPDATED=$((UPDATED + count))
-          done
-
-          TOTAL="$UPDATED"
-
-          sed -i "5i# Include Channels : Total - $TOTAL | Updated - $UPDATED" knight.m3u
+          # ✅ Append playlist (no deduplication)
+          cat "$tmpdir/raw.m3u" >> knight.m3u
 
           echo "✅ knight.m3u created successfully."
           echo "📊 Total: $TOTAL | Updated: $UPDATED"
-
-          # ✅ EXPORT FOR NEXT STEP (FIX COMMIT MESSAGE)
-          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
-          echo "UPDATED=$UPDATED" >> $GITHUB_ENV
 
       - name: Commit and push updated knight.m3u
         run: |
@@ -150,4 +124,4 @@ jobs:
           fi
 
       - name: Summary
-        run: echo "✅ Knight build completed at $(date)"
+        run: echo "✅ Monster completed at $(date)"
