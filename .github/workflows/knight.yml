@@ -36,7 +36,6 @@ jobs:
 
           grep -v '^$' base.txt > "$tmpdir/sources.txt"
 
-          # Temp raw file (no header yet)
           : > "$tmpdir/raw.m3u"
 
           echo "🌐 Fetching and grouping sources..."
@@ -69,8 +68,9 @@ jobs:
             echo "" >> "$tmpdir/raw.m3u"
             echo "################### $group ###################" >> "$tmpdir/raw.m3u"
 
-            if curl -fs "$url" | \
-              grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
+            if curl -fs --connect-timeout 10 --max-time 20 "$url" | \
+              grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' | \
+              grep -vi 'YGX WORLD' \
               > "$tmpdir/part_$i.m3u"; then
 
               cat "$tmpdir/part_$i.m3u" >> "$tmpdir/raw.m3u"
@@ -81,11 +81,11 @@ jobs:
             fi
           done < "$tmpdir/sources.txt"
 
-          # ✅ Count channels (NO dedupe → Total = Updated)
+          # ✅ Count channels (NO dedupe)
           UPDATED=$(grep -c '^#EXTINF' "$tmpdir/raw.m3u" || true)
           TOTAL="$UPDATED"
 
-          # ✅ Write FINAL HEADER with COUNTS
+          # ✅ Write FINAL HEADER
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
@@ -95,11 +95,14 @@ jobs:
             echo ""
           } > knight.m3u
 
-          # ✅ Append playlist (no deduplication)
           cat "$tmpdir/raw.m3u" >> knight.m3u
 
           echo "✅ knight.m3u created successfully."
           echo "📊 Total: $TOTAL | Updated: $UPDATED"
+
+          # ✅ EXPORT VARIABLES FOR NEXT STEP
+          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
+          echo "UPDATED=$UPDATED" >> $GITHUB_ENV
 
       - name: Commit and push updated knight.m3u
         run: |
@@ -124,4 +127,4 @@ jobs:
           fi
 
       - name: Summary
-        run: echo "✅ Monster completed at $(date)"
+        run: echo "✅ Knight completed at $(date)"
