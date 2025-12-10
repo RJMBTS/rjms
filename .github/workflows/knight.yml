@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build Network Split Playlists + Master knight.m3u
+      - name: Build Master knight.m3u (Network Split + Auto Sort + YGX Removed)
         run: |
           set -e
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
@@ -37,7 +37,7 @@ jobs:
           grep -v '^$' base.txt > "$tmpdir/sources.txt"
           mkdir -p "$tmpdir/groups"
 
-          echo "🌐 Fetching, filtering, grouping & splitting networks..."
+          echo "🌐 Fetching, filtering, grouping & sorting..."
 
           while read -r url; do
             [[ -z "$url" ]] && continue
@@ -64,21 +64,19 @@ jobs:
 
             outfile="$tmpdir/groups/$group.m3u"
 
-            # ✅ HARD BLOCK YGX WORLD (name + URL both removed correctly)
+            # ✅ HARD BLOCK YGX WORLD (removes both EXTINF + URL)
             curl -fs --connect-timeout 10 --max-time 20 "$url" | \
               grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' | \
               awk '
                 BEGIN{IGNORECASE=1}
                 /#EXTINF/ {
                   if ($0 ~ /YGX[[:space:]]*WORLD/) {
-                    skip=1
                     getline
                     next
-                  } else {
-                    print $0
-                    getline
-                    print $0
                   }
+                  print $0
+                  getline
+                  print $0
                 }
               ' >> "$outfile" || true
 
@@ -86,71 +84,53 @@ jobs:
 
           done < "$tmpdir/sources.txt"
 
-          echo "🧩 Writing individual network playlists..."
-
-          TOTAL=0
-          UPDATED=0
-
-          for file in "$tmpdir/groups/"*.m3u; do
-            [ ! -s "$file" ] && continue
-
-            groupname=$(basename "$file" .m3u)
-            finalfile="$groupname.m3u"
-
-            {
-              echo "#EXTM3U"
-              echo "# Network: $groupname"
-              echo "# Last updated: $timestamp"
-              echo ""
-            } > "$finalfile"
-
-            # ✅ SORT A–Z BY CHANNEL NAME
-            awk '
-              /^#EXTINF/ { meta=$0; getline url; print meta "\n" url }
-            ' "$file" | sort -f >> "$finalfile"
-
-            count=$(grep -c '^#EXTINF' "$finalfile" || true)
-            UPDATED=$((UPDATED + count))
-            TOTAL=$UPDATED
-
-            echo "✅ Created network file: $finalfile ($count channels)"
-          done
-
-          echo "🧱 Building master knight.m3u..."
-
+          # ✅ MASTER HEADER
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
             echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated: $timestamp"
-            echo "# Include Channels : Total - $TOTAL | Updated - $UPDATED"
             echo ""
           } > knight.m3u
 
-          for netfile in *.m3u; do
-            [[ "$netfile" == "knight.m3u" ]] && continue
-            groupname="${netfile%.m3u}"
+          TOTAL=0
+          UPDATED=0
+
+          # ✅ APPEND ALL NETWORKS (SORTED A–Z) INTO ONE FILE
+          for file in "$tmpdir/groups/"*.m3u; do
+            [ ! -s "$file" ] && continue
+
+            groupname=$(basename "$file" .m3u)
 
             echo "" >> knight.m3u
             echo "################### $groupname ###################" >> knight.m3u
-            grep -v '^#EXTM3U|^# Network|^# Last updated' "$netfile" >> knight.m3u
+
+            awk '
+              /^#EXTINF/ { meta=$0; getline url; print meta "\n" url }
+            ' "$file" | sort -f >> knight.m3u
+
+            count=$(grep -c '^#EXTINF' "$file" || true)
+            UPDATED=$((UPDATED + count))
           done
 
-          echo "✅ Master & network playlists created successfully."
+          TOTAL="$UPDATED"
+
+          sed -i "5i# Include Channels : Total - $TOTAL | Updated - $UPDATED" knight.m3u
+
+          echo "✅ knight.m3u created successfully."
           echo "📊 Total: $TOTAL | Updated: $UPDATED"
 
           echo "TOTAL=$TOTAL" >> $GITHUB_ENV
           echo "UPDATED=$UPDATED" >> $GITHUB_ENV
 
-      - name: Commit and push playlists
+      - name: Commit and push knight.m3u
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-
-          git add *.m3u
+          git add knight.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-update playlists | Total:$TOTAL Updated:$UPDATED"
+            git commit -m "Auto-update knight.m3u | Total:$TOTAL Updated:$UPDATED"
             git pull --rebase origin main || true
 
             n=0
@@ -166,4 +146,4 @@ jobs:
           fi
 
       - name: Summary
-        run: echo "✅ Network split build completed at $(date)"
+        run: echo "✅ Single-file knight build completed at $(date)"
