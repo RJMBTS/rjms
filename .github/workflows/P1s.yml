@@ -1,4 +1,4 @@
-name: P1S
+name: P1s
 
 on:
   schedule:
@@ -29,7 +29,7 @@ jobs:
           tmpdir=$(mktemp -d)
 
           mkdir -p Bishop
-          OUTPUT="Bishop/SLiv.m3u"
+          OUTPUT="Bishop/P1s.m3u"
           SONY_URL="https://raw.githubusercontent.com/himanshu-temp/m3u/refs/heads/main/sony.m3u"
 
           echo "🌐 Fetching Sony playlist..."
@@ -49,7 +49,7 @@ jobs:
           UPDATED=$(grep -c '^#EXTINF' "$tmpdir/sliv_ready.m3u" || true)
           TOTAL="$UPDATED"
 
-          # Build final SLiv.m3u file
+          # Build final P1s.m3u file
           {
             echo '#EXTM3U billed-msg="SLiv - RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
@@ -69,13 +69,13 @@ jobs:
           echo "📁 Output generated at: $OUTPUT"
           echo "📊 Total Channels: $TOTAL"
 
-      - name: Commit and push SLiv.m3u
+      - name: Commit and push P1s.m3u
         if: steps.buildfile.outputs.file-ready == 'true'
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
-          git add Bishop/SLiv.m3u
+          git add Bishop/P1s.m3u
 
           if ! git diff --cached --quiet; then
             git commit -m "SLiv Update | Total:${TOTAL} Updated:${UPDATED}"
@@ -93,4 +93,4 @@ jobs:
           fi
 
       - name: Summary
-        run: echo "✅ SLiv.m3u build completed successfully at $(date)"
+        run: echo "✅ P1s.m3u build completed successfully at $(date)"
