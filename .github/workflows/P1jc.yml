@@ -41,12 +41,16 @@ jobs:
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/no_group.m3u"
 
           awk -F',' '
-          BEGIN { IGNORECASE=1 }
+          BEGIN { IGNORECASE=1; q="\"" }
+
           /^#EXTINF/ {
               line = $0
+
               match(line, /tvg-name="([^"]*)"/, arr)
               tvgname = arr[1]
+
               chan = $2
+
               group = "RJM | JCN"
 
               if (tvgname ~ /colors|cineplex|color/ || chan ~ /colors|cineplex|color/) {
@@ -55,10 +59,14 @@ jobs:
               else if (tvgname ~ /news18|news 18/ || chan ~ /news18|news 18/) {
                   group = "RJM | VIACOM"
               }
-              sub(/^#EXTINF[^,]*/, "& group-title=\"" group "\"", line)
+
+              insert = " group-title=" q group q
+              sub(/^#EXTINF[^,]*/, "&" insert, line)
+
               print line
               next
           }
+
           { print }
           ' "$tmpdir/no_group.m3u" > "$tmpdir/final.m3u"
 
