@@ -1,7 +1,7 @@
 #EXTM3U billed-msg="RJM Tv - RJMBTS Network"
 # Pushed and Updated by Kittujk
 # Coded & Maintained @RJMBTS
-# Last updated: 2025-12-12 08:41:20 IST
+# Last updated: 2025-12-12 08:48:21 IST
 # Channels : Total - 88 | Updated - 88
 # Sliv - 20 | Z5 - 68
 
@@ -40,47 +40,47 @@
 #EXTINF:-1 group-title="Z5",India Today
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 ygx/69.1 Safari/537.36
 #EXTINF:-1 group-title="Sliv",SET HD
-https://dishmt.slivcdn.com/hls/live/2011671/SETHD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011671/SETHD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Z5",Sanskar TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 ygx/69.1 Safari/537.36
 #EXTINF:-1 group-title="Sliv",Sony Aath
-https://dishmt.slivcdn.com/hls/live/2011641/SonyAathSD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011641/SonyAathSD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony BBC Earth HD
-https://dishmt.slivcdn.com/hls/live/2011907/SonyBBCEarthHD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011907/SonyBBCEarthHD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony Marathii
-https://dishmt.slivcdn.com/hls/live/2011740/SonyMarathi/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011740/SonyMarathi/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony Max 2
-https://dishmt.slivcdn.com/hls/live/2011908/MAX2/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011908/MAX2/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony Max HD
-https://dishmt.slivcdn.com/hls/live/2011670/SonyMaxhd/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011670/SonyMaxhd/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony Max
-https://dishmt.slivcdn.com/hls/live/2011745/SonyMaxSD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011745/SonyMaxSD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony PIX HD
-https://dishmt.slivcdn.com/hls/live/2011748/PIXHD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011748/PIXHD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony Pal
-https://dishmt.slivcdn.com/hls/live/2011741/SonyPalSD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011741/SonyPalSD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony Sab HD
-https://dishmt.slivcdn.com/hls/live/2011749/SABHD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011749/SABHD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony TEN 1 HD
-https://dishmt.slivcdn.com/hls/live/2011747-b/TEN1HD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011747-b/TEN1HD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony TEN 1 SD
-https://dishmt.slivcdn.com/hls/live/2011739-b/TEN1SD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011739-b/TEN1SD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony TEN 2 HD
-https://dishmt.slivcdn.com/hls/live/2020434-b/TEN2HD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2020434-b/TEN2HD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony TEN 2 SD
-https://dishmt.slivcdn.com/hls/live/2020590-b/TEN2SD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2020590-b/TEN2SD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony TEN 3 HD
-https://dishmt.slivcdn.com/hls/live/2020591-b/TEN3HD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2020591-b/TEN3HD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony TEN 3 SD
-https://dishmt.slivcdn.com/hls/live/2020592-b/TEN3SD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2020592-b/TEN3SD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony TEN 5 HD
-https://dishmt.slivcdn.com/hls/live/2020593-b/SONYSIXHD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2020593-b/SONYSIXHD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony TEN 5 SD
-https://dishmt.slivcdn.com/hls/live/2020594-b/SONYSIXSD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2020594-b/SONYSIXSD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony Wah
-https://dishmt.slivcdn.com/hls/live/2011906/SonyWah/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011906/SonyWah/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Sliv",Sony Yay
-https://dishmt.slivcdn.com/hls/live/2011746/SonyYaySD/master.m3u8?hdnea=exp=1765549361~acl=/*~id=54180968598775920399286738679996~hmac=fd9e48b8add19a2d48a0a0d05270f51e58ae4471a076f43f1a3d50a3859f9b20
+https://dishmt.slivcdn.com/hls/live/2011746/SonyYaySD/master.m3u8?hdnea=exp=1765551189~acl=/*~id=83419128701137173581269379107501~hmac=626208069c3ca4397d8c927a968ddc540ea14c11cb6bf09945a78059388565bb
 #EXTINF:-1 group-title="Z5",WION
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 ygx/69.1 Safari/537.36
 #EXTINF:-1 group-title="Z5",Zee 24 Ghanta
@@ -179,5 +179,5 @@ https://dishmt.slivcdn.com/hls/live/2011746/SonyYaySD/master.m3u8?hdnea=exp=1765
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 ygx/69.1 Safari/537.36
 #EXTINF:-1 group-title="Z5",Zing
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 ygx/69.1 Safari/537.36
-#EXTINF:-1 group-title="Z5",h_987,c_scale,f_webp,q_auto:eco/resources/0-9-bigganga/list_clean/1170x658b1a857ea78b747b4a6256dd13b3828fd.png",Zee Anmol Cinema 2
+#EXTINF:-1 group-title="Z5",h_987
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 ygx/69.1 Safari/537.36
