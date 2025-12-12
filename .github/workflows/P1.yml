@@ -1,4 +1,4 @@
-name: P1.yml
+name: P1
 
 on:
   schedule:
