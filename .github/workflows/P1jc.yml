@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build P1jc.m3u (Clean + Correct Group Placement)
+      - name: Build P1jc.m3u (Space Fix + Correct Grouping)
         id: buildfile
         run: |
           set -e
@@ -35,38 +35,38 @@ jobs:
           echo "🌐 Fetching JioCinema playlist..."
           curl -fsSL "$JC_URL" -o "$tmpdir/jc_raw.m3u"
 
-          # Remove unwanted metadata including #EXTM3U
+          # Remove meta lines
           grep -v -E '^#Generated on|# Join Telegram|#EXTM3U' \
             "$tmpdir/jc_raw.m3u" > "$tmpdir/clean.m3u"
 
-          # Remove ALL existing group-title attributes
+          # Remove old group-title
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/tmp1.m3u"
 
-          # PERFECT FIX → Insert group-title="RJM | Viacom18" BEFORE channel name
+          # Normalize multiple spaces into a single space
+          sed -E 's/  +/ /g' "$tmpdir/tmp1.m3u" > "$tmpdir/tmp2.m3u"
+
+          # Inject clean group-title before channel name
           awk '
           /^#EXTINF/ {
-              line = $0
+              line=$0
               if (line ~ /News18/) {
-                  # Insert group-title before the comma (before channel name)
                   sub(/,/, " group-title=\"RJM | Viacom18\",", line)
               }
               print line
               next
           }
           { print }
-          ' "$tmpdir/tmp1.m3u" > "$tmpdir/final.m3u"
+          ' "$tmpdir/tmp2.m3u" > "$tmpdir/final.m3u"
 
-          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
-          TOTAL="$UPDATED"
+          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u")
+          TOTAL=$UPDATED
 
           {
-            echo '#EXTM3U'
+            echo "#EXTM3U"
             echo "# Pushed and Updated by Kittujk"
-            echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated: $timestamp"
-            echo "# Channels : Total - $TOTAL | Updated - $UPDATED"
+            echo "# Channels : $TOTAL"
             echo ""
-            echo "################### RJM | JC ###################"
           } > "$OUTPUT"
 
           cat "$tmpdir/final.m3u" >> "$OUTPUT"
@@ -75,7 +75,7 @@ jobs:
           echo "TOTAL=$TOTAL" >> $GITHUB_ENV
           echo "file-ready=true" >> $GITHUB_OUTPUT
 
-      - name: Commit and push P1jc.m3u
+      - name: Commit and push
         if: steps.buildfile.outputs.file-ready == 'true'
         run: |
           git config user.name "GitHub Actions Bot"
@@ -84,12 +84,9 @@ jobs:
           git add Bishop/P1jc.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "P1jc Update | Total:${TOTAL} Updated:${UPDATED}"
+            git commit -m "P1jc Update ($TOTAL channels)"
             git pull --rebase origin main || true
             git push origin main || git push origin main || git push origin main
           else
             echo "No changes — skipping commit."
           fi
-
-      - name: Summary
-        run: echo "✅ P1jc.m3u build completed successfully"
