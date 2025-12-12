@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build Jstar.m3u (Keep Original Grouping)
+      - name: Build P1js.m3u (Original Grouping)
         id: buildfile
         run: |
           set -e
@@ -29,14 +29,14 @@ jobs:
           tmpdir=$(mktemp -d)
 
           mkdir -p Bishop
-          OUTPUT="Bishop/Jstar.m3u"
+          OUTPUT="Bishop/P1js.m3u"
           JSTAR_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u"
 
           echo "🌐 Fetching Jstar playlist..."
           curl -fsSL "$JSTAR_URL" -o "$tmpdir/jstar_raw.m3u"
 
-          # Remove only unwanted headers, keep everything else original
-          grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
+          # Remove unwanted headers + remove "#Generated on 1765537809"
+          grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram|#Generated on 1765537809' \
             "$tmpdir/jstar_raw.m3u" > "$tmpdir/final.m3u"
 
           UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
@@ -49,7 +49,7 @@ jobs:
             echo "# Last updated: $timestamp"
             echo "# Channels : Total - $TOTAL | Updated - $UPDATED"
             echo ""
-            echo "################### Jstar (Original Grouping) ###################"
+            echo "################### P1js (Original Grouping) ###################"
           } > "$OUTPUT"
 
           cat "$tmpdir/final.m3u" >> "$OUTPUT"
@@ -61,16 +61,16 @@ jobs:
           echo "📁 Output generated at: $OUTPUT"
           echo "📊 Total Channels: $TOTAL"
 
-      - name: Commit and push Jstar.m3u
+      - name: Commit and push P1js.m3u
         if: steps.buildfile.outputs.file-ready == 'true'
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
-          git add Bishop/Jstar.m3u
+          git add Bishop/P1js.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "Jstar Update (Original Grouping) | Total:${TOTAL} Updated:${UPDATED}"
+            git commit -m "P1js Update (Original Grouping) | Total:${TOTAL} Updated:${UPDATED}"
             git pull --rebase origin main || true
 
             for n in {1..3}; do
@@ -83,4 +83,4 @@ jobs:
           fi
 
       - name: Summary
-        run: echo "✅ Jstar.m3u (Original Grouping) build completed successfully at $(date)"
+        run: echo "✅ P1js.m3u build completed successfully at $(date)"
