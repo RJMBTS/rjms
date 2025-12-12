@@ -1,4 +1,4 @@
-name: P1s 🌐
+name: P1s
 
 on:
   schedule:
@@ -35,15 +35,15 @@ jobs:
           echo "🌐 Fetching Sony playlist..."
           curl -fs "$SONY_URL" > "$tmpdir/sony_raw.m3u"
 
-          # Remove unwanted headers
+          # Remove unwanted header lines
           grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
             "$tmpdir/sony_raw.m3u" > "$tmpdir/clean.m3u"
 
-          # 1️⃣ Remove ANY existing group-title
+          # 1️⃣ Remove ANY existing group-title from the source
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/no_group.m3u"
 
-          # 2️⃣ Insert ONLY: group-title="RJM | SLiv"
-          sed -E 's|^#EXTINF[^,]*|& group-title="RJM | SLiv"|' \
+          # 2️⃣ Add ONLY: group-title="RJM | SLiv" (using SAFE delimiter ~)
+          sed -E 's~^#EXTINF[^,]*~& group-title="RJM | SLiv"~' \
             "$tmpdir/no_group.m3u" > "$tmpdir/final.m3u"
 
           UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
