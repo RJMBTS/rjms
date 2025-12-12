@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build rook.m3u (Sliv unchanged + Z5 fixed → Sorted → Wand folder)
+      - name: Build rook.m3u (Sliv EXTINF Fix + Z5 URL Fix → Sorted → Wand folder)
         run: |
           set -e
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
@@ -35,7 +35,7 @@ jobs:
 
 
           # -------------------------------------------------------
-          # SLIV (SONY) — LOGIC UNCHANGED AS YOU REQUESTED
+          # SLIV (SONY) — ORIGINAL LOGIC BUT FIXED EXTINF FORMAT
           # -------------------------------------------------------
           echo "🌐 Fetching SONY playlist..."
           if curl -fsSL "$SONY_URL" \
@@ -47,16 +47,17 @@ jobs:
               exit 1
           fi
 
-          echo "🛠 Applying original Sliv logic (unchanged)..."
+          echo "🛠 Applying Sliv EXTINF format FIX..."
 
+          # FIXES the duplicate -1 issue
           sed -E \
             's/group-title="[^"]*"/group-title="Sliv"/g;
-             s/#EXTINF:/#EXTINF:-1 group-title="Sliv",/g' \
+             s/#EXTINF:[^,]*/#EXTINF:-1 group-title="Sliv"/g' \
             "$tmpdir/sony_raw.m3u" > "$tmpdir/sliv_unsorted.m3u"
 
 
           # -------------------------------------------------------
-          # Z5 — SAFE URL DETECTION FIX (ONLY CHANGE REQUESTED)
+          # Z5 — SAFE URL DETECTION (unchanged logic but fixed URLs)
           # -------------------------------------------------------
           echo "🌐 Fetching Z5 playlist..."
           if curl -fsSL "$Z5_URL" \
@@ -68,11 +69,10 @@ jobs:
               exit 1
           fi
 
-          echo "🛠 Processing Z5 channels (URL detection fixed)..."
+          echo "🛠 Processing Z5 channels (URL fix applied)..."
 
           awk '
             /^#EXTINF/ {
-                # Extract channel name (after last comma)
                 match($0, /,(.*)$/, m)
                 name=m[1]
 
@@ -90,7 +90,7 @@ jobs:
 
 
           # -------------------------------------------------------
-          # SORT BOTH SLIV + Z5
+          # MERGE + SORT BOTH GROUPS
           # -------------------------------------------------------
           echo "🔄 Sorting channels alphabetically..."
 
@@ -105,7 +105,7 @@ jobs:
             > "$tmpdir/final_sorted.m3u"
 
 
-          # Counts
+          # counts
           SLIV_COUNT=$(grep -c 'group-title="Sliv"' "$tmpdir/sliv_unsorted.m3u")
           Z5_COUNT=$(grep -c 'group-title="Z5"' "$tmpdir/z5_clean.m3u")
           TOTAL=$(grep -c '^#EXTINF' "$tmpdir/final_sorted.m3u")
@@ -113,7 +113,7 @@ jobs:
 
 
           # -------------------------------------------------------
-          # BUILD FINAL OUTPUT
+          # BUILD FINAL OUTPUT FILE
           # -------------------------------------------------------
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
@@ -127,7 +127,6 @@ jobs:
 
           cat "$tmpdir/final_sorted.m3u" >> Wand/rook.m3u
 
-
           echo "TOTAL=$TOTAL" >> $GITHUB_ENV
           echo "UPDATED=$UPDATED" >> $GITHUB_ENV
 
@@ -140,7 +139,7 @@ jobs:
           git add Wand/rook.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-update rook.m3u (Sliv unchanged + Z5 URL fix) | Total:${TOTAL}"
+            git commit -m "Auto-update rook.m3u (Sliv EXTINF fix + Z5 URL fix) | Total:${TOTAL}"
             git pull --rebase origin main || true
 
             for attempt in 1 2 3; do
@@ -152,6 +151,5 @@ jobs:
             echo "No changes detected."
           fi
 
-
       - name: Summary
-        run: echo "✅ Rook (Sliv unchanged + Z5 URL fix) workflow completed at $(date)"
+        run: echo "✅ Rook (Sliv EXTINF fixed + Z5 URL fixed) workflow completed at $(date)"
