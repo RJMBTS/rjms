@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build P1js.m3u (STAR + COLORS Grouping)
+      - name: Build P1js.m3u (Star + Colors + Kids Grouping)
         id: buildfile
         run: |
           set -e
@@ -42,7 +42,7 @@ jobs:
           # Remove ALL @ygxworld occurrences
           sed -i 's/@ygxworld//g' "$tmpdir/clean.m3u"
 
-          # Modify ONLY STAR + COLORS channels
+          # Apply STAR, COLORS, KIDS grouping rules
           awk '
             BEGIN { IGNORECASE=1 }
             /^#EXTINF/ {
@@ -50,20 +50,25 @@ jobs:
               name_line=$0
               getline url
 
-              # Extract channel name
               channel=name_line
               sub(/^.*,/, "", channel)
 
-              ## ⭐ STAR NETWORK CHANNELS
+              ## ⭐ STAR NETWORK
               if (channel ~ /(Star|Asianet|Vijay|Maa|Suvarna|Pravah|Utsav)/) {
                 gsub(/group-title="[^"]*"/, "", line)
                 sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Star\"", line)
               }
 
-              ## 🎨 COLORS NETWORK CHANNELS
-              else if (channel ~ /(Colors|Kannada|Marathi|Bangla|Gujarati|Odia|Tamil)/ && channel ~ /Colors/) {
+              ## 🎨 COLORS NETWORK
+              else if (channel ~ /Colors/) {
                 gsub(/group-title="[^"]*"/, "", line)
                 sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Colors\"", line)
+              }
+
+              ## 🧸 DISNEY + HUNGAMA → KIDS
+              else if (channel ~ /(Disney|Hungama|Super Hungama|XD|UTV|Bindass)/) {
+                gsub(/group-title="[^"]*"/, "", line)
+                sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Kids\"", line)
               }
 
               print line
@@ -83,7 +88,7 @@ jobs:
             echo "# Last updated: $timestamp"
             echo "# Channels : Total - $TOTAL | Updated - $UPDATED"
             echo ""
-            echo "################### P1js (RJM | Star + RJM | Colors Grouping) ###################"
+            echo "########## P1js (RJM | Star + RJM | Colors + RJM | Kids Grouping) ##########"
           } > "$OUTPUT"
 
           cat "$tmpdir/final.m3u" >> "$OUTPUT"
@@ -104,7 +109,7 @@ jobs:
           git add Bishop/P1js.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "P1js Update (RJM | Star + RJM | Colors Grouping) | Total:${TOTAL} Updated:${UPDATED}"
+            git commit -m "P1js Update (Star + Colors + Kids Grouping Applied) | Total:${TOTAL} Updated:${UPDATED}"
             git pull --rebase origin main || true
 
             for n in {1..3}; do
