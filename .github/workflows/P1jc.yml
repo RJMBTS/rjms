@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build & Repair P1jc.m3u
+      - name: Build P1jc.m3u
         id: buildfile
         run: |
           set -e
@@ -29,36 +29,27 @@ jobs:
 
           mkdir -p Bishop
           OUTPUT="Bishop/P1jc.m3u"
+
           JC_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jcinema.m3u"
 
           echo "🎬 Fetching JCinema playlist..."
           curl -fs "$JC_URL" > "$tmpdir/raw.m3u"
 
-          # Remove unwanted header lines
+          # Remove only unwanted headers (safe)
           grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
             "$tmpdir/raw.m3u" > "$tmpdir/step1.m3u"
 
-          # Remove any old or broken group-title
+          # Remove old group-title safely
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/step1.m3u" > "$tmpdir/step2.m3u"
-
-          # 🔧 FIX BROKEN tvg-logo LINES (your exact issue)
-          sed -E \
-            's#tvg-logo="([^"]*) group-title=#tvg-logo="\1" group-title=#g' \
-            "$tmpdir/step2.m3u" > "$tmpdir/step3.m3u"
-
-          # Fix misplaced w,h parameters inside the URL
-          sed -E \
-            's#resizeMedium ([^"]*)w_#resizeMedium_w_#g' \
-            "$tmpdir/step3.m3u" > "$tmpdir/step4.m3u"
 
           # Add correct group-title
           sed -E 's~^#EXTINF[^,]*~& group-title="RJM | JC"~' \
-            "$tmpdir/step4.m3u" > "$tmpdir/final.m3u"
+            "$tmpdir/step2.m3u" > "$tmpdir/final.m3u"
 
           UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
           TOTAL="$UPDATED"
 
-          # Write final output
+          # Build final file
           {
             echo '#EXTM3U billed-msg="RJMS - An RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
@@ -83,19 +74,12 @@ jobs:
           git add Bishop/P1jc.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "P1jc Auto-Repair Update | Total:${TOTAL} Updated:${UPDATED}"
+            git commit -m "P1jc Update | Total:${TOTAL} Updated:${UPDATED}"
             git pull --rebase origin main || true
-
-            n=0
-            until [ "$n" -ge 3 ]; do
-              git push origin main && break
-              n=$((n+1))
-              echo "⚠️ Push failed, retrying... ($n/3)"
-              sleep 10
-            done
+            git push origin main
           else
             echo "No changes — skipping commit."
           fi
 
       - name: Summary
-        run: echo "✅ P1jc.m3u auto-repair completed successfully"
+        run: echo "✅ P1jc.m3u build completed successfully"
