@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build rook.m3u (Sliv EXTINF Fix + Z5 URL Fix → Sorted → Wand folder)
+      - name: Build rook.m3u (Sliv + Z5 + Viacom18 + Jcinema → Sorted → Wand folder)
         run: |
           set -e
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
@@ -30,71 +30,89 @@ jobs:
 
           SONY_URL="https://raw.githubusercontent.com/himanshu-temp/m3u/refs/heads/main/sony.m3u"
           Z5_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/z5.m3u"
+          JCINEMA_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jcinema.m3u"
 
           echo "🔹 Build started at $timestamp"
 
-
-          # -------------------------------------------------------
-          # SLIV (SONY) — ORIGINAL LOGIC BUT FIXED EXTINF FORMAT
-          # -------------------------------------------------------
+          # -------------------------------------------------------------
+          # SLIV (SONY) — ORIGINAL LOGIC (unchanged) + EXTINF FIX
+          # -------------------------------------------------------------
           echo "🌐 Fetching SONY playlist..."
-          if curl -fsSL "$SONY_URL" \
-              | grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
-              > "$tmpdir/sony_raw.m3u"; then
-              echo "✅ SONY playlist fetched."
-          else
-              echo "❌ Failed to fetch SONY playlist!"
-              exit 1
-          fi
+          curl -fsSL "$SONY_URL" \
+            | grep -v -E '^#EXTM3U|# Join|# Pushed' \
+            > "$tmpdir/sony_raw.m3u"
 
-          echo "🛠 Applying Sliv EXTINF format FIX..."
-
-          # FIXES the duplicate -1 issue
+          echo "🛠 Applying Sliv EXTINF format fix..."
           sed -E \
             's/group-title="[^"]*"/group-title="Sliv"/g;
              s/#EXTINF:[^,]*/#EXTINF:-1 group-title="Sliv"/g' \
-            "$tmpdir/sony_raw.m3u" > "$tmpdir/sliv_unsorted.m3u"
+            "$tmpdir/sony_raw.m3u" > "$tmpdir/sliv_clean.m3u"
+
+          SLIV_COUNT=$(grep -c 'group-title="Sliv"' "$tmpdir/sliv_clean.m3u")
 
 
-          # -------------------------------------------------------
-          # Z5 — SAFE URL DETECTION (unchanged logic but fixed URLs)
-          # -------------------------------------------------------
+          # -------------------------------------------------------------
+          # Z5 — SAFE URL DETECTION
+          # -------------------------------------------------------------
           echo "🌐 Fetching Z5 playlist..."
-          if curl -fsSL "$Z5_URL" \
-              | grep -v -E '^#EXTM3U|# Pushed|# Join' \
-              > "$tmpdir/z5_raw.m3u"; then
-              echo "✅ Z5 playlist fetched."
-          else
-              echo "❌ Failed to fetch Z5 playlist!"
-              exit 1
-          fi
+          curl -fsSL "$Z5_URL" \
+            | grep -v -E '^#EXTM3U|# Join|# Pushed' \
+            > "$tmpdir/z5_raw.m3u"
 
-          echo "🛠 Processing Z5 channels (URL fix applied)..."
-
+          echo "🛠 Processing Z5 channels (URL fix)..."
           awk '
             /^#EXTINF/ {
                 match($0, /,(.*)$/, m)
                 name=m[1]
-
                 print "#EXTINF:-1 group-title=\"Z5\"," name
-
-                # SAFE URL SCAN — prevents missing URLs
                 while (getline url) {
-                    if (url ~ /^https?:\/\//) {
-                        print url
-                        break
-                    }
+                    if (url ~ /^https?:\/\//) { print url; break }
                 }
             }
           ' "$tmpdir/z5_raw.m3u" > "$tmpdir/z5_clean.m3u"
 
+          Z5_COUNT=$(grep -c 'group-title="Z5"' "$tmpdir/z5_clean.m3u")
 
-          # -------------------------------------------------------
-          # MERGE + SORT BOTH GROUPS
-          # -------------------------------------------------------
+
+          # -------------------------------------------------------------
+          # JCINEMA — SMART GROUPING (Viacom18 or Jcinema)
+          # -------------------------------------------------------------
+          echo "🌐 Fetching Jcinema playlist..."
+          curl -fsSL "$JCINEMA_URL" \
+            | grep -v -E '^#EXTM3U|# Join|# Pushed' \
+            > "$tmpdir/jcinema_raw.m3u"
+
+          echo "🛠 Processing Jcinema channels → Viacom18 OR Jcinema..."
+          awk '
+            /^#EXTINF/ {
+                match($0, /,(.*)$/, m)
+                name=m[1]
+                lname=tolower(name)
+
+                if (lname ~ /colors/ || lname ~ /viacom/) {
+                    print "#EXTINF:-1 group-title=\"Viacom18\"," name
+                } else {
+                    print "#EXTINF:-1 group-title=\"Jcinema\"," name
+                }
+
+                while (getline url) {
+                    if (url ~ /^https?:\/\//) { print url; break }
+                }
+            }
+          ' "$tmpdir/jcinema_raw.m3u" > "$tmpdir/jcinema_clean.m3u"
+
+          VIACOM18_COUNT=$(grep -c 'group-title="Viacom18"' "$tmpdir/jcinema_clean.m3u")
+          JCINEMA_COUNT=$(grep -c 'group-title="Jcinema"' "$tmpdir/jcinema_clean.m3u")
+
+
+          # -------------------------------------------------------------
+          # MERGE + SORT EVERYTHING
+          # -------------------------------------------------------------
           echo "🔄 Sorting channels alphabetically..."
 
-          cat "$tmpdir/sliv_unsorted.m3u" "$tmpdir/z5_clean.m3u" \
+          cat "$tmpdir/sliv_clean.m3u" \
+              "$tmpdir/z5_clean.m3u" \
+              "$tmpdir/jcinema_clean.m3u" \
               > "$tmpdir/merged_unsorted.m3u"
 
           awk '
@@ -104,31 +122,24 @@ jobs:
             | awk -F"|" '{ print $1 ORS $2 }' \
             > "$tmpdir/final_sorted.m3u"
 
-
-          # counts
-          SLIV_COUNT=$(grep -c 'group-title="Sliv"' "$tmpdir/sliv_unsorted.m3u")
-          Z5_COUNT=$(grep -c 'group-title="Z5"' "$tmpdir/z5_clean.m3u")
           TOTAL=$(grep -c '^#EXTINF' "$tmpdir/final_sorted.m3u")
           UPDATED="$TOTAL"
 
 
-          # -------------------------------------------------------
-          # BUILD FINAL OUTPUT FILE
-          # -------------------------------------------------------
+          # -------------------------------------------------------------
+          # WRITE FINAL FILE
+          # -------------------------------------------------------------
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
             echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated: $timestamp"
             echo "# Channels : Total - $TOTAL | Updated - $UPDATED"
-            echo "# Sliv - $SLIV_COUNT | Z5 - $Z5_COUNT"
+            echo "# Sliv - $SLIV_COUNT | Z5 - $Z5_COUNT | Viacom18 - $VIACOM18_COUNT | Jcinema - $JCINEMA_COUNT"
             echo ""
           } > Wand/rook.m3u
 
           cat "$tmpdir/final_sorted.m3u" >> Wand/rook.m3u
-
-          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
-          echo "UPDATED=$UPDATED" >> $GITHUB_ENV
 
 
       - name: Commit and push updated rook.m3u
@@ -137,19 +148,13 @@ jobs:
           git config user.email "actions@github.com"
 
           git add Wand/rook.m3u
-
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-update rook.m3u (Sliv EXTINF fix + Z5 URL fix) | Total:${TOTAL}"
+            git commit -m "Auto-update rook.m3u (Sliv + Z5 + Viacom18 + Jcinema merged) | Total:${TOTAL}"
             git pull --rebase origin main || true
-
-            for attempt in 1 2 3; do
-              git push origin main && break
-              echo "⚠️ Push failed — retrying ($attempt/3)"
-              sleep 10
-            done
+            git push origin main || true
           else
             echo "No changes detected."
           fi
 
       - name: Summary
-        run: echo "✅ Rook (Sliv EXTINF fixed + Z5 URL fixed) workflow completed at $(date)"
+        run: echo "✅ Rook playlist updated successfully — Sliv + Z5 + Viacom18 + Jcinema merged at $(date)"
