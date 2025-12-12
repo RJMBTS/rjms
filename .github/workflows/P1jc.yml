@@ -1,12 +1,12 @@
-name: P1jc 🎬
+name: P1jc 🌐
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 concurrency:
-  group: master-m3u-jc
+  group: master-m3u
   cancel-in-progress: false
 
 permissions:
@@ -21,48 +21,39 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build & Repair P1jc.m3u
+      - name: Build P1jc.m3u (JioCinema → group-title "RJM | JC")
         id: buildfile
         run: |
           set -e
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
           tmpdir=$(mktemp -d)
 
           mkdir -p Bishop
           OUTPUT="Bishop/P1jc.m3u"
-
           JC_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jcinema.m3u"
 
-          echo "🎬 Fetching JCinema playlist..."
-          curl -fs "$JC_URL" > "$tmpdir/raw.m3u"
+          echo "🌐 Fetching JioCinema playlist..."
+          curl -fs "$JC_URL" > "$tmpdir/jc_raw.m3u"
 
           # Remove unwanted headers
-          grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram|#Generated on' \
-            "$tmpdir/raw.m3u" > "$tmpdir/step1.m3u"
+          grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
+            "$tmpdir/jc_raw.m3u" > "$tmpdir/clean.m3u"
 
-          # Remove any old group-title safely
-          sed -E 's/group-title="[^"]*"//g' "$tmpdir/step1.m3u" > "$tmpdir/step2.m3u"
+          # 1️⃣ Remove existing group-title
+          sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/no_group.m3u"
 
-          #########################################
-          # 🔧 MAIN FIX → Repairs broken tvg-logo URL
-          # Matches EXACT pattern in your file:
-          #   resizeMedium group-title="RJM | JC",w_XXXX,h_XXXX/v3Storage/...
-          #########################################
-          sed -E \
-            's#tvg-logo="([^"]*) group-title="[^"]*",w_([0-9]+,[0-9]+)/(v3Storage/[^"]*)#tvg-logo="\1_w_\2/\3#g' \
-            "$tmpdir/step2.m3u" > "$tmpdir/step3.m3u"
-
-          # Add correct group-title
+          # 2️⃣ Add new group-title="RJM | JC"
           sed -E 's~^#EXTINF[^,]*~& group-title="RJM | JC"~' \
-            "$tmpdir/step3.m3u" > "$tmpdir/final.m3u"
+            "$tmpdir/no_group.m3u" > "$tmpdir/final.m3u"
 
           UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
           TOTAL="$UPDATED"
 
-          # Build final output
           {
             echo '#EXTM3U billed-msg="RJMS - An RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
             echo "# Coded & Maintained @RJMBTS"
+            echo "# Last updated: $timestamp"
             echo "# Channels : Total - $TOTAL | Updated - $UPDATED"
             echo ""
             echo "################### RJM | JC ###################"
@@ -70,9 +61,12 @@ jobs:
 
           cat "$tmpdir/final.m3u" >> "$OUTPUT"
 
-          echo "file-ready=true" >> $GITHUB_OUTPUT
           echo "UPDATED=$UPDATED" >> $GITHUB_ENV
           echo "TOTAL=$TOTAL" >> $GITHUB_ENV
+          echo "file-ready=true" >> $GITHUB_OUTPUT
+
+          echo "📁 Output generated at: $OUTPUT"
+          echo "📊 Total Channels: $TOTAL"
 
       - name: Commit and push P1jc.m3u
         if: steps.buildfile.outputs.file-ready == 'true'
@@ -83,12 +77,19 @@ jobs:
           git add Bishop/P1jc.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "P1jc Auto-Repair | Total:${TOTAL} Updated:${UPDATED}"
+            git commit -m "P1jc Update | Total:${TOTAL} Updated:${UPDATED}"
             git pull --rebase origin main || true
-            git push origin main
+
+            n=0
+            until [ "$n" -ge 3 ]; do
+              git push origin main && break
+              n=$((n+1))
+              echo "⚠️ Push failed, retrying in 10s... ($n/3)"
+              sleep 10
+            done
           else
             echo "No changes — skipping commit."
           fi
 
       - name: Summary
-        run: echo "✅ P1jc.m3u build & repair completed successfully"
+        run: echo "✅ P1jc.m3u build completed successfully at $(date)"
