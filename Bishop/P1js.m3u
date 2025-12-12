@@ -1,10 +1,10 @@
 #EXTM3U billed-msg="RJMS - An RJMBTS Network"
 # Pushed and Updated by Kittujk
 # Coded & Maintained @RJMBTS
-# Last updated: 2025-12-13 00:11:06 IST
+# Last updated: 2025-12-13 00:16:13 IST
 # Channels : Total - 748 | Updated - 748
 
-################### P1js (RJM | Jstar STAR Grouping) ###################
+################### P1js (RJM | Star + RJM | Colors Grouping) ###################
 
 #EXTINF:-1 tvg-id="1373" group-title="Jiostar" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Disney_Channel.png",Disney Channel
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -41,259 +41,259 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Hungama_BTS/output/index.mpd?__hdnea__=st
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Super_Hungama_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1132"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Plus_HD.png" group-title="RJM | Jstar",Star Plus HD
+#EXTINF:-1 tvg-id="1132"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Plus_HD.png" group-title="RJM | Star",Star Plus HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6f7b7241b2935a909d389fe318e5baaa:65783311644973348f359dc154bb41db
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Plus_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1116"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Plus.png" group-title="RJM | Jstar",Star Plus
+#EXTINF:-1 tvg-id="1116"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Plus.png" group-title="RJM | Star",Star Plus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3bba2ffaf08b501796c5d9eb431460a4:7a62074c4c46f3b153259526481c02bf
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Plus_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="156"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_HD.png" group-title="RJM | Jstar",Star Gold HD
+#EXTINF:-1 tvg-id="156"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_HD.png" group-title="RJM | Star",Star Gold HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ec7ad3786d9e5efa9e0c4aeb3e58c7b7:907509ccae7e68b30ae75b5d09fe60ef
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Gold_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1151"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_Romance.png" group-title="RJM | Jstar",Star Gold Romance
+#EXTINF:-1 tvg-id="1151"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_Romance.png" group-title="RJM | Star",Star Gold Romance
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=0d8e857858fe5e8facd51b10a39e641d:f6058b29e8a5017e16ab5baad78ea004
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Gold_Romance_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1153"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_Thrills.png" group-title="RJM | Jstar",Star Gold Thrills
+#EXTINF:-1 tvg-id="1153"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_Thrills.png" group-title="RJM | Star",Star Gold Thrills
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ca83419dfa1b56f794032b271b8f2c84:d592520eea361507a63c94bff799dfb6
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Gold_Thrills_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1154"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_2.png" group-title="RJM | Jstar",Star Gold 2
+#EXTINF:-1 tvg-id="1154"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_2.png" group-title="RJM | Star",Star Gold 2
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2db0cd9cb0685309b48e322c83192bda:e13bf7a33eb2e19a8f19568dd383ba6d
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Gold_2_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1155"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_2_HD.png" group-title="RJM | Jstar",Star Gold 2 HD
+#EXTINF:-1 tvg-id="1155"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_2_HD.png" group-title="RJM | Star",Star Gold 2 HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=e6afa4754bc15dd28ab6806f417d319d:6a74ef2884813547109ee96098610387
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Gold_2_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="931"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Bharat_HD.png" group-title="RJM | Jstar",Star Bharat HD
+#EXTINF:-1 tvg-id="931"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Bharat_HD.png" group-title="RJM | Star",Star Bharat HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=701524f373c55b2785ac49aab0bdc4a6:9de42eedb40f6c243848eb8aa8103e32
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Bharat_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1127"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Bharat.png" group-title="RJM | Jstar",Star Bharat
+#EXTINF:-1 tvg-id="1127"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Bharat.png" group-title="RJM | Star",Star Bharat
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=687cfa6d31645a91ba3c38a9acdfac7c:c035ca584ac0a2170b96e2fa4523f3be
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Bharat_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1125"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold.png" group-title="RJM | Jstar",Star Gold
+#EXTINF:-1 tvg-id="1125"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold.png" group-title="RJM | Star",Star Gold
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=940a0a4080f553cab03ec23a2e80cf7c:b162354170b54cb588182eb75681cac0
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Gold_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1104"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_HD.png" group-title="RJM | Jstar",Star Movies HD
+#EXTINF:-1 tvg-id="1104"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_HD.png" group-title="RJM | Star",Star Movies HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6ac6943751e558b181da32727f03dff7:f36e5cd48252bcd0fcda2bfe21f5b365
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Movies_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1115"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies.png" group-title="RJM | Jstar",Star Movies
+#EXTINF:-1 tvg-id="1115"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies.png" group-title="RJM | Star",Star Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=e705c9330a935a119021d97c7677ce62:dd306a57de1715b0e1256d5c1737f485
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Movies_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1110"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_Select_HD.png" group-title="RJM | Jstar",Star Movies Select HD
+#EXTINF:-1 tvg-id="1110"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_Select_HD.png" group-title="RJM | Star",Star Movies Select HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b55393cd147a54debaf2b0f2d82b5d9f:6b168db49241a78c1b423ab9a29409ef
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Movies_Select_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1113"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_Select_HD.png" group-title="RJM | Jstar",Star Gold Select HD
+#EXTINF:-1 tvg-id="1113"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_Select_HD.png" group-title="RJM | Star",Star Gold Select HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2cb38dd5e6235bd9936ad7a29bc7ffd8:281d7b329be4e22d4e0e3e1d508ba2a4
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Gold_Select_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1120"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Jalsha_Movies.png" group-title="RJM | Jstar",Star Jalsha Movies HD
+#EXTINF:-1 tvg-id="1120"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Jalsha_Movies.png" group-title="RJM | Star",Star Jalsha Movies HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=940a0a4080f553cab03ec23a2e80cf7c:b162354170b54cb588182eb75681cac0
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Jalsha_Movies_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1142"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_1.png" group-title="RJM | Jstar",Star Sports 1
+#EXTINF:-1 tvg-id="1142"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_1.png" group-title="RJM | Star",Star Sports 1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=df20894ec30954d3b28097c138f4cfda:ff9b6292b1cddbd11a046029cb314634
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_1_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1141"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_2.png" group-title="RJM | Jstar",Star Sports 2
+#EXTINF:-1 tvg-id="1141"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_2.png" group-title="RJM | Star",Star Sports 2
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=fc3aafe80845584199a637249fad2ffa:ca4474972fdb4bf8ecb164482853c692
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_2_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1108"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_HD1_Hindi.png" group-title="RJM | Jstar",Star Sports 1 Hindi HD
+#EXTINF:-1 tvg-id="1108"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_HD1_Hindi.png" group-title="RJM | Star",Star Sports 1 Hindi HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=609ace1518f15ee2bcee407f5e435fed:533464a6d57d3e40b61b8fa8c4fe6627
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1123"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_Select_1.png" group-title="RJM | Jstar",Star Sports Select 1
+#EXTINF:-1 tvg-id="1123"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_Select_1.png" group-title="RJM | Star",Star Sports Select 1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ea7985dacbb95f1c9d62e5a1675142e5:39d5910ca04841b5f32bf24623cdae58
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_Select_1_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="300"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_Select_HD_1.png" group-title="RJM | Jstar",Star Sports Select 1 HD
+#EXTINF:-1 tvg-id="300"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_Select_HD_1.png" group-title="RJM | Star",Star Sports Select 1 HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=c2c048e439d65316beeda6ef64d5d0f8:e2fdc132cbdee65501b845ce414fce39
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_Select_1_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1114"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_Select_2.png" group-title="RJM | Jstar",Star Sports Select 2
+#EXTINF:-1 tvg-id="1114"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_Select_2.png" group-title="RJM | Star",Star Sports Select 2
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ec7d009d07aa5cbc81a441880530dfa5:8147983ad7402ebfc222d28b667a196f
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_Select_2_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="301"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_Select_HD_2.png" group-title="RJM | Jstar",Star Sports Select 2 HD
+#EXTINF:-1 tvg-id="301"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_Select_HD_2.png" group-title="RJM | Star",Star Sports Select 2 HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6017d0514d425fa38f6e80ba6dcc852f:0018944b00adf2078f62386f30c68b74
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_Select_HD_2_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1124"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_1_Tamil.png" group-title="RJM | Jstar",Star Sports 1 Tamil
+#EXTINF:-1 tvg-id="1124"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_1_Tamil.png" group-title="RJM | Star",Star Sports 1 Tamil
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=d0d750ebd52b5756aa7fb833f61ceece:4ae62a20c030c918aad24193c1dda229
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_1_Tamil_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1136"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Utsav_Movies.png" group-title="RJM | Jstar",Star Utsav Movies
+#EXTINF:-1 tvg-id="1136"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Utsav_Movies.png" group-title="RJM | Star",Star Utsav Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1faf9c42dfe45669a70c470359886145:5a229a5f6f270c880b24014bf3cd6ee7
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Utsav_Movies_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1140"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Suvarna.png" group-title="RJM | Jstar",Star Suvarna Plus
+#EXTINF:-1 tvg-id="1140"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Suvarna.png" group-title="RJM | Star",Star Suvarna Plus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=843e1658f5915fdda0a5ecc5bd3dd726:88f0fd96990a66b1307094eaf4998119
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Suvarna_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1143"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Utsav.png" group-title="RJM | Jstar",Star Utsav
+#EXTINF:-1 tvg-id="1143"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Utsav.png" group-title="RJM | Star",Star Utsav
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=63456f11b1bf599a93a6a4b9a76db2bf:b47756e4d8fb938dcbcb72d6d877fbc3
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Utsav_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="336"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Pravah_HD.png" group-title="RJM | Jstar",Star Pravah HD
+#EXTINF:-1 tvg-id="336"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Pravah_HD.png" group-title="RJM | Star",Star Pravah HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ac5fe0f7b01659a9aba3475523f71ae1:b2e3f3af283a309e24eabe6b8681282e
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Pravah_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1111"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Maa_Movies_HD.png" group-title="RJM | Jstar",Star Maa Movies HD
+#EXTINF:-1 tvg-id="1111"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Maa_Movies_HD.png" group-title="RJM | Star",Star Maa Movies HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6dff9a2c741754c1b75312c53bc83d92:b75a65f46065ee70de75a88fed692846
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Movies_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1112"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Maa_HD.png" group-title="RJM | Jstar",Star Maa HD
+#EXTINF:-1 tvg-id="1112"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Maa_HD.png" group-title="RJM | Star",Star Maa HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6c4b78251e865fc2a23a000374c8e725:983ecd2ffe60cdcf2e5e76ae229a5cb8
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1129"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Maa_Music.png" group-title="RJM | Jstar",Star Maa Music
+#EXTINF:-1 tvg-id="1129"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Maa_Music.png" group-title="RJM | Star",Star Maa Music
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=80cfb1a6a4b251dd9b9ae92782a35917:b4cd88f5d71fe94993dd3476cdd63f33
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Music_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="368"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Vijay_HD.png" group-title="RJM | Jstar",Star Vijay HD
+#EXTINF:-1 tvg-id="368"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Vijay_HD.png" group-title="RJM | Star",Star Vijay HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=849d6b062b645abea937ec7f2b6b1686:1f65503420b88d11a16d4a4eacd95f0f
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Vijay_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="370"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Suvarna_HD.png" group-title="RJM | Jstar",Suvarna HD
+#EXTINF:-1 tvg-id="370"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Suvarna_HD.png" group-title="RJM | Star",Suvarna HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=9065757e265f5f53a8f06a9c9c931d02:6fd7b25773ad2f9641ab5f65a1b18e42
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Suvarna_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1117"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Suvarna.png" group-title="RJM | Jstar",Suvarna
+#EXTINF:-1 tvg-id="1117"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Suvarna.png" group-title="RJM | Star",Suvarna
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=fc71d871cbf45818a5b3eb3652d75387:added6a0df4d0eab8758b0ed9f54ecf2
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Suvarna_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1119"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_Select.png" group-title="RJM | Jstar",Star Gold Select
+#EXTINF:-1 tvg-id="1119"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold_Select.png" group-title="RJM | Star",Star Gold Select
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=09706397be655eb6a26c6ba99b65e6d5:acb1ebe04e2a29fe098d532d7a506846
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Gold_Select_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1121"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Pravah.png" group-title="RJM | Jstar",Star Pravah
+#EXTINF:-1 tvg-id="1121"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Pravah.png" group-title="RJM | Star",Star Pravah
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3fb941b7c6fe54fb8f66b19804eff952:c1b742ed7b6d4eca1c6bdcb9041d9b80
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Pravah_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1130"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Vijay.png" group-title="RJM | Jstar",Star Vijay
+#EXTINF:-1 tvg-id="1130"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Vijay.png" group-title="RJM | Star",Star Vijay
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=c5f2861efbc7552ba802dcae4e160359:4ea32867828280a4d6f36ea8fbbe38eb
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Vijay_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1131"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Vijay_Super.png" group-title="RJM | Jstar",Vijay Super
+#EXTINF:-1 tvg-id="1131"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Vijay_Super.png" group-title="RJM | Star",Vijay Super
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=737e9cc83a8a5a55a002fa3ca457244c:a0285e3041ff5f4efae5361e12f759db
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -328,7 +328,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/National_Geographic_BTS/output/index.mpd?
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/CNBC_Tv18_Prime_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="144" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_HD.png",Colors HD
+#EXTINF:-1 tvg-id="144"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_HD.png" group-title="RJM | Colors",Colors HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=d9025bf5bbe6502cab58edaa0b50750b:91b5ca6ebefe3a977cb6fcae31868664
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -377,7 +377,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Aastha_BTS/output/index.mpd?__hdnea__=st=
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/ABP_News_India_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="180"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_News.png" group-title="RJM | Jstar",Asianet News
+#EXTINF:-1 tvg-id="180"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_News.png" group-title="RJM | Star",Asianet News
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=dbadf906bbc7519e9fd18e57104a6f23:e78d51debe566f93b6a66dc4ce100fab
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -405,14 +405,14 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/B4U_Music_BTS/output/index.mpd?__hdnea__=
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/CNN_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="196" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Gujarati.png",Colors Gujarati
+#EXTINF:-1 tvg-id="196"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Gujarati.png" group-title="RJM | Colors",Colors Gujarati
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6e27c4a5f43e504fa5f9d39e880687d1:0baa1de589cf31b80cac8391466d7ad6
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Colors_Gujarati_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="198" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Oriya.png",Colors Oriya
+#EXTINF:-1 tvg-id="198"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Oriya.png" group-title="RJM | Colors",Colors Oriya
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=83f6aa30230852c3af409b10ae9a51ac:b04c71550e63311f9f295bb3e58a7044
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -671,7 +671,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Jaya_TV_HD_MOB/WDVLive/index.mpd?__hdnea_
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Jaya_Max_MOB/WDVLive/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="429" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Tamil_HD.png",Colors Tamil HD
+#EXTINF:-1 tvg-id="429"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Tamil_HD.png" group-title="RJM | Colors",Colors Tamil HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=94d31d976768554b892f7037db09e0c9:08c5154b6cdcb6e0fc99d9d4e6298cb3
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -734,7 +734,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/TLC_HD_World_BTS/output/index.mpd?__hdnea
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Epic_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="482" group-title="Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Cineplex.png",Colors Cineplex
+#EXTINF:-1 tvg-id="482"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Cineplex.png" group-title="RJM | Colors",Colors Cineplex
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b9d4acedc66c5660a1e06197a55bccd2:dd53bab1a42f41ae8f0a5c8fd286f456
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -986,7 +986,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_RAJASTHAN_BTS/output/index.mpd?__hdne
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Raj_Pariwar_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="535"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Dhamaal_TV.png" group-title="RJM | Jstar",Dhamaal TV
+#EXTINF:-1 tvg-id="535"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Dhamaal_TV.png" group-title="RJM | Star",Dhamaal TV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=e915104ce8745ddfa8da4a3e548e003a:5ed45da13ffb79d798326ca47b73da03
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -1476,7 +1476,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Rang_BTS/output/index.mpd?__hdnea__=st=17
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Prag_News_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="626"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Suvarna_News.png" group-title="RJM | Jstar",Suvarna News
+#EXTINF:-1 tvg-id="626"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Suvarna_News.png" group-title="RJM | Star",Suvarna News
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=d882188f0c8457099f6ce76213c610e7:dd4de2aefdb7881f69268768739bd4e0
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -2071,21 +2071,21 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Raj_Musix_BTS/output/index.mpd?__hdnea__=
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/MTV_Beats_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="755" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Marathi_HD.png",Colors Marathi HD
+#EXTINF:-1 tvg-id="755"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Marathi_HD.png" group-title="RJM | Colors",Colors Marathi HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2038491f84f6547986f8ff80e696f8b2:3316fed01103f3241733629cc6b5469f
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Colors_Marathi_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="756" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Bengali_HD.png",Colors Bengali HD
+#EXTINF:-1 tvg-id="756"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Bengali_HD.png" group-title="RJM | Colors",Colors Bengali HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=79e4ad38e4265035877e9a7d51e08594:82ceadac512c10e1df711eb743e099ae
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Colors_Bengali_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="757" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Kannada_HD.png",Colors Kannada HD
+#EXTINF:-1 tvg-id="757"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Kannada_HD.png" group-title="RJM | Colors",Colors Kannada HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3d3d8a2fdcf85fa0bf624860f796c809:8959641efbd66352a19a5f930f3dbc26
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -2225,7 +2225,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/K_News_India_BTS/output/index.mpd?__hdnea
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/CVR_News_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="785" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Super.png",Colors Super
+#EXTINF:-1 tvg-id="785"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Super.png" group-title="RJM | Colors",Colors Super
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b0acd54e4fca554fba081512eaf93384:4cb9416e3f7d5e78a7cc48e255d44441
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -2708,7 +2708,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Bhaarat_Samachar_BTS/output/index.mpd?__h
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Prime_News_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="923"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Dighvijay_TV.png" group-title="RJM | Jstar",Dighvijay TV
+#EXTINF:-1 tvg-id="923"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Dighvijay_TV.png" group-title="RJM | Star",Dighvijay TV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -3219,7 +3219,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Rangamanch_BTS/output/index.mpd?__hdnea__
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Comedy_Central_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1158" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Infinity_HD.png",Colors Infinity HD
+#EXTINF:-1 tvg-id="1158"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Infinity_HD.png" group-title="RJM | Colors",Colors Infinity HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=509216860f8e594aaf7e921296f53851:536df1e35e2bb055be0117b51db8139c
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -3618,7 +3618,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Dsports_BTS/output/index.mpd?__hdnea__=st
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/B4U_Bhojpuri_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="12321" group-title="Movies" tvg-logo="https://t.me/ygxworld",by @ygxworld
+#EXTINF:-1 tvg-id="12321" group-title="Movies" tvg-logo="https://t.me/ygxworld",by 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=dae6c19d7db756cc96f107fda55b0bef:3f161c5a3bbab46bcc1b876384a1210e
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -3646,21 +3646,21 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/HHDL_MOB/WDVLive/index.mpd?__hdnea__=st=1
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/VH1_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1324" group-title="Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Gujarati_Cinema.png",Colors Gujarati Cinema
+#EXTINF:-1 tvg-id="1324"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Gujarati_Cinema.png" group-title="RJM | Colors",Colors Gujarati Cinema
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=cd976004d8345aa0be2034488fc8356f:55de685c871df127cfb17f25b1259421
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Colors_Gujarati_Cinema_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1325" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Infinity_SD.png",Colors Infinity SD
+#EXTINF:-1 tvg-id="1325"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Infinity_SD.png" group-title="RJM | Colors",Colors Infinity SD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=0182f1ff69df5a58b5073d1bbc24fa8f:1aaad81489784cef4402f4e1e6fea612
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Colors_Infinity_SD_MOB/WDVLive/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1326" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Marathi_SD.png",Colors Marathi SD
+#EXTINF:-1 tvg-id="1326"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Marathi_SD.png" group-title="RJM | Colors",Colors Marathi SD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=d60fa0c54e625171a1f6594a41b727c6:deca7c933b6aa0c968c2620c46130360
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -3744,28 +3744,28 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Sonic_Bangla_MOB/WDVLive/index.mpd?__hdne
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Sonic_Marathi_MOB/WDVLive/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1368" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_SD.png",Colors SD
+#EXTINF:-1 tvg-id="1368"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_SD.png" group-title="RJM | Colors",Colors SD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=5727d2eea91255a3abcad8bf6e97cee6:66e77c7cf5c7f654c68f05455f44fea0
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Colors_SD_MOB/WDVLive/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1369" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Bangla_SD.png",Colors Bangla SD
+#EXTINF:-1 tvg-id="1369"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Bangla_SD.png" group-title="RJM | Colors",Colors Bangla SD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=4b4ea22699965dcfa9883cb7994d7202:9107a849f44403873bffedac6a6cabdc
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Colors_Bangla_SD_MOB/WDVLive/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1370" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Kannada_SD.png",Colors Kannada SD
+#EXTINF:-1 tvg-id="1370"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Kannada_SD.png" group-title="RJM | Colors",Colors Kannada SD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=de4783d8f87058fea520b87c28c9fd3e:e10e2c975c0771fa74cc2f70d5bac140
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Colors_Kannada_SD_MOB/WDVLive/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1371" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Tamil.png",Colors Tamil
+#EXTINF:-1 tvg-id="1371"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Tamil.png" group-title="RJM | Colors",Colors Tamil
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=0729280e18465f30a437fae60b0de8c7:f5db301fe989d18fc10d29c836a3a2c7
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -3947,7 +3947,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Velukkudi_Discourses_BTS/output/index.mpd
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/TV_Teacher_MOB/WDVLive/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1450" group-title="Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Rishtey_Cineplex.png",Colors Cineplex Superhit
+#EXTINF:-1 tvg-id="1450"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Rishtey_Cineplex.png" group-title="RJM | Colors",Colors Cineplex Superhit
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=234f3bf300e75c93a3825d54b1c0520b:53a4b6981fb1872c0ad4d197066e8c1f
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -3989,7 +3989,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/History_TV18_SD_MOB/WDVLive/index.mpd?__h
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Nick_Hindi_MOB/WDVLive/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1477" group-title="Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Color_Cineplex_HD.png",Colors Cineplex HD
+#EXTINF:-1 tvg-id="1477"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Color_Cineplex_HD.png" group-title="RJM | Colors",Colors Cineplex HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b9d4acedc66c5660a1e06197a55bccd2:dd53bab1a42f41ae8f0a5c8fd286f456
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -4094,7 +4094,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/DharmGranth_TV_BTS/output/index.mpd?__hdn
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/P_News_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1553"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ABSTAR_News.png" group-title="RJM | Jstar",AB Star News
+#EXTINF:-1 tvg-id="1553"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ABSTAR_News.png" group-title="RJM | Star",AB Star News
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=23829df55a935d54972a8752ad674ef4:6d7214c2c6169c65a23d7c69011240c1
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -4234,7 +4234,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Medha_Secondary_MOB/WDVLive/index.mpd?__h
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Omnicuris_MOB/WDVLive/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1632" group-title="Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Kannada_Cinema.png",Colors Kannada Cinema
+#EXTINF:-1 tvg-id="1632"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Kannada_Cinema.png" group-title="RJM | Colors",Colors Kannada Cinema
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ad215e8ef7dc50ad8f055e14479efdda:4ea964fa3ee177f2e1659cbc87fb9390
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -4262,7 +4262,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Harvest_TV_24x7_BTS/output/index.mpd?__hd
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Madha_TV_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1657" group-title="Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Bangla_Cinema.png",Colors Bangla Cinema
+#EXTINF:-1 tvg-id="1657"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Bangla_Cinema.png" group-title="RJM | Colors",Colors Bangla Cinema
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6f7b7241b2935a909d389fe318e5baaa:65783311644973348f359dc154bb41db
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -4444,7 +4444,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Buletin_India_BTS/output/index.mpd?__hdne
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Aryan_TV_National_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1763" group-title="Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Cineplex_Bollywood.png",Colors Cineplex Bollywood
+#EXTINF:-1 tvg-id="1763"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Cineplex_Bollywood.png" group-title="RJM | Colors",Colors Cineplex Bollywood
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=061b3f55b6695e978b208f5117e609ee:9a6da304db8cfb545805d3152a5d66ed
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -4808,21 +4808,21 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Gujarat_First_24x7_BTS/output/index.mpd?_
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/PMC_Telugu_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1984"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sports18_1_HD.png" group-title="RJM | Jstar",Star Sports 2 Hindi HD
+#EXTINF:-1 tvg-id="1984"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sports18_1_HD.png" group-title="RJM | Star",Star Sports 2 Hindi HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=b9d4acedc66c5660a1e06197a55bccd2:dd53bab1a42f41ae8f0a5c8fd286f456
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Sports18_1_HD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1985"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sports18_1_SD.png" group-title="RJM | Jstar",Star Sports 2 Hindi
+#EXTINF:-1 tvg-id="1985"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sports18_1_SD.png" group-title="RJM | Star",Star Sports 2 Hindi
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=a3ed8dc0e0cb5d238da80ee0a85bd2e1:67a96992e6406606f3480ab58d7f540c
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Sports18_1_SD_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="1998"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sports18_Khel.png" group-title="RJM | Jstar",Star Sports Khel
+#EXTINF:-1 tvg-id="1998"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sports18_Khel.png" group-title="RJM | Star",Star Sports Khel
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ab947ddbb9795d38bff35597b4f73108:2671e22eb7dc174c35b6aad4b113f7b0
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -4976,7 +4976,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Dil_Se_BTS/output/index.mpd?__hdnea__=st=
 #EXTHTTP:{"cookie":"__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Pop_Pataka_BTS/output/index.mpd?__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e&xxx=%7Ccookie=__hdnea__=st=1765537809~exp=1765624209~acl=/*~hmac=9a6a81ae62d28aca85118f96ccbd94fea749826530933eb26817319e47cddf6e
 
-#EXTINF:-1 tvg-id="2038"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Dhamaal.png" group-title="RJM | Jstar",Dhamaal
+#EXTINF:-1 tvg-id="2038"  tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Dhamaal.png" group-title="RJM | Star",Dhamaal
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=63fff67e53565e429748e95229f2c129:cc72cff549464fe605d62825b4e71244
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
