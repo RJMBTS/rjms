@@ -1,0 +1,128 @@
+name: P1jc
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: master-m3u
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build P1jc.m3u (Smart grouping: COLORS / VIACOM / JCN)
+        id: buildfile
+        run: |
+          set -e
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
+          tmpdir=$(mktemp -d)
+
+          mkdir -p Bishop
+          OUTPUT="Bishop/P1jc.m3u"
+          SOURCE_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jcinema.m3u"
+
+          echo "🌐 Fetching J Cinema playlist..."
+          curl -fs "$SOURCE_URL" > "$tmpdir/raw.m3u"
+
+          # Remove unwanted header lines
+          grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
+            "$tmpdir/raw.m3u" > "$tmpdir/clean.m3u"
+
+          # Remove existing group-title
+          sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/no_group.m3u"
+
+          # 2️⃣ Apply smart grouping using AWK
+          awk -F',' '
+          BEGIN {
+              IGNORECASE=1
+          }
+          /^#EXTINF/ {
+              line=$0
+
+              # Extract tvg-name text
+              match(line, /tvg-name="([^"]*)"/, arr)
+              tvgname=arr[1]
+
+              # Extract channel name after comma
+              chan=$2
+
+              group="RJM | JCN"   # default group
+
+              # COLORS group rules
+              if (tvgname ~ /colors|cineplex|color/ || chan ~ /colors|cineplex|color/) {
+                  group="RJM | COLORS"
+              }
+
+              # NEWS18 group rules
+              else if (tvgname ~ /news18|news 18/ || chan ~ /news18|news 18/) {
+                  group="RJM | VIACOM"
+              }
+
+              # Append group-title
+              sub(/^#EXTINF[^,]*/, "& group-title=\"" group "\"", line)
+
+              print line
+              next
+          }
+          { print }
+          ' "$tmpdir/no_group.m3u" > "$tmpdir/final.m3u"
+
+          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
+          TOTAL="$UPDATED"
+
+          # Build final output file
+          {
+            echo '#EXTM3U billed-msg="RJMS - An RJMBTS Network"'
+            echo "# Pushed and Updated by Kittujk"
+            echo "# Coded & Maintained @RJMBTS"
+            echo "# Last updated: $timestamp"
+            echo "# Include Channels : Total - $TOTAL | Updated - $UPDATED"
+            echo ""
+            echo "################### RJM | JCN ###################"
+          } > "$OUTPUT"
+
+          cat "$tmpdir/final.m3u" >> "$OUTPUT"
+
+          echo "UPDATED=$UPDATED" >> $GITHUB_ENV
+          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
+          echo "file-ready=true" >> $GITHUB_OUTPUT
+
+          echo "📁 Output file saved to: $OUTPUT"
+          echo "📊 Total Channels: $TOTAL"
+
+      - name: Commit and push P1jc.m3u
+        if: steps.buildfile.outputs.file-ready == 'true'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+          git add Bishop/P1jc.m3u
+
+          if ! git diff --cached --quiet; then
+            git commit -m "P1jc Update | Total:${TOTAL} Updated:${UPDATED}"
+            git pull --rebase origin main || true
+
+            n=0
+            until [ "$n" -ge 3 ]; do
+              git push origin main && break
+              n=$((n+1))
+              echo "⚠️ Push failed, retrying in 10s... ($n/3)"
+              sleep 10
+            done
+          else
+            echo "No changes — skipping commit."
+          fi
+
+      - name: Summary
+        run: echo "✅ P1jc.m3u smart grouping completed at $(date)"
