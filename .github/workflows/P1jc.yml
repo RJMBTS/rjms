@@ -1,0 +1,96 @@
+name: P1jc 🎬
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: master-m3u-jc
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build P1jc.m3u (JCinema Source → group-title "RJM | JC")
+        id: buildfile
+        run: |
+          set -e
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
+          tmpdir=$(mktemp -d)
+
+          mkdir -p Bishop
+          OUTPUT="Bishop/P1jc.m3u"
+          JC_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jcinema.m3u"
+
+          echo "🎬 Fetching JCinema playlist..."
+          curl -fs "$JC_URL" > "$tmpdir/jc_raw.m3u"
+
+          # Remove unwanted header lines
+          grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
+            "$tmpdir/jc_raw.m3u" > "$tmpdir/clean.m3u"
+
+          # Remove existing group-title (if any)
+          sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/no_group.m3u"
+
+          # Add group-title="RJM | JC"
+          sed -E 's~^#EXTINF[^,]*~& group-title="RJM | JC"~' \
+            "$tmpdir/no_group.m3u" > "$tmpdir/final.m3u"
+
+          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
+          TOTAL="$UPDATED"
+
+          # Build final playlist
+          {
+            echo '#EXTM3U billed-msg="RJMS - An RJMBTS Network"'
+            echo "# Pushed and Updated by Kittujk"
+            echo "# Coded & Maintained @RJMBTS"
+            echo "# Last updated: $timestamp"
+            echo "# Channels : Total - $TOTAL | Updated - $UPDATED"
+            echo ""
+            echo "################### RJM | JC ###################"
+          } > "$OUTPUT"
+
+          cat "$tmpdir/final.m3u" >> "$OUTPUT"
+
+          echo "UPDATED=$UPDATED" >> $GITHUB_ENV
+          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
+          echo "file-ready=true" >> $GITHUB_OUTPUT
+
+          echo "📁 Output generated at: $OUTPUT"
+          echo "📊 Total Channels: $TOTAL"
+
+      - name: Commit and push P1jc.m3u
+        if: steps.buildfile.outputs.file-ready == 'true'
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+          git add Bishop/P1jc.m3u
+
+          if ! git diff --cached --quiet; then
+            git commit -m "P1jc Update | Total:${TOTAL} Updated:${UPDATED}"
+            git pull --rebase origin main || true
+
+            n=0
+            until [ "$n" -ge 3 ]; do
+              git push origin main && break
+              n=$((n+1))
+              echo "⚠️ Push failed, retrying in 10s... ($n/3)"
+              sleep 10
+            done
+          else
+            echo "No changes — skipping commit."
+          fi
+
+      - name: Summary
+        run: echo "✅ P1jc.m3u build completed successfully at $(date)"
