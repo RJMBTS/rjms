@@ -35,32 +35,30 @@ jobs:
           echo "🎬 Fetching JCinema playlist..."
           curl -fs "$JC_URL" > "$tmpdir/raw.m3u"
 
-          # Remove unwanted header lines
-          grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
+          # Remove unwanted headers
+          grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram|#Generated on' \
             "$tmpdir/raw.m3u" > "$tmpdir/step1.m3u"
 
           # Remove any old group-title safely
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/step1.m3u" > "$tmpdir/step2.m3u"
 
-          # 🔧 FIX BROKEN tvg-logo LINES
-          # Remove corrupted 'group-title' injected inside logo URL
+          #########################################
+          # 🔧 MAIN FIX → Repairs broken tvg-logo URL
+          # Matches EXACT pattern in your file:
+          #   resizeMedium group-title="RJM | JC",w_XXXX,h_XXXX/v3Storage/...
+          #########################################
           sed -E \
-            's#tvg-logo="([^"]*) group-title="[^"]*",#tvg-logo="\1",#g' \
+            's#tvg-logo="([^"]*) group-title="[^"]*",w_([0-9]+,[0-9]+)/(v3Storage/[^"]*)#tvg-logo="\1_w_\2/\3#g' \
             "$tmpdir/step2.m3u" > "$tmpdir/step3.m3u"
 
-          # Fix Voot resizeMedium spacing problem
-          sed -E \
-            's#resizeMedium #resizeMedium_#g' \
-            "$tmpdir/step3.m3u" > "$tmpdir/step4.m3u"
-
-          # Add correct group-title RJM | JC
+          # Add correct group-title
           sed -E 's~^#EXTINF[^,]*~& group-title="RJM | JC"~' \
-            "$tmpdir/step4.m3u" > "$tmpdir/final.m3u"
+            "$tmpdir/step3.m3u" > "$tmpdir/final.m3u"
 
           UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
           TOTAL="$UPDATED"
 
-          # Build final playlist output
+          # Build final output
           {
             echo '#EXTM3U billed-msg="RJMS - An RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
@@ -85,7 +83,7 @@ jobs:
           git add Bishop/P1jc.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "P1jc Auto-Repair Update | Total:${TOTAL} Updated:${UPDATED}"
+            git commit -m "P1jc Auto-Repair | Total:${TOTAL} Updated:${UPDATED}"
             git pull --rebase origin main || true
             git push origin main
           else
@@ -93,4 +91,4 @@ jobs:
           fi
 
       - name: Summary
-        run: echo "✅ P1jc.m3u auto-repair build completed successfully"
+        run: echo "✅ P1jc.m3u build & repair completed successfully"
