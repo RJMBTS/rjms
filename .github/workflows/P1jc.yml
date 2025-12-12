@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build P1jc.m3u (Space Fix + Correct Grouping)
+      - name: Build P1jc.m3u (Force group-title first)
         id: buildfile
         run: |
           set -e
@@ -32,61 +32,67 @@ jobs:
           OUTPUT="Bishop/P1jc.m3u"
           JC_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jcinema.m3u"
 
-          echo "🌐 Fetching JioCinema playlist..."
+          echo "Fetching playlist..."
           curl -fsSL "$JC_URL" -o "$tmpdir/jc_raw.m3u"
 
-          # Remove meta lines
-          grep -v -E '^#Generated on|# Join Telegram|#EXTM3U' \
-            "$tmpdir/jc_raw.m3u" > "$tmpdir/clean.m3u"
+          # Remove metadata
+          grep -v -E '^#EXTM3U|#Generated on|# Join Telegram' "$tmpdir/jc_raw.m3u" > "$tmpdir/clean.m3u"
 
           # Remove old group-title
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/tmp1.m3u"
 
-          # Normalize multiple spaces into a single space
+          # Normalize spaces
           sed -E 's/  +/ /g' "$tmpdir/tmp1.m3u" > "$tmpdir/tmp2.m3u"
 
-          # Inject clean group-title before channel name
+          # ⭐ FORCE group-title FIRST in line
           awk '
           /^#EXTINF/ {
               line=$0
-              if (line ~ /News18/) {
-                  sub(/,/, " group-title=\"RJM | Viacom18\",", line)
+
+              # extract channel name
+              split(line, parts, ",")
+              chan=parts[2]
+
+              # only News18 channels
+              if (chan ~ /News18/) {
+
+                  # extract attributes (after EXTINF:-1 and before comma)
+                  sub(/^#EXTINF:-1 */, "", line)
+                  split(line, a, ",")
+                  attrs=a[1]
+
+                  # rebuild line with group-title FIRST
+                  new="#EXTINF:-1 group-title=\"RJM | Viacom18\" " attrs "," chan
+                  print new
+                  next
               }
+
               print line
               next
           }
           { print }
           ' "$tmpdir/tmp2.m3u" > "$tmpdir/final.m3u"
 
-          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u")
-          TOTAL=$UPDATED
-
           {
             echo "#EXTM3U"
-            echo "# Pushed and Updated by Kittujk"
             echo "# Last updated: $timestamp"
-            echo "# Channels : $TOTAL"
-            echo ""
           } > "$OUTPUT"
 
           cat "$tmpdir/final.m3u" >> "$OUTPUT"
 
-          echo "UPDATED=$UPDATED" >> $GITHUB_ENV
-          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
-          echo "file-ready=true" >> $GITHUB_OUTPUT
+          echo "file-ready=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit and push
         if: steps.buildfile.outputs.file-ready == 'true'
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-
           git add Bishop/P1jc.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "P1jc Update ($TOTAL channels)"
+            git commit -m "P1jc grouped update"
             git pull --rebase origin main || true
-            git push origin main || git push origin main || git push origin main
+            git push origin main || git push origin main
           else
-            echo "No changes — skipping commit."
+            echo "No changes"
           fi
