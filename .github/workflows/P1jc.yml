@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build P1jc.m3u (OTT Navigator Compatible Grouping)
+      - name: Build P1jc.m3u (OTT Navigator Compatible Grouping + Trim Fix)
         id: buildfile
         run: |
           set -e
@@ -39,31 +39,34 @@ jobs:
           grep -v -E '^#Generated on|# Join Telegram|#EXTM3U' \
             "$tmpdir/jc_raw.m3u" > "$tmpdir/clean.m3u"
 
-          # Remove any old group-title attributes
+          # Remove ANY pre-existing group-title
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/tmp1.m3u"
 
-          # Fix spacing (OTT Navigator is strict)
+          # Normalize whitespace (OTT Navigator is strict)
           sed -E 's/[[:space:]]+/ /g' "$tmpdir/tmp1.m3u" > "$tmpdir/tmp2.m3u"
 
-          # Rebuild EXTINF lines — group-title FIRST (required by OTT Navigator)
+          # EXTINF rebuild logic
           awk '
           /^#EXTINF/ {
               original = $0
 
-              # Separate attributes from channel name
+              # Split attributes and channel name
               split(original, parts, ",")
               attrs = parts[1]
               name  = parts[2]
 
-              # If malformed, print original line
+              # Trim name (CRITICAL FIX)
+              name = gensub(/^[[:space:]]+|[[:space:]]+$/, "", "g", name)
+
+              # If malformed, print as-is
               if (name == "" || name == parts[1]) {
                   print original
                   next
               }
 
-              ##################################
-              # GROUP 1: RJM | Viacom18
-              ##################################
+              ###############################################
+              #  GROUP 1: RJM | Viacom18
+              ###############################################
               if (name ~ /News18/ ||
                   name ~ /CNBC/ ||
                   name ~ /TV18/ ||
@@ -84,14 +87,14 @@ jobs:
                   next
               }
 
-              ##################################
-              # GROUP 2: RJM | Colors Group
-              ##################################
-              if (name ~ /Colors/ ||
+              ###############################################
+              #  GROUP 2: RJM | Colors Group
+              ###############################################
+              if (name ~ /^Colors/ ||
                   name ~ /Cineplex/ ||
-                  name ~ /MTV/ ||
-                  name ~ /Vh1/ ||
-                  name ~ /Nick/ ||
+                  name ~ /^MTV/ ||
+                  name ~ /^Vh1/ ||
+                  name ~ /^Nick/ ||
                   name ~ /Sonic/ ||
                   name ~ /Comedy Central/) {
 
@@ -107,9 +110,7 @@ jobs:
                   next
               }
 
-              ##################################
-              # Keep all other channels unchanged
-              ##################################
+              # Default: unchanged
               print original
               next
           }
@@ -121,7 +122,7 @@ jobs:
           TOTAL="$UPDATED"
 
           {
-            echo '#EXTM3U'
+            echo "#EXTM3U"
             echo "# Last updated: $timestamp"
             echo "# Channels: Total - $TOTAL"
           } > "$OUTPUT"
@@ -130,7 +131,7 @@ jobs:
 
           echo "file-ready=true" >> $GITHUB_OUTPUT
 
-      - name: Commit and push
+      - name: Commit and push updates
         if: steps.buildfile.outputs.file-ready == 'true'
         run: |
           git config user.name "GitHub Actions Bot"
@@ -139,7 +140,7 @@ jobs:
           git add Bishop/P1jc.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "P1jc Grouping Update (Viacom18 + Colors)"
+            git commit -m "P1jc Grouping Update (Viacom18 + Colors + Trim Fix)"
             git pull --rebase origin main || true
             git push origin main || git push origin main
           else
