@@ -64,8 +64,8 @@ jobs:
                 sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Infotainment\"", line)
               }
 
-              ## 🌞 SUN NETWORK → RJM | SunNxt
-              else if (channel ~ /(Sun TV|Sun HD|KTV|Gemini|Udaya|Surya|Sun Music|Gemini Music|Udaya Music|Surya Music|Gemini Life|Udaya Movies|Surya Movies)/) {
+              ## 🌞 SUN NETWORK → RJM | SunNxt (Sun Life INCLUDED)
+              else if (channel ~ /(Sun TV|Sun HD|KTV|Gemini|Udaya|Surya|Sun Music|Gemini Music|Udaya Music|Surya Music|Gemini Life|Udaya Movies|Surya Movies|Sun Life)/) {
                 gsub(/group-title="[^"]*"/, "", line)
                 sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | SunNxt\"", line)
               }
