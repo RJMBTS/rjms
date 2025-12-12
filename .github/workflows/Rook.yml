@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build rook.m3u (Sony → Sliv + Z5 → Z5 Group → Sorted → Wand folder)
+      - name: Build rook.m3u (Sony + Z5 → Counts → Sorted → Wand folder)
         run: |
           set -e
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
@@ -33,61 +33,56 @@ jobs:
 
           echo "🔹 Build started at $timestamp"
 
-          # ------------------------------
-          # Fetch Sony Playlist
-          # ------------------------------
+          # ---------------- SONY ----------------
           echo "🎬 Fetching SONY playlist..."
-          if curl -fsSL "$SONY_URL" | grep -v -E '^#EXTM3U|# Join|# Updated' \
-              > "$tmpdir/sony_raw.m3u"; then
-            echo "✅ SONY playlist fetched."
+          if curl -fsSL "$SONY_URL" | grep -v -E '^#EXTM3U|# Join|# Updated' > "$tmpdir/sony_raw.m3u"; then
+            echo "✅ Sony fetched."
           else
-            echo "❌ Failed to fetch SONY playlist!"
+            echo "❌ Failed fetching Sony!"
             exit 1
           fi
 
-          # Convert Sony entries → Sliv group
-          awk -F',' '
+          awk '
             /^#EXTINF/ {
-                name=$2;
-                print "#EXTINF:-1 group-title=\"Sliv\"," name;
-                getline url;
-                print url;
-                next;
+                match($0, /,(.*)$/, m)
+                name=m[1]
+                print "#EXTINF:-1 group-title=\"Sliv\"," name
+                getline url
+                print url
             }
           ' "$tmpdir/sony_raw.m3u" > "$tmpdir/sony_clean.m3u"
 
-          # ------------------------------
-          # Fetch Z5 Playlist
-          # ------------------------------
+          SLIV_COUNT=$(grep -c '^#EXTINF' "$tmpdir/sony_clean.m3u")
+
+
+          # ---------------- Z5 ----------------
           echo "🎬 Fetching Z5 playlist..."
-          if curl -fsSL "$Z5_URL" | grep -v -E '^#EXTM3U|# Join|# Updated' \
-              > "$tmpdir/z5_raw.m3u"; then
-            echo "✅ Z5 playlist fetched."
+          if curl -fsSL "$Z5_URL" | grep -v -E '^#EXTM3U|# Join|# Updated' > "$tmpdir/z5_raw.m3u"; then
+            echo "✅ Z5 fetched."
           else
-            echo "❌ Failed to fetch Z5 playlist!"
+            echo "❌ Failed fetching Z5!"
             exit 1
           fi
 
-          # Convert Z5 entries → Z5 group
-          awk -F',' '
+          awk '
             /^#EXTINF/ {
-                name=$2;
-                print "#EXTINF:-1 group-title=\"Z5\"," name;
-                getline url;
-                print url;
-                next;
+                match($0, /,(.*)$/, m)
+                name=m[1]
+                print "#EXTINF:-1 group-title=\"Z5\"," name
+                getline url
+                print url
             }
           ' "$tmpdir/z5_raw.m3u" > "$tmpdir/z5_clean.m3u"
 
-          # ------------------------------
-          # Merge Both Cleaned Playlists
-          # ------------------------------
+          Z5_COUNT=$(grep -c '^#EXTINF' "$tmpdir/z5_clean.m3u")
+
+
+          # ---------- MERGE BOTH ----------
           cat "$tmpdir/sony_clean.m3u" "$tmpdir/z5_clean.m3u" \
             > "$tmpdir/merged_unsorted.m3u"
 
-          echo "🔄 Sorting merged playlist alphabetically..."
+          echo "🔄 Sorting merged playlist..."
 
-          # Sort based on channel name
           awk '
             /^#EXTINF/ { ext=$0; getline url; print ext "|" url }
           ' "$tmpdir/merged_unsorted.m3u" \
@@ -95,30 +90,33 @@ jobs:
             | awk -F"|" '{ print $1 ORS $2 }' \
             > "$tmpdir/final_sorted.m3u"
 
-          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final_sorted.m3u" || true)
-          TOTAL="$UPDATED"
+          TOTAL_COUNT=$(grep -c '^#EXTINF' "$tmpdir/final_sorted.m3u")
+          UPDATED="$TOTAL_COUNT"
 
-          # ------------------------------
-          # Build Final Output File
-          # ------------------------------
+
+          # ---------- BUILD FINAL FILE ----------
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
             echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated: $timestamp"
-            echo "# Channels : Total - $TOTAL | Sorted A-Z"
+            echo "# Channels : Total - $TOTAL_COUNT | Updated - $UPDATED"
+            echo "# Sliv - $SLIV_COUNT | Z5 - $Z5_COUNT"
             echo ""
           } > Wand/rook.m3u
 
           cat "$tmpdir/final_sorted.m3u" >> Wand/rook.m3u
 
-          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
+          echo "TOTAL=$TOTAL_COUNT" >> $GITHUB_ENV
           echo "UPDATED=$UPDATED" >> $GITHUB_ENV
+          echo "SLIV=$SLIV_COUNT" >> $GITHUB_ENV
+          echo "Z5=$Z5_COUNT" >> $GITHUB_ENV
 
-          echo "📊 Total merged channels: $TOTAL"
-          echo "✅ rook.m3u created at Wand/rook.m3u"
+          echo "📊 Total: $TOTAL_COUNT | Sliv: $SLIV_COUNT | Z5: $Z5_COUNT"
+          echo "✅ rook.m3u generated successfully in Wand/"
 
-      - name: Commit and push updated rook.m3m3u
+
+      - name: Commit and push updated rook.m3u
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
@@ -126,17 +124,18 @@ jobs:
           git add Wand/rook.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-update Wand/rook.m3u (Sony + Z5 | Sorted | Merged) | Total:${TOTAL}"
+            git commit -m "Auto-update rook.m3u | Total:${TOTAL} Sliv:${SLIV} Z5:${Z5}"
             git pull --rebase origin main || true
 
             for attempt in 1 2 3; do
               git push origin main && break
-              echo "⚠️ Push failed, retrying… ($attempt/3)"
+              echo "⚠️ Push failed — retrying ($attempt/3)"
               sleep 10
             done
           else
             echo "No changes detected."
           fi
 
+
       - name: Summary
-        run: echo "✅ Sony + Z5 merged Sliv/Z5 workflow completed at $(date)"
+        run: echo "✅ Sony + Z5 merged playlist completed at $(date)"
