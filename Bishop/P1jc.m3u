@@ -1,8 +1,5 @@
 #EXTM3U
-# Pushed and Updated by Kittujk
-# Last updated: 2025-12-12 18:33:31 IST
-# Channels : 41
-
+# Last updated: 2025-12-12 18:38:58 IST
 
 #EXTINF:-1 tvg-id="144" tvg-logo="https://v3img.voot.com/resizeMedium,w_1090,h_613/v3Storage/assets/colors-hindi--16x9-1714557869344.jpg",Colors HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
@@ -179,112 +176,112 @@ https://jcevents.hotstar.com/bpk-tv/CNBC_Bazaar_voot_MOB/Fallback/CNBC_Bazaar_vo
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/CNBC_TV18_voot_MOB/Fallback/CNBC_TV18_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="231" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/IBN_7.png" group-title="RJM | Viacom18",News18 India
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="231" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/IBN_7.png",News18 India
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_India_voot_MOB/Fallback/News18_India_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="492" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/CNN_NEWS_18.png" group-title="RJM | Viacom18",CNN News18
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="492" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/CNN_NEWS_18.png",CNN News18
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/CNN_News18_voot_MOB/Fallback/CNN_News18_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="615" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/News_18_Tamilnadu.png" group-title="RJM | Viacom18",News18 Tamil Nadu
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="615" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/News_18_Tamilnadu.png",News18 Tamil Nadu
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Tamil_Nadu_voot_MOB/Fallback/News18_Tamil_Nadu_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="232" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/IBN_Lokmat.png" group-title="RJM | Viacom18",News18 Lokmat
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="232" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/IBN_Lokmat.png",News18 Lokmat
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Lokmat_voot_MOB/Fallback/News18_Lokmat_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="717" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Bangla_News.png" group-title="RJM | Viacom18",News18 Bangla
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="717" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Bangla_News.png",News18 Bangla
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Bangla_voot_MOB/Fallback/News18_Bangla_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="653" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Kannada_News.png" group-title="RJM | Viacom18",News18 Kannada
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="653" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Kannada_News.png",News18 Kannada
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Kannada_voot_MOB/Fallback/News18_Kannada_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="620" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_News_Gujarati.png" group-title="RJM | Viacom18",News18 Gujarati
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="620" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_News_Gujarati.png",News18 Gujarati
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Gujarati_voot_MOB/Fallback/News18_Gujarati_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="655" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Haryana_and_HP_News.png" group-title="RJM | Viacom18",News18 Punjab Haryana
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="655" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Haryana_and_HP_News.png",News18 Punjab Haryana
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Punjab_Haryana_HP_voot_MOB/Fallback/News18_Punjab_Haryana_HP_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="696" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_News_Oriya.png" group-title="RJM | Viacom18",News18 Odia
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="696" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_News_Oriya.png",News18 Odia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Odia_voot_MOB/Fallback/News18_Odia_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="627" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/News_18_Assam.png" group-title="RJM | Viacom18",News18 Assam North East
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="627" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/News_18_Assam.png",News18 Assam North East
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Assam_North_East_voot_MOB/Fallback/News18_Assam_North_East_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="965" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/News_18_Kerala.png" group-title="RJM | Viacom18",News18 Kerala
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="965" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/News_18_Kerala.png",News18 Kerala
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Kerala_voot_MOB/Fallback/News18_Kerala_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="531" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_RAJASTHAN.png" group-title="RJM | Viacom18",News18 Rajasthan
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="531" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_RAJASTHAN.png",News18 Rajasthan
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Rajasthan_voot_MOB/Fallback/News18_Rajasthan_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="693" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_BIHAR.png" group-title="RJM | Viacom18",News18 Bihar Jharkhand
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="693" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_BIHAR.png",News18 Bihar Jharkhand
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_Bihar_Jharkhand_voot_MOB/Fallback/News18_Bihar_Jharkhand_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="529" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_MP.png" group-title="RJM | Viacom18",News18 MP Chhattisgarh
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="529" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_MP.png",News18 MP Chhattisgarh
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_MP_Chhattisgarh_voot_MOB/Fallback/News18_MP_Chhattisgarh_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="530" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_UP.png" group-title="RJM | Viacom18",News18 UP Uttarakhand
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="530" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_UP.png",News18 UP Uttarakhand
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
 #EXTVLCOPT:http-referrer=https://www.hotstar.com/
 https://jcevents.hotstar.com/bpk-tv/News18_UP_Uttarakhand_voot_MOB/Fallback/News18_UP_Uttarakhand_voot_MOB.m3u8
 
-#EXTINF:-1 tvg-id="694" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Urdu.png" group-title="RJM | Viacom18",News18 JKLH
+#EXTINF:-1 group-title="RJM | Viacom18" tvg-id="694" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Urdu.png",News18 JKLH
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"hdntl=exp=1765590605~acl=%2f*~id=91e793c60fbcd5ce89b71eb5059b456c~data=hdntl~hmac=f248d66a8b52836dadd84bcb86c4ae51a9a1d2cf65bbe2c488ffa6fb0c6c57ad"}
 #EXTVLCOPT:http-origin=https://www.hotstar.com
