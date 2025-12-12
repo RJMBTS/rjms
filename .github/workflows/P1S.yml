@@ -39,7 +39,7 @@ jobs:
           grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
             "$tmpdir/sony_raw.m3u" > "$tmpdir/clean.m3u"
 
-          # Insert group-title="SLiv" safely into every EXTINF line
+          # Insert ONLY group-title="SLiv" into every EXTINF line
           sed -E 's|^#EXTINF[^,]*|& group-title="SLiv"|' \
             "$tmpdir/clean.m3u" > "$tmpdir/sliv_ready.m3u"
 
