@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build P1jc.m3u (Force group-title first)
+      - name: Build P1jc.m3u (OTT Navigator Compatible)
         id: buildfile
         run: |
           set -e
@@ -41,29 +41,29 @@ jobs:
           # Remove old group-title
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/tmp1.m3u"
 
-          # Normalize spaces
-          sed -E 's/  +/ /g' "$tmpdir/tmp1.m3u" > "$tmpdir/tmp2.m3u"
+          # Fix multiple spaces
+          sed -E 's/[[:space:]]+/ /g' "$tmpdir/tmp1.m3u" > "$tmpdir/tmp2.m3u"
 
-          # ⭐ FORCE group-title FIRST in line
+          # OTT NAVIGATOR FIX → group-title FIRST
           awk '
           /^#EXTINF/ {
               line=$0
 
-              # extract channel name
+              # Split attributes from name
               split(line, parts, ",")
-              chan=parts[2]
+              attrs=parts[1]
+              name=parts[2]
 
-              # only News18 channels
-              if (chan ~ /News18/) {
+              # Only apply to News18
+              if (name ~ /News18/) {
 
-                  # extract attributes (after EXTINF:-1 and before comma)
-                  sub(/^#EXTINF:-1 */, "", line)
-                  split(line, a, ",")
-                  attrs=a[1]
+                  # Remove "#EXTINF:-1 "
+                  gsub(/^#EXTINF:-1 */, "", attrs)
 
-                  # rebuild line with group-title FIRST
-                  new="#EXTINF:-1 group-title=\"RJM | Viacom18\" " attrs "," chan
-                  print new
+                  # Build correct format with group-title FIRST
+                  new_line = "#EXTINF:-1 group-title=\"RJM | Viacom18\" " attrs "," name
+
+                  print new_line
                   next
               }
 
@@ -80,7 +80,7 @@ jobs:
 
           cat "$tmpdir/final.m3u" >> "$OUTPUT"
 
-          echo "file-ready=true" >> "$GITHUB_OUTPUT"
+          echo "file-ready=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push
         if: steps.buildfile.outputs.file-ready == 'true'
@@ -88,9 +88,8 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add Bishop/P1jc.m3u
-
           if ! git diff --cached --quiet; then
-            git commit -m "P1jc grouped update"
+            git commit -m "P1jc OTT Navigator Group Fix"
             git pull --rebase origin main || true
             git push origin main || git push origin main
           else
