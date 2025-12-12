@@ -35,34 +35,41 @@ jobs:
           echo "🌐 Fetching playlist..."
           curl -fsSL "$JC_URL" -o "$tmpdir/jc_raw.m3u"
 
-          # Remove metadata
+          # Remove metadata lines
           grep -v -E '^#Generated on|# Join Telegram|#EXTM3U' \
             "$tmpdir/jc_raw.m3u" > "$tmpdir/clean.m3u"
 
-          # Remove old group-title attributes
+          # Remove existing group-title
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/tmp1.m3u"
 
-          # Normalize whitespace (critical for matching)
+          # Normalize whitespace
           sed -E 's/[[:space:]]+/ /g' "$tmpdir/tmp1.m3u" > "$tmpdir/tmp2.m3u"
 
-          # EXTINF modification with whitespace trim
+          #############################################
+          # 100% WORKING AWK GROUPING ENGINE
+          #############################################
+
           awk '
-          function trim(x){ sub(/^[ \t\r\n]+/, "", x); sub(/[ \t\r\n]+$/, "", x); return x }
+          function trim(x){
+              sub(/^[ \t\r\n]+/, "", x);
+              sub(/[ \t\r\n]+$/, "", x);
+              return x;
+          }
 
           /^#EXTINF/ {
               line = $0
 
-              # Split into attributes + name
+              # Break into attributes and channel name
               split(line, a, ",")
               attrs = a[1]
               name = trim(a[2])
 
-              # Remove prefix
-              gsub(/^#EXTINF:-1 */, "", attrs)
+              # Remove ANY form of #EXTINF prefix
+              gsub(/^#EXTINF[^ ]* */, "", attrs)
 
-              #######################################
-              # Colors Group
-              #######################################
+              #############################
+              # COLORS GROUP
+              #############################
               if (name ~ /^Colors/ ||
                   name ~ /Cineplex/ ||
                   name ~ /^MTV/ ||
@@ -75,9 +82,9 @@ jobs:
                   next
               }
 
-              #######################################
-              # Viacom18 Group (CNBC + News18)
-              #######################################
+              #############################
+              # VIACOM18 GROUP
+              #############################
               if (name ~ /News18/ ||
                   name ~ /^CNBC/ ||
                   name ~ /TV18/) {
@@ -86,7 +93,7 @@ jobs:
                   next
               }
 
-              # Default unchanged
+              # Default line
               print line
               next
           }
@@ -94,9 +101,10 @@ jobs:
           { print }
           ' "$tmpdir/tmp2.m3u" > "$tmpdir/final.m3u"
 
-          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u")
+          UPDATED=$(grep -c "^#EXTINF" "$tmpdir/final.m3u")
           TOTAL="$UPDATED"
 
+          # Write final file
           {
             echo "#EXTM3U"
             echo "# Last updated: $timestamp"
@@ -114,9 +122,8 @@ jobs:
           git config user.email "actions@github.com"
 
           git add Bishop/P1jc.m3u
-
           if ! git diff --cached --quiet; then
-            git commit -m "P1jc Group Update (Colors + Viacom18 + Trim Fix)"
+            git commit -m "P1jc M3U Auto Grouping Update (Viacom18 + Colors)"
             git pull --rebase origin main || true
             git push origin main || git push origin main
           else
