@@ -1,4 +1,4 @@
-name: P1s
+name: P1s 🌐
 
 on:
   schedule:
@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build SLiv.m3u (Sony Only → Single Group "SLiv")
+      - name: Build P1s.m3u (Sony Only → Single Group "RJM | SLiv")
         id: buildfile
         run: |
           set -e
@@ -35,32 +35,32 @@ jobs:
           echo "🌐 Fetching Sony playlist..."
           curl -fs "$SONY_URL" > "$tmpdir/sony_raw.m3u"
 
-          # Remove unwanted header lines
+          # Remove unwanted headers
           grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
             "$tmpdir/sony_raw.m3u" > "$tmpdir/clean.m3u"
 
-          # 1️⃣ Remove ANY existing group-title from the source
+          # 1️⃣ Remove ANY existing group-title
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/no_group.m3u"
 
-          # 2️⃣ Add ONLY one group-title="SLiv"
-          sed -E 's|^#EXTINF[^,]*|& group-title="SLiv"|' \
-            "$tmpdir/no_group.m3u" > "$tmpdir/sliv_ready.m3u"
+          # 2️⃣ Insert ONLY: group-title="RJM | SLiv"
+          sed -E 's|^#EXTINF[^,]*|& group-title="RJM | SLiv"|' \
+            "$tmpdir/no_group.m3u" > "$tmpdir/final.m3u"
 
-          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/sliv_ready.m3u" || true)
+          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
           TOTAL="$UPDATED"
 
           # Build final P1s.m3u file
           {
-            echo '#EXTM3U billed-msg="SLiv - RJMBTS Network"'
+            echo '#EXTM3U billed-msg="RJMS - An RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
             echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated: $timestamp"
             echo "# Include Channels : Total - $TOTAL | Updated - $UPDATED"
             echo ""
-            echo "################### SLiv ###################"
+            echo "################### RJM | SLiv ###################"
           } > "$OUTPUT"
 
-          cat "$tmpdir/sliv_ready.m3u" >> "$OUTPUT"
+          cat "$tmpdir/final.m3u" >> "$OUTPUT"
 
           echo "UPDATED=$UPDATED" >> $GITHUB_ENV
           echo "TOTAL=$TOTAL" >> $GITHUB_ENV
@@ -78,7 +78,7 @@ jobs:
           git add Bishop/P1s.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "SLiv Update | Total:${TOTAL} Updated:${UPDATED}"
+            git commit -m "P1s Update | Total:${TOTAL} Updated:${UPDATED}"
             git pull --rebase origin main || true
 
             n=0
