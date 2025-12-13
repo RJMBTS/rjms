@@ -1,1 +1,64 @@
+name: P1j 🌐
 
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: master-m3u-p1j
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build P1j.m3u
+        id: buildfile
+        run: |
+          set -e
+
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
+          tmpdir=$(mktemp -d)
+
+          mkdir -p Bishop
+          OUTPUT="Bishop/P1j.m3u"
+          SRC_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jtv.m3u"
+
+          curl -fsSL "$SRC_URL" -o "$tmpdir/raw.m3u"
+
+          COUNT=$(grep -c '^#EXTINF' "$tmpdir/raw.m3u" || true)
+
+          {
+            echo '#EXTM3U billed-msg="RJMS - An RJMBTS Network"'
+            echo "# Last updated: $timestamp"
+            echo "# Channels : $COUNT"
+            echo ""
+
+            grep -v -E '^#EXTM3U|^# Last updated|^# Channels' "$tmpdir/raw.m3u" \
+            | awk 'BEGIN{RS="#EXTINF"; ORS=""} NR>1{print "#EXTINF"$0}' \
+            | sort -f
+          } > "$OUTPUT"
+
+      - name: Commit and push changes
+        run: |
+          if git status --porcelain | grep -q .; then
+            git config user.name "github-actions"
+            git config user.email "github-actions@github.com"
+            git add Bishop/P1j.m3u
+            git commit -m "Update P1j.m3u"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+          else
+            echo "No changes to commit"
+          fi
