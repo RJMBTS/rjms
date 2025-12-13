@@ -2,7 +2,7 @@ name: P1js 🌐
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -30,7 +30,7 @@ jobs:
 
           mkdir -p Bishop
           OUTPUT="Bishop/P1js.m3u"
-          SRC_URL="https://raw.githubusercontent.com/alex8875/m3u/main/jstar.m3u"
+          SRC_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u"
 
           curl -fsSL "$SRC_URL" -o "$tmpdir/raw.m3u"
 
@@ -43,63 +43,60 @@ jobs:
           BEGIN { IGNORECASE=1 }
 
           /^#EXTINF/ {
-            extinf=$0
+            line=$0
             getline url
-
-            name=extinf
-            sub(/^.*,/, "", name)
+            channel=line
+            sub(/^.*,/, "", channel)
 
             ## 🧸 KIDS
-            if (name ~ /(Disney|Hungama|Nick|Sonic|Pogo|Cartoon|Discovery Kids|Sony Yay|Chutti|Kushi|Kochu|Chintu|Kids|Junior)/ || extinf ~ /group-title="[^"]*Kids[^"]*"/) {
-              gsub(/group-title="[^"]*"/, "", extinf)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Kids\"", extinf)
+            if (channel ~ /(Disney|Hungama|Nick|Sonic|Pogo|Cartoon|Discovery Kids|Sony Yay|Chutti|Kushi|Kochu|Chintu|Kids|Junior)/ || line ~ /group-title="[^"]*Kids[^"]*"/) {
+              gsub(/group-title="[^"]*"/, "", line)
+              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Kids\"", line)
             }
 
-            ## 📰 VIACOM18
-            else if (name ~ /(CNN|CNBC|News18)/) {
-              gsub(/group-title="[^"]*"/, "", extinf)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Viacom18\"", extinf)
+            ## 📰 VIACOM18 → CNN / CNBC / NEWS18
+            else if (channel ~ /(CNN|CNBC|News18)/) {
+              gsub(/group-title="[^"]*"/, "", line)
+              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Viacom18\"", line)
             }
 
             ## 📘 INFOTAINMENT
-            else if (name ~ /(Nat[ ]*Geo|National Geographic|Discovery|Animal Planet|History|Sony BBC Earth|TLC)/) {
-              gsub(/group-title="[^"]*"/, "", extinf)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Infotainment\"", extinf)
+            else if (channel ~ /(Nat[ ]*Geo|National Geographic|Discovery|Animal Planet|History|Sony BBC Earth|TLC)/) {
+              gsub(/group-title="[^"]*"/, "", line)
+              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Infotainment\"", line)
             }
 
             ## 📺 ETV
-            else if (name ~ /ETV/) {
-              gsub(/group-title="[^"]*"/, "", extinf)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | ETv Win\"", extinf)
+            else if (channel ~ /ETV/) {
+              gsub(/group-title="[^"]*"/, "", line)
+              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | ETv Win\"", line)
             }
 
             ## 🌞 SUN NETWORK
-            else if (name ~ /(Sun TV|Sun HD|Sun Life|KTV|Gemini|Udaya|Surya)/) {
-              gsub(/group-title="[^"]*"/, "", extinf)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | SunNxt\"", extinf)
+            else if (channel ~ /(Sun TV|Sun HD|Sun Life|KTV|Gemini|Udaya|Surya)/) {
+              gsub(/group-title="[^"]*"/, "", line)
+              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | SunNxt\"", line)
             }
 
             ## ⭐ STAR
-            else if (name ~ /(Star|Asianet|Vijay|Maa|Suvarna|Pravah|Utsav)/) {
-              gsub(/group-title="[^"]*"/, "", extinf)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Star\"", extinf)
+            else if (channel ~ /(Star|Asianet|Vijay|Maa|Suvarna|Pravah|Utsav)/) {
+              gsub(/group-title="[^"]*"/, "", line)
+              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Star\"", line)
             }
 
             ## 🎨 COLORS
-            else if (name ~ /Colors/) {
-              gsub(/group-title="[^"]*"/, "", extinf)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Colors\"", extinf)
+            else if (channel ~ /Colors/) {
+              gsub(/group-title="[^"]*"/, "", line)
+              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Colors\"", line)
             }
 
-            print name "\t" extinf
+            print line
             print url
+            next
           }
-          ' "$tmpdir/clean.m3u" \
-          | paste - - \
-          | sort -f -k1,1 \
-          | cut -f2- \
-          | tr '\t' '\n' \
-          > "$tmpdir/final.m3u"
+
+          { print }
+          ' "$tmpdir/clean.m3u" > "$tmpdir/final.m3u"
 
           COUNT=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
 
@@ -121,6 +118,6 @@ jobs:
           git add Bishop/P1js.m3u
           if ! git diff --cached --quiet; then
             git pull --rebase origin main || true
-            git commit -m "P1js Update | Alphabetically Sorted"
+            git commit -m "P1js Update | Viacom18 enforced"
             git push origin main
           fi
