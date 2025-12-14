@@ -1,0 +1,708 @@
+#EXTM3U billed-msg="RJM Tv - RJMBTS Network"
+# Pushed and Updated by Kittujk
+# Coded & Maintained @RJMBTS
+# Last updated on : 2025-12-14 15:16:24 IST
+# Channels : Total - 351 | Updated - 351
+
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",KC TV 
+https://rtmp.bmlive.net/bms/kctv/stream.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Raga TV 
+https://live.onecloudlive.in/ragatv/ragatvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Om Sakthi TV 
+https://live1.sscloud7.com/live/omsakthitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Oli TV 
+https://live.olidigital.in/olitv/olitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Time TV 
+https://live.olidigital.in/timetv/timetv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Moon TV 
+https://live.maxtn.in/moontv/moontv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",NTN TV 
+https://live.skystream.in/live/ntntv/index.m3u8?hls_ctx=1314owa2
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Kumari TV 
+https://rtmp.applelive.in/gvkumaritv/gvkumaritv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sakthi TV 
+https://live.sscloud7.in/live/sakthitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Prime TV 
+https://live.applelive.in/primetv/primetv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",MP TV 
+https://stream.sscloud7.in/live/mptv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Vedha TV 
+https://skystream.in/live/vedha6528/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Deiva Oli 
+https://stream.sscloud7.in/live/deivaoli/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",G Music 
+https://rtmp.applelive.in/gmusic/gmusic/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Dtv 
+https://stream.d6-pro.com/Dtv/live/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Vani TV 
+https://live.sscloud7.in/live/vanitvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Max Movies 
+https://live.maxtn.in/maxmovies/maxmovies/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Max Music 
+https://live.maxtn.in/maxmusic/maxmusic/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",TDN 
+https://live.maxtn.in/tdn/tdn/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",7 Green 4K 
+https://account33.livebox.co.in/7GREEN4Khls/live.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Tharun Movies 
+https://streaming.livebox.co.in/tharunmovieshls/live.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",MN TV 
+https://mntv.livebox.co.in/mntvhls/live.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",MN Music 
+https://mntv.livebox.co.in/musichls/live.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Boobsh TV 
+https://rtmp.applelive.in/boobsh/boobsh/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sana TV 
+https://galaxyott.live/hls/sanatv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sana Plus 
+https://galaxyott.live/hls/sanaplus.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",GEM TV 
+https://gemtv.circle7stream.com/gem/fcce47a8559e30755582c396ce7fce9e.sdp/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",NTC TV 
+https://galaxyott.live/hls/ntv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Ultimate TV 
+https://stream.galaxyott.live/live/utv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Anandham TV (GalaxyOTT/JioTV) 
+https://stream.galaxyott.live/live/anandhamtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Anandham TV (Cloud7) 
+https://live1.sscloud7.com/live/anandhamtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Surya TV 
+https://galaxyott.live/hls/suryatv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",YET TV 
+https://live.yettelevision.com:5443/LiveApp/streams/yettv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",ACP TV [RTMP] 
+rtmp://103.87.105.51:1935/acphd/acphd?psk=123456
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",ACP Classic [RTMP] 
+rtmp://103.87.105.51:1935/acpclassic/acpclassic?psk=123456
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",ACP Isai Oli [RTMP] 
+rtmp://103.87.105.51:1935/acpisaioli/acpisaioli?psk=123456
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",A2A TV 
+https://live.sscloud7.in/live/a2atv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Succes TV Tamil 
+https://stream.onecloudlive.in/successtv/successtvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Manasu TV 
+https://stream6.livebox.co.in/manasutvhls/live.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Punithan TV 
+https://stream.singamcloud.in/punithantv/punithantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Asoka TV [Not 24/7] 
+https://ipcloud.live/asokatv/asokahd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",No 1 TV 
+https://live.skystream.in/live/no1tv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",PR TV 
+https://play.applelive.in/prtv/prtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thalapathy TV 
+https://play.applelive.in/thalapathytv/thalapathytv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Riya TV 
+https://play.applelive.in/riyatv/riyatv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Nila TV Nellai 
+https://ipcloud.live/nilatvnellai/nilahd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Dark Television 
+https://play.applelive.in/darktv/darktv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Harin TV 
+https://ipcloud.live/harintv/harintvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Phoenix TV 
+https://stream.onecloudlive.in/phoenixtv/phoenixtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Tamil TV 
+https://stream.onecloudlive.in/tamiltv/tamiltvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Roja TV 
+https://live.rojatv.cloud/rojatv/rojatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Roja Movies 
+https://stream.rojatv.cloud/rojatv/rojatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Nila TV 
+https://live.olidigital.in/nilatv/nilatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sky Plus TV 
+https://ipcloud.live/skytv/skytv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Vasantham TV 
+https://stream.onecloudlive.in/dhandapani/vasanthamtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Paavai TV 
+https://ipcloud.live/paavai/live/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Advika TV 
+http://stream.advikadigital.in/advika/advika/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SS Music 
+https://stream.advikadigital.in/advika/ssmusic/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sree Saravanaa TV 
+https://stream.advikadigital.in/advika/saravana/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Deavathai TV 
+https://hdbox.singamcloud.in/Deavathaitv/Deavathaitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SMCV TV 
+https://singamcloud.in/smcvtv/smcvtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Yogaa TV 
+https://ipcloud.live/yogaatv/yogaatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Roja TV [Not 24/7] 
+https://rojatv.phoenixcreations.online/rojatv/rojatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",APS TV [Not 24/7] 
+https://apstv.phoenixcreations.online/apstv/apstv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sasi TV [Not 24/7] 
+https://sasitv.phoenixcreations.online/sasitv/sasitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sar TV [Not 24/7] 
+https://sartv.phoenixcreations.online/sartv/sartv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jose TV [Not 24/7] 
+https://josetv.phoenixcreations.online/josetv/josetv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Phoenix TV [Not 24/7] 
+https://phoenix.phoenixcreations.online/phoenix/phoenix/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Top TV [Not 24/7] 
+https://toptv.phoenixcreations.online/toptv/toptv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",RK TV [Not 24/7] 
+https://rktv.phoenixcreations.online/rktv/rktv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Subin TV (GalaxyOTT/Jio) 
+https://stream.galaxyott.live/live/subintv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Subin TV (Cloud7) 
+https://sscloud7.com/live/subintv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SK TV 
+https://stream.galaxyott.live/live/sktv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Maran TV 
+https://server.sscloud7.in/marantv/marantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Surya TV Digital 
+https://live.sscloud7.in/live/suryatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Aaryaa TV (JioTV) 
+http://103.140.254.2:3500/live/3395.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Aaryaa TV (Cloud7) 
+https://live.sscloud7.in/live/aaryaatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Isai TV 
+https://server.sscloud7.in/isaihd/isaihd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rock TV 
+https://apis.avmediawork.in/tvhls/rocktv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Tamil Oli TV 
+https://view.rcserver.in/tmp_hls7/tamilolitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Dharshan TV 
+https://galaxyott.live/hls/dharshantv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Suriyan TV (GalaxyOTT/Jio) 
+https://stream.galaxyott.live/live/suriyantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Suriyan TV (Cloud7) 
+https://sscloud7.com/live/suriyantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Udhayam TV 
+https://ipcloud.live/udhayamtv/live/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Deiveega Oli TV 
+https://app.ashokadigital.net/app/e9fa0994/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sailam TV 
+https://app.ashokadigital.net/app/c7b1cd7e/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sha TV 
+https://play.applelive.in/shatv/shatv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Mullai TV 
+https://view.apserver.in/tmp_hls12/bakthimanam/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sachin TV 
+https://ipcloud.live/sachintv/sachintvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sachin Music 
+https://ipcloud.live/sachintv/musichd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Dhoni TV 
+https://ipcloud.live/sachintv/dhonitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Aadvik TV 
+https://ipcloud.live/sachintv/aadviktv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Strawberry TV 
+https://stream.onecloudlive.in/sachintv/strawberrytv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",JP Music TV 
+https://stream.onecloudlive.in/sachintv/jpmusichd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Minnal TV 
+https://ipcloud.live/minnaltv/minnalhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Akilam TV 
+https://stream.onecloudlive.in/akilamtv/akilamtvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Queens 143 
+https://notvstream.in/queens/queens.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thulir TV [Not 24/7] 
+https://view.apserver.in/tmp_hls6/thulirtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Chakra TV 
+https://stream.onecloudlive.in/chakratv/chekratvtju/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thendral TV Madurai [Not 24/7] 
+https://ipcloud.live/thendralmdu/madurai/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Namma Gobi TV 
+https://stream.rojatv.cloud/nammagobi/tv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jeyam TV Madurai [Not 24/7] 
+https://stream.onecloudlive.in/jeyam/jeyammdu/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",RJ Tamil [Not 24/7] 
+https://ipcloud.live/rjtamiltv/rjtamil/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Aadhavan TV 
+https://ipcloud.live/aadhavantv/aadhavanhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Maruthi TV 
+https://stream.onecloudlive.in/maruthitv/maruthitvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jayam TV 
+https://app.ashokadigital.net/app/db285ebc/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",M Television [Not 24/7] 
+https://ipcloud.live/mtv/menhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",MSN TV 
+https://ipcloud.live/msntv/msntv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Saami TV 
+https://ipcloud.live/msntv/saamitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jeevan TV 
+https://stream.singamcloud.in/Jeevantv/Jeevantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rio TV 
+https://stream.onecloudlive.in/riotv/riotvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Veerali TV 
+https://ipcloud.live/veerali/veeralitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",King TV 
+https://rtmp.bmlive.net/kingtv/kingtv/stream.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",3 Star TV 
+https://stream.onecloudlive.in/threestartv/threestarhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Shalini TV Tiruvannamalai 
+https://ipcloud.live/shalinitv/shalinitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",JCV 
+https://play.applelive.in/jcvtv/jcvtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",JCV Musix 
+https://play.applelive.in/jcvtv/jcvmusix.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Hai TV 
+https://play.applelive.in/haitv/haitv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",JJ News Tamil 
+https://live.skystream.in/live/jjnewstamil/index.m3u8?hls_ctx=141308l7
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Channel Spice [Not 24/7] 
+https://stream.onecloudlive.in/spicetv/spicetv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Urchagam TV 
+https://rtmp.bmlive.net/bms/urchagamtv/stream.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Kumaran TV 
+https://stream.rojatv.cloud/kumarantv/gobi/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thendral TV 
+https://live.thendralcloud.in/thendraltv/d0dbe915091d400bd8ee7f27f0791303.sdp/chunks.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Ganesh TV 
+https://live.thendralcloud.in/ganeshtvlive/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Eagle TV 
+https://rtmp.bmlive.net/bms/eagletv/stream.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Ashoka TV 
+https://app.ashokadigital.net/app/12f5e922/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Mathi TV 
+https://notvstream.in/mathitv/mathitv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rainbow TV 
+https://live.skystream.in/live/rainbowtv/index.m3u8?hls_ctx=a7618r13
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sai TV 
+https://stream.onecloudlive.in/saitvmdu/saitvmdu/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Anbu TV 
+https://ipcloud.live/anbutv/anbutvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Apple TV Pondicherry 
+https://stream.iplive.xyz/appletv/4kpondy/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Nellai TV 
+https://stream.onecloudlive.in/nellaitv/nellaitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SJ Surya TV 
+https://ipcloud.live/nellaitv/suriyatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Params TV 
+https://app.ashokadigital.net/app/a3e0b02f/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Karthick TV 
+https://ipcloud.live/karthick/karthicktvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",King 24x7 
+https://notvstream.in/kingtv/kingtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Smiley TV 
+https://live1.sscloud7.com/live/smileytv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Visil TV 
+https://stream.sscloud7.in/live/vishiltv1/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Visil Max 
+https://stream.sscloud7.in/live/vishiltv2/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Durai TV 
+https://ipcloud.live/duraitv/live/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Akash TV 
+https://account2.livebox.co.in/AkashTvhls/live.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Apple TV Nagercoil 
+https://play.applelive.in/appletv/appletv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jeyson TV 
+https://play.applelive.in/jeysontv/jeysontv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Kumari Kathir TV 
+https://play.applelive.in/jjmax/jjmax.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Selfie TV 
+https://play.applelive.in/selfeetv/selfeetv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",JC TV 
+https://play.applelive.in/jctv/jctv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Digital TV 
+https://play.applelive.in/digitaltv/digitaltv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Malar TV 
+https://sscloud7.com/live/malartv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Veera TV 
+https://ipcloud.live/veeratv/veeratvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Eagle TV 
+https://ipcloud.live/eaglemedia/eagletv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Subash TV 
+https://ipcloud.live/subashtv/subashhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sahara TV 
+https://ipcloud.live/saharatv/saharatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",NTV Trichy 
+https://notvstream.in/ntv/ntv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Arunai TV 
+https://notvstream.in/arunaitv/arunaitv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",RR TV 
+https://notvstream.in/rrtv/rrtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",M&M TV 
+https://notvstream.in/mmtv/mmtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SS TV 
+https://notvstream.in/sstv/sstv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",UTV Mayuram 
+https://notvstream.in/utv/utv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thirumalai TV 
+https://notvstream.in/thirumalaitv/thirumalaitv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Subi TV 
+https://notvstream.in/subitv/subitv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Krishna TV 
+https://notvstream.in/krishnatv/krishnatv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Anandam TV 
+https://notvstream.in/anandamtv/anandamtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Hitech TV 
+https://notvstream.in/hitechtv/hitechtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Orange TV 
+https://notvstream.in/orangetv/orangetv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Leo TV 
+https://ipcloud.live/leotv/leotvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Nila TV 
+https://ipcloud.live/nilatv/nilatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Boss Television 
+https://play.applelive.in/vasantv/vasantv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Aasai TV 
+https://notvstream.in/aasaitv/aasaitv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rainbow TV Gandarvakottai 
+https://notvstream.in/rainbowtv/rainbowtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Shalini TV 
+https://stream.singamcloud.in/shalinitv/shalinitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Aalaya Magimai TV 
+https://app.ashokadigital.net/aalayamagimaitv/aalayamagimaitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Dheiveegam TV 
+https://stream.singamcloud.in/Dheiveegamtv/Dheiveegamtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Nisha TV 
+https://app.ashokadigital.net/app/7825e06b/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Amman TV 
+https://app.ashokadigital.net/app/78b1bc36/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Amman Plus 
+https://app.ashokadigital.net/app/e39f503a/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Oscar TV 
+https://account21.livebox.co.in/oscartvhls/live.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Temble TV 
+https://notvstream.in/tembletv/tembletv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Bright Simrose TV 
+https://notvstream.in/brightsimrosetv/brightsimrosetv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Malathi TV 
+https://ipcloud.live/malathitv/malathitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sangamam TV Erode 
+https://stream.onecloudlive.in/sangamamtv/sangamamtvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SSCN 
+https://app.ashokadigital.net/sscn/sscn/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jeiyan TV 
+https://stream.onecloudlive.in/jeyantv/jeyantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Vidiyal TV 
+https://account11.livebox.co.in/vidyaltvhls/live.m3u8?psk=stream
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",R TV 
+http://stream.ashokadigital.net/rtv/rtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Pothigai Thendral 
+https://ipcloud.live/pothigai/thendral/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Apple TV 
+https://stream.iplive.xyz/mayatv/mayatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Velan TV 
+https://cloudstream4k.com/velantv/bsk/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Shalini TV Thanjavur 
+https://live.singamcloud.in/shalinitv/shalinitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",JRP TV 
+https://ipcloud.live/jrptv/jrphd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Adhiyamaan TV 
+https://hd.singamcloud.in/adhiyamamtv/adhiyamamtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",City TV 
+https://hd.singamcloud.in/citytv/citytv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",L TV 
+https://live.singamcloud.in/rtv/rtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Ezhil TV 
+http://198.144.149.206:8080/NOTV/EZHILTV/index.m3u8?token=GTR
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Kavin TV 
+http://198.144.149.206:8080/NOTV/KAVINTV/index.m3u8?token=GTR
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jawahar Channel 
+https://app.ashokadigital.net/app/6a01fb97/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",7Star TV 
+https://app.ashokadigital.net/app/ed8bd4a7/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",7Star Music 
+https://app.ashokadigital.net/app/9346e98d/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Tamil Star TV 
+http://acv.7starcloud.com:1935/tamilstar/tv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SV TV 
+http://shreeparams.7starcloud.com:1935/live/params/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rasi TV 
+http://rasinetworks.in:1935/rasitvhd/rasitvhd.stream_aac/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rasi Tamil 
+http://rasinetworks.in:1935/rasitamil/rasitamil.stream_aac/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rasi Movies 
+http://rasinetworks.in:1935/rasimovies/rasimovies.stream_aac/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rasi Music 
+http://rasinetworks.in:1935/rasimusic/rasimusic.stream_aac/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rasi Hollywood 
+http://rasinetworks.in:1935/rasihollywood/rasihollywood.stream_aac/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rasi Comedy 
+http://rasinetworks.in:1935/rasicomedy/rasicomedy.stream_aac/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Rasi Classic 
+http://rasinetworks.in:1935/rasiclassic/rasiclassic.stream_aac/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Santhiya TV 
+https://stream.onecloudlive.in/santhiyatv/santhiyatvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Santhiya TV JKM 
+https://stream.onecloudlive.in/santhiyatv/jkm/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Anandam TV 
+#EXTVLCOPT:http-referrer=https://oxolive.com
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Anandam Abi TV 
+#EXTVLCOPT:http-referrer=https://oxolive.com
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Anandam UTV 
+#EXTVLCOPT:http-referrer=https://oxolive.com
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jayaam TV 
+https://app.ashokadigital.net/app/67a779e9/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Ragam TV [RTMP] 
+rtmp://stream.wsplcloud.com/live/ragamtv
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",CSK TV 
+http://csktv.7starcloud.com:1935/csktv/csktvdpi/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Hari TV 
+http://haritv.stream.ashokadigital.net/haritv/haritvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sri Krishna TV 
+http://krishnatv.7starcloud.com:1935/erodekrishnatv/livestream/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sri Krishna TV Tiruchengode 
+http://krishnatv.7starcloud.com:1935/live/livestream/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Vaani Visuals [RTMP] 
+rtmp://vaanivisuals.in:1935/vaanitv/vaanitv
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",KCTN TV 
+http://ttv.7starcloud.com:1935/kctn/tv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",VCTN TV 
+http://ttv.7starcloud.com:1935/vctn/tv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thirumagal TV 
+http://ttv.7starcloud.com:1935/thirumagal/tv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Vanavil TV 
+http://ttv.7starcloud.com:1935/vaanavil/tv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",KCN TV 
+https://view.rcserver.in/tmp_hls12/kcntv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Tamil Magan TV 
+http://120.138.14.16:8080/hls/tamilmagantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Namathu Sangamam TV 
+http://yours.7starcloud.com:1935/live/nmtv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Yours TV 
+http://yours.7starcloud.com:1935/live/yourstv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Visaka TV 
+http://visaka.7starcloud.com:1935/live/visakatv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",K Channel [Not 24/7] 
+https://live.brightmeltech.in/kchannel/kchannel.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",IWorld TV [Not 24/7] 
+https://view.apserver.in/tmp_hls10/iworldtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Aadhavan Tamil TV [Not 24/7] 
+https://aadhavantamiltv.phoenixcreations.online/aadhavantamiltv/aadhavantamiltv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jothi Bala TV [Not 24/7] 
+https://jothibalatv.phoenixcreations.online/jothibalatv/jothibalatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Lotus TV 
+https://lotustv.phoenixcreations.online/lotustv/lotustv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thendral TV Ambai 
+https://thendraltv.phoenixcreations.online/thendraltv/thendraltv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",NTV Nellai 
+https://ntv.phoenixcreations.online/ntv/ntv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sky Media 
+https://skymedia.phoenixcreations.online/skymedia/skymedia/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Magizh TV 
+https://magizhtv.phoenixcreations.online/magizhtv/magizhtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thirumalai TV Vadipatti 
+https://ipcloud.live/thirumalaitv/madurai/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Maa TV 
+https://live.singamcloud.in/maatv/maatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SS TV Nagercoil 
+https://server.sscloud7.in/live/sshd/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",PCV Channel 
+https://stream.sscloud7.in/live/livepcv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",JR Malar TV 
+https://server.sscloud7.in/live/malartv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jith TV 
+https://sscloud7.com/live/jithtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Bhakthi TV 
+https://live.sscloud7.in/live/bhakthitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sky TV 
+https://sscloud7.com/live/skytv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Boys TV 
+https://rtmp.applelive.in/boystv/boystv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",V TV 
+https://live.applelive.in/vtv/vtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Maniway TV 
+https://live.singamcloud.in/bsctv/bsctv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Raghul TV 
+http://alk.sscloud7.in:1935/live/raghultv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",King TV Alangulam 
+https://server.sscloud7.in/kingtv/kingtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Devi TV 
+http://server.mindspell.in/live/devitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Vinayaka TV 
+http://server.mindspell.in/live/vinayagatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sri Thangamalai Murugan Tv 
+http://server3.sscloud7.in:1935/stmtv/srithangamalaimurugantv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",KM Music 
+http://168.220.233.77:1935/kmmusic/kmmusic/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Velavan TV 
+http://velavantv.sscloud7.in/live/velavantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sky TV Karur 
+https://view.rcserver.in/tmp_hls6/skytv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Udhayam TV 
+https://view.rcserver.in/tmp_hls8/udhayamtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jayam TV Karur 
+https://view.rcserver.in/tmp_hls10/jayamtvkarur/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jeyasubbu TV 
+https://view.rcserver.in/tmp_hls13/jeyasubbumovies/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Tamilnesan TV 
+https://view.rcserver.in/tmp_hls14/tntv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sentamil TV 
+https://view.rcserver.in/tmp_hls15/senthamiltv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Karur TV 
+https://view.rcserver.in/tmp_hls16/karurtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Karur City 
+https://view.rcserver.in/tmp_hls17/karurcity/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Apple TV 
+https://view.rcserver.in/tmp_hls18/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Amma Vision 
+https://view.rcserver.in/tmp_hls19/ammavision/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jayam TV 
+https://view.rcserver.in/tmp_hls20/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",QMax Plus 
+https://view.rcserver.in/tmp_hls21/qmaxtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thirai TV 
+https://view.apserver.in/tmp_hls2/thiraitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thirai Isai 
+https://view.apserver.in/tmp_hls1/thiraitvplus/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",BK TV 
+https://view.apserver.in/tmp_hls3/bktv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Dhejes TV 
+https://view.apserver.in/tmp_hls4/lingaatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",OPV TV 
+https://view.apserver.in/tmp_hls5/opvtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",MR TV 
+https://view.apserver.in/tmp_hls8/mrtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Like TV [Not 24/7] 
+https://view.apserver.in/tmp_hls9/liketv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Everest TV 
+https://view.apserver.in/tmp_hls11/everesttv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Leaf TV 
+https://view.apserver.in/tmp_hls15/leaftv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sky TV (TCCL) 
+https://uiptv.iptv.pics/hls/skytv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",S Max TV 
+http://play.applelive.in/smaxtv/smaxtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Panjami TV 
+https://uiptv.iptv.pics/hls/tcclamman/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thentamil TV 
+https://gem.inet.moe/hls/thentamill.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Dharumai Adeenam TV 
+https://stream.onecloudlive.in/taitaltv/livetv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Bharathi TV 
+https://server.sscloud7.in/live/bharathitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Ajay TV 
+https://server.sscloud7.in/live/ajaytv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Ayya Vaikuntar TV 
+https://server.sscloud7.in/live/ayyatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thendral TV Theni 
+https://sscloud7.com/live/thendraltv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Vinayaga TV 
+http://server.mindspell.in/live/vinayagatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Izzath TV 
+https://live.olidigital.in/izzathtv/izzathtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Eason TV 
+https://amigofx.com:1936/easontv/easontv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Senthur TV 
+https://senthurtv-hls.suriyantv.in/live/senthurtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thogai TV 
+https://saran.phoenixcreations.online/thogaitv/thogaitv/playlist.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil", Nilgiris Dist."
+https://rtmp.bmlive.net/ctn/ctntn/stream.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sri Velavan TV 
+https://rtmp.applelive.in/srivelavantvultrahd/srivelavantvultrahd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Ashoka Channel 
+http://ashokatv.stream.ashokadigital.net/ashokaslm/ashokatv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Cuddalore Voice TV 
+http://voicetv.stream.ashokadigital.net:8080/voicetv/voicetvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Irattaipaathai TV 
+https://account31.livebox.co.in/IRATTAIPAATHAITVhls/live.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",MS Mathan TV 
+http://madhantv.phoenixcreations.online/madhantv/madhantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Velan TV 
+http://velantv.phoenixcreations.online/velantv/velantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Kovai TV 
+https://account31.livebox.co.in/Kovaitvhls/live.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Emperor TV 
+https://rtmp.bmlive.net/bms/emperortv/stream.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jayam TV 
+https://ipcloud.live/jayamtv/jayamtvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jayam TV Namakkal 
+https://rtmp.bmlive.net/bms/jayamtv/stream.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",MCN TV 
+https://play.applelive.in/mcntv/mcntv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",STN TV 
+https://play.applelive.in/stntv/stntv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Enthiran TV 
+https://live.applelive.in/enthirantv/enthirantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Anbudan TV 
+https://rtmp.applelive.in/anbudantv/anbudantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Thillai TV 
+https://stream.onecloudlive.in/tcn/tcntv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Malligai TV 
+https://server.sscloud7.in/live/malligai/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SS TV 
+https://mumbai-edge.smartplaytv.in/sstvTamil/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",BSC Old 
+https://stream.onecloudlive.in/bschd/live/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Anbu TV [RTMP] 
+rtmp://rtmp.bmlive.net:1935/bms/anbutvhd
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Shalini TV Kanchipuram [RTMP] 
+rtmp://103.78.164.62/static/SHALINITVHD
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",MM TV [RTMP] 
+rtmp://103.78.164.62/static/MMTVHD
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",MM Classic [RTMP] 
+rtmp://103.78.164.62/static/MMCLASSIC
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SSS TV [RTMP] 
+rtmp://103.78.164.62/static/SSSHD
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Q TV [RTMP] 
+rtmp://103.78.164.62/static/QTVHD
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",RC Music 
+https://view.rcserver.in/tmp_hls2/stream/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Kaalai TV 
+https://view.rcserver.in/tmp_hls22/kaalaitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SK TV 
+https://view.rcserver.in/tmp_hls23/sktv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",SK Music 
+https://view.rcserver.in/tmp_hls26/skmusic/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Mei Alai 
+https://view.rcserver.in/tmp_hls24/meialai/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Chen TV 
+https://view.apserver.in/tmp_hls16/chentv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Chen Plus 
+https://view.apserver.in/tmp_hls7/chenplus/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Bass TV 
+http://xstream.onecloudlive.in:8080/bass/basstv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Delta TV 
+https://stream.onecloudlive.in/deltatv/deltatvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Jai TV 
+https://play.applelive.in/jaitv/jaitv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",CTN Channel 
+https://live.olidigital.in/ctnchannel/ctnchannel/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",King TV Ranipet 
+https://ipcloud.live/kingtv/kingtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Yatra TV 
+https://live.rojatv.cloud/yatra/tv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Suriyan TV 
+https://view.rcserver.in/tmp_hls9/suriyantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",NRS Channel 
+https://notvstream.in/nrstv/nrstv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Tiruppur Voice TV 
+https://notvstream.in/tirupurvoicetv/tirupurvoicetv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Mayuri TV 
+https://server.sscloud7.in/live/mayuritvtvl/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",G TV 
+https://live.singamcloud.in/gtv/gtv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sri Vasanth TV 
+https://play.applelive.in/vasanthtv/vasanthtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",MDN TV 
+https://account18.livebox.co.in/IMAGESEQUENCEhls/live.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Garudan TV 
+https://play.applelive.in/hls/garudantv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",GSJK TV 
+https://live.brightmeltech.in/gsjktv/gsjktv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Ramya TV 
+https://live.brightmeltech.in/ramyatv/ramyatv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Raja TV 
+https://live.brightmeltech.in/rajatv/rajatv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",V TV 
+https://play.applelive.in/vtv/vtv.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Max TV 
+https://stream.onecloudlive.in/maxtv/maxtvtenkasi/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Aarthi TV 
+http://198.144.149.206:8080/NOTV/AARTHITV/index.m3u8?token=GTR
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Sky TV 
+http://198.144.149.206:8080/NOTV/SKYTV/index.m3u8?token=GTR
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Kanchi TV 
+http://198.144.149.206:8080/NOTV/KANCHITV/index.m3u8?token=GTR
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Yaal TV 
+http://198.144.149.206:8080/NOTV/YAALTV/index.m3u8?token=GTR
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Raghul TV 
+http://alk.sscloud7.in/live/raghultv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",A1 TV 
+http://stream.ashokadigital.net/aonetv/aonetvhd/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Bharathi TV 
+https://stream.onecloudlive.in/karnan/bharathitv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Eesan TV 
+https://live.singamcloud.in/eesantv/eesantv/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Vajram TV 
+https://app.ashokadigital.net/app/68b001a0/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Vajra TV 
+https://app.ashokadigital.net/app/ad04b02c/index.m3u8
+#EXTINF:-1 group-title="RJM | Local" tvg-category="Tamil",Citi Channel 
+https://app.ashokadigital.net/cititv/cititvhd/index.m3u8
