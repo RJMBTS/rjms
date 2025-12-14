@@ -1,8 +1,8 @@
 #EXTM3U billed-msg="RJM Tv - RJMBTS Network"
 # Pushed and Updated by Kittujk
 # Coded & Maintained @RJMBTS
-# Last updated on : 2025-12-14 15:47:36 IST
-# Channels : Total - 103 | Updated - 103
+# Last updated on : 2025-12-14 16:52:48 IST
+# Channels : Total - 103 | Updated - 99
 
 #EXTINF:-1 group-title="Local | Malayalam" tvg-category="Local",BIGG BOSS MALAYALAM 
 https://crimson-sea-7857.aayushmansinghrajpurohit95.workers.dev/480610.m3u8
@@ -42,14 +42,6 @@ https://crimson-sea-7857.aayushmansinghrajpurohit95.workers.dev/5903.m3u8
 https://crimson-sea-7857.aayushmansinghrajpurohit95.workers.dev/5904.m3u8
 #EXTINF:-1 group-title="Local | Malayalam" tvg-category="Local",SURYA TV USA 
 https://crimson-sea-7857.aayushmansinghrajpurohit95.workers.dev/5902.m3u8
-#EXTINF:-1 group-title="Local | Malayalam" tvg-category="Local",SURYA MOVIES 
-https://crimson-sea-7857.aayushmansinghrajpurohit95.workers.dev/5941.m3u8
-#EXTINF:-1 group-title="Local | Malayalam" tvg-category="Local",SURYA COMEDY 
-https://crimson-sea-7857.aayushmansinghrajpurohit95.workers.dev/5940.m3u8
-#EXTINF:-1 group-title="Local | Malayalam" tvg-category="Local",SURYA MOVIES USA 
-https://crimson-sea-7857.aayushmansinghrajpurohit95.workers.dev/5942.m3u8
-#EXTINF:-1 group-title="Local | Malayalam" tvg-category="Local",SURYA MUSIC 
-https://crimson-sea-7857.aayushmansinghrajpurohit95.workers.dev/5944.m3u8
 #EXTINF:-1 group-title="Local | Malayalam" tvg-category="Local",MAZAHIL MANORAMA USA 
 https://crimson-sea-7857.aayushmansinghrajpurohit95.workers.dev/5906.m3u8
 #EXTINF:-1 group-title="Local | Malayalam" tvg-category="Local",MAZAHIL MANORAMA USA HD 
