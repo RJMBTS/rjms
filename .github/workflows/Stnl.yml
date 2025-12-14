@@ -1,4 +1,4 @@
-name: STL Master 🌐
+name: Stnl 🌐
 
 on:
   workflow_dispatch:
@@ -73,18 +73,24 @@ jobs:
           total=$(grep -c '^#EXTINF' "$tmpdir/all.m3u" || echo 0)
           updated=$(grep -c '^#EXTINF' "$tmpdir/all_unique.m3u" || echo 0)
 
-          # ===== FORCE GROUPING =====
+          # ===== FORCE GROUPING (NO sub(), SAFE METHOD) =====
           echo "📂 Grouping all channels → RJM | Local → Tamil"
 
           awk '
             /^#EXTINF/ {
-              info=$0
-              gsub(/group-title="[^"]*"/, "", info)
-              gsub(/tvg-category="[^"]*"/, "", info)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Local\" tvg-category=\"Tamil\"", info)
+              line=$0
+
+              # Extract channel name (after first comma)
+              split(line, a, ",")
+              name=a[2]
+
+              # Build fresh EXTINF line
+              info="#EXTINF:-1 group-title=\"RJM | Local\" tvg-category=\"Tamil\"," name
+
               getline url
               gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", url)
               if (url=="") next
+
               print info
               print url
             }
