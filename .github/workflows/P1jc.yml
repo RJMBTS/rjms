@@ -42,7 +42,7 @@ jobs:
           # Remove all existing group-title attributes
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/tmp1.m3u"
 
-          # IMPORTANT FIX: Do NOT collapse whitespace — it breaks EXTINF blocks
+          # IMPORTANT FIX: Do NOT collapse whitespace
           cp "$tmpdir/tmp1.m3u" "$tmpdir/tmp2.m3u"
 
           #############################################
@@ -58,18 +58,12 @@ jobs:
 
           /^#EXTINF/ {
               line = $0
-
-              # Split at first comma (EXTINF attrs, channel name)
               split(line, a, ",")
               attrs = a[1]
               name = trim(a[2])
 
-              # Remove ANY variation of #EXTINF prefix
               gsub(/^#EXTINF[^ ]* */, "", attrs)
 
-              #############################
-              # COLORS GROUP
-              #############################
               if (name ~ /^Colors/ ||
                   name ~ /Cineplex/ ||
                   name ~ /^MTV/ ||
@@ -82,9 +76,6 @@ jobs:
                   next
               }
 
-              #############################
-              # VIACOM18 GROUP
-              #############################
               if (name ~ /News18/ ||
                   name ~ /^CNBC/ ||
                   name ~ /TV18/) {
@@ -93,7 +84,6 @@ jobs:
                   next
               }
 
-              # Default output
               print line
               next
           }
@@ -101,15 +91,21 @@ jobs:
           { print }
           ' "$tmpdir/tmp2.m3u" > "$tmpdir/final.m3u"
 
-          UPDATED=$(grep -c "^#EXTINF" "$tmpdir/final.m3u")
+          # ✅ Count channels (NO dedupe → Total = Updated)
+          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
           TOTAL="$UPDATED"
 
+          # ✅ Write FINAL HEADER with COUNTS
           {
-            echo "#EXTM3U"
-            echo "# Last updated: $timestamp"
-            echo "# Channels: Total - $TOTAL"
+            echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
+            echo "# Pushed and Updated by Kittujk"
+            echo "# Coded & Maintained @RJMBTS"
+            echo "# Last updated on : $timestamp"
+            echo "# Channels : Total - $TOTAL | Updated - $UPDATED"
+            echo ""
           } > "$OUTPUT"
 
+          # ✅ Append playlist (no deduplication)
           cat "$tmpdir/final.m3u" >> "$OUTPUT"
 
           echo "file-ready=true" >> $GITHUB_OUTPUT
