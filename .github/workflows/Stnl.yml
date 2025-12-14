@@ -7,7 +7,7 @@ on:
     - cron: "30 0 * * *"
 
 concurrency:
-  group: stl-m3u
+  group: stnl-m3u
   cancel-in-progress: false
 
 permissions:
@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🧩 Build Stl.m3u (RJM | Local → Tamil)
+      - name: 🧩 Build Stnl.m3u (Local | Tamil)
         shell: bash
         env:
           TZ: "Asia/Kolkata"
@@ -37,7 +37,7 @@ jobs:
           timestamp=$(date +"%Y-%m-%d %H:%M:%S %Z")
 
           mkdir -p Bishop
-          out_file="Bishop/Stl.m3u"
+          out_file="Bishop/Stnl.m3u"
 
           SRC_URL="https://raw.githubusercontent.com/amazeyourself/tamil-local-iptv/refs/heads/main/channels.m3u"
 
@@ -73,19 +73,15 @@ jobs:
           total=$(grep -c '^#EXTINF' "$tmpdir/all.m3u" || echo 0)
           updated=$(grep -c '^#EXTINF' "$tmpdir/all_unique.m3u" || echo 0)
 
-          # ===== FORCE GROUPING (NO sub(), SAFE METHOD) =====
-          echo "📂 Grouping all channels → RJM | Local → Tamil"
+          # ===== FORCE GROUPING (SAFE METHOD) =====
+          echo "📂 Grouping all channels → Local | Tamil"
 
           awk '
             /^#EXTINF/ {
-              line=$0
-
-              # Extract channel name (after first comma)
-              split(line, a, ",")
+              split($0, a, ",")
               name=a[2]
 
-              # Build fresh EXTINF line
-              info="#EXTINF:-1 group-title=\"RJM | Local\" tvg-category=\"Tamil\"," name
+              info="#EXTINF:-1 group-title=\"Local | Tamil\" tvg-category=\"Local\"," name
 
               getline url
               gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", url)
@@ -109,22 +105,22 @@ jobs:
           # ===== MERGE =====
           cat "$tmpdir/grouped.m3u" >> "$out_file"
 
-          echo "✅ Bishop/Stl.m3u generated successfully"
+          echo "✅ Bishop/Stnl.m3u generated successfully"
           echo "📺 Total: $total | ♻️ Updated: $updated"
 
-      - name: 🚀 Commit & Push Stl.m3u
+      - name: 🚀 Commit & Push Stnl.m3u
         shell: bash
         run: |
           set -euxo pipefail
           git config user.name "RJMBTS Auto Builder"
           git config user.email "actions@github.com"
 
-          git add Bishop/Stl.m3u || true
+          git add Bishop/Stnl.m3u || true
 
           if git diff --cached --quiet; then
             echo "No changes — skipping commit."
           else
-            git commit -m "🔄 Auto-update Bishop/Stl.m3u (RJM | Local → Tamil)"
+            git commit -m "🔄 Auto-update Bishop/Stnl.m3u (Local | Tamil)"
             git pull --rebase origin main || git rebase --abort
             git push origin main || echo "⚠️ Push failed"
           fi
