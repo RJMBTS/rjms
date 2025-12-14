@@ -1,0 +1,132 @@
+name: SML Master 🌐
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs once every 24 hours (00:30 UTC = 06:00 IST)
+    - cron: "30 0 * * *"
+
+concurrency:
+  group: sml-m3u
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🧩 Build Sml.m3u (RJM | Local → Malayalam | No Movies 24x7)
+        shell: bash
+        env:
+          TZ: "Asia/Kolkata"
+        run: |
+          set -euxo pipefail
+
+          tmpdir=$(mktemp -d)
+          trap 'rm -rf "$tmpdir"' EXIT
+
+          timestamp=$(date +"%Y-%m-%d %H:%M:%S %Z")
+
+          mkdir -p Bishop
+          out_file="Bishop/Sml.m3u"
+
+          SRC_URL="https://raw.githubusercontent.com/usernameplay/playlistghd.m3u/refs/heads/main/mallutv.m3u"
+
+          echo "🌐 Fetching source:"
+          echo "$SRC_URL"
+
+          # ===== FETCH & CLEAN SOURCE =====
+          if ! curl -fsSL --max-time 60 "$SRC_URL" \
+            | grep -v -E '^#EXTM3U|#Generated on' \
+            > "$tmpdir/all.m3u"; then
+            echo "❌ Failed to fetch source"
+            exit 1
+          fi
+
+          # ===== DEDUPLICATION =====
+          echo "🧹 Removing duplicates..."
+          awk '
+            /^#EXTINF/ {
+              info=$0
+              gsub(/[[:space:]]+/, " ", info)
+              getline url
+              gsub(/[[:space:]]+/, "", url)
+              if (url=="") next
+              key = info "|" url
+              if (!(key in seen)) {
+                seen[key]=1
+                print info
+                print url
+              }
+            }
+          ' "$tmpdir/all.m3u" > "$tmpdir/all_unique.m3u"
+
+          total=$(grep -c '^#EXTINF' "$tmpdir/all.m3u" || echo 0)
+
+          # ===== FORCE GROUPING + REMOVE ONLY MOVIES 24x7 =====
+          echo "📂 Grouping → RJM | Local → Malayalam (Movies 24x7 removed)"
+
+          awk '
+            /^#EXTINF/ {
+              split($0, a, ",")
+              name=a[2]
+
+              lname=tolower(name)
+
+              # ❌ Skip ONLY Movies 24x7 channels
+              if (lname ~ /movies/ && lname ~ /24x7/) next
+
+              info="#EXTINF:-1 group-title=\"RJM | Local\" tvg-category=\"Malayalam\"," name
+
+              getline url
+              gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", url)
+              if (url=="") next
+
+              print info
+              print url
+            }
+          ' "$tmpdir/all_unique.m3u" > "$tmpdir/grouped.m3u"
+
+          updated=$(grep -c '^#EXTINF' "$tmpdir/grouped.m3u" || echo 0)
+
+          # ===== FINAL HEADER =====
+          {
+            echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
+            echo "# Pushed and Updated by Kittujk"
+            echo "# Coded & Maintained @RJMBTS"
+            echo "# Last updated on : $timestamp"
+            echo "# Channels : Total - $total | Updated - $updated"
+            echo ""
+          } > "$out_file"
+
+          # ===== MERGE =====
+          cat "$tmpdir/grouped.m3u" >> "$out_file"
+
+          echo "✅ Bishop/Sml.m3u generated successfully"
+          echo "📺 Total fetched: $total | After filter: $updated"
+
+      - name: 🚀 Commit & Push Sml.m3u
+        shell: bash
+        run: |
+          set -euxo pipefail
+          git config user.name "RJMBTS Auto Builder"
+          git config user.email "actions@github.com"
+
+          git add Bishop/Sml.m3u || true
+
+          if git diff --cached --quiet; then
+            echo "No changes — skipping commit."
+          else
+            git commit -m "🔄 Auto-update Bishop/Sml.m3u (Malayalam | No Movies 24x7)"
+            git pull --rebase origin main || git rebase --abort
+            git push origin main || echo "⚠️ Push failed"
+          fi
