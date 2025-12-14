@@ -22,9 +22,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build P1js.m3u
-        id: buildfile
         run: |
           set -e
+
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
           tmpdir=$(mktemp -d)
 
@@ -32,92 +32,34 @@ jobs:
           OUTPUT="Bishop/P1js.m3u"
           SRC_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u"
 
+          echo "⬇️ Downloading source playlist..."
           curl -fsSL "$SRC_URL" -o "$tmpdir/raw.m3u"
 
-          grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram|#Generated on' \
-            "$tmpdir/raw.m3u" > "$tmpdir/clean.m3u"
+          # ✅ Count channels (NO dedupe → Total = Updated)
+          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/raw.m3u" || true)
+          TOTAL="$UPDATED"
 
-          sed -i 's/@ygxworld//g' "$tmpdir/clean.m3u"
-
-          awk '
-          BEGIN { IGNORECASE=1 }
-
-          /^#EXTINF/ {
-            line=$0
-            getline url
-            channel=line
-            sub(/^.*,/, "", channel)
-
-            ## 🧸 KIDS
-            if (channel ~ /(Disney|Hungama|Nick|Sonic|Pogo|Cartoon|Discovery Kids|Sony Yay|Chutti|Kushi|Kochu|Chintu|Kids|Junior)/ || line ~ /group-title="[^"]*Kids[^"]*"/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Kids\"", line)
-            }
-
-            ## 📰 VIACOM18 → CNN / CNBC / NEWS18
-            else if (channel ~ /(CNN|CNBC|News18)/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Viacom18\"", line)
-            }
-
-            ## 📘 INFOTAINMENT
-            else if (channel ~ /(Nat[ ]*Geo|National Geographic|Discovery|Animal Planet|History|Sony BBC Earth|TLC)/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Infotainment\"", line)
-            }
-
-            ## 📺 ETV
-            else if (channel ~ /ETV/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | ETv Win\"", line)
-            }
-
-            ## 🌞 SUN NETWORK
-            else if (channel ~ /(Sun TV|Sun HD|Sun Life|KTV|Gemini|Udaya|Surya)/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | SunNxt\"", line)
-            }
-
-            ## ⭐ STAR
-            else if (channel ~ /(Star|Asianet|Vijay|Maa|Suvarna|Pravah|Utsav)/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Star\"", line)
-            }
-
-            ## 🎨 COLORS
-            else if (channel ~ /Colors/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              sub(/^#EXTINF[^,]*/, "& group-title=\"RJM | Colors\"", line)
-            }
-
-            print line
-            print url
-            next
-          }
-
-          { print }
-          ' "$tmpdir/clean.m3u" > "$tmpdir/final.m3u"
-
-          COUNT=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
-
+          # ✅ Write FINAL HEADER with COUNTS
           {
-            echo '#EXTM3U billed-msg="RJMS - An RJMBTS Network"'
+            echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
+            echo "# Pushed and Updated by Kittujk"
+            echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated: $timestamp"
-            echo "# Channels : $COUNT"
+            echo "# Include Channels : Total - $TOTAL | Updated - $UPDATED"
             echo ""
           } > "$OUTPUT"
 
-          cat "$tmpdir/final.m3u" >> "$OUTPUT"
-          echo "file-ready=true" >> $GITHUB_OUTPUT
+          # ✅ Append playlist (no deduplication)
+          cat "$tmpdir/raw.m3u" >> "$OUTPUT"
 
-      - name: Commit and push
-        if: steps.buildfile.outputs.file-ready == 'true'
+          echo "✅ P1js.m3u created successfully."
+          echo "📊 Total: $TOTAL | Updated: $UPDATED"
+
+      - name: Commit and push changes
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
-          git add Bishop/P1js.m3u
-          if ! git diff --cached --quiet; then
-            git pull --rebase origin main || true
-            git commit -m "P1js Update | Viacom18 enforced"
-            git push origin main
-          fi
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add Bishop/knight.m3u
+          git commit -m "Auto update P1js.m3u" || echo "No changes to commit"
+          git push
