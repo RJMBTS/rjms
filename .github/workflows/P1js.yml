@@ -45,7 +45,7 @@ jobs:
             echo "# Pushed and Updated by Kittujk"
             echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated on : $timestamp"
-            echo "# Include Channels : Total - $TOTAL | Updated - $UPDATED"
+            echo "# Channels : Total - $TOTAL | Updated - $UPDATED"
             echo ""
           } > "$OUTPUT"
 
