@@ -24,27 +24,21 @@ jobs:
       - name: Build Rook.m3u from selected Bishop sources
         run: |
           set -e
-
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
           tmpdir=$(mktemp -d)
 
           echo "🔹 Building Rook.m3u at $timestamp"
 
-          # ───────────────
-          # WRITE SINGLE ROOK HEADER (overwrite mode)
-          # ───────────────
+          # Rook header (ONLY Rook channel count)
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
-            echo '# Pushed and Updated by Kittujk'
-            echo '# Scripted & Maintained by @RJMBTS'
-            echo '# Channels : Total - 0 | Updated - 0'
+            echo "# Pushed and Updated by Kittujk"
+            echo "# Scripted & Maintained by @RJMBTS"
+            echo "# Channels : Total - 0 | Updated - 0"
             echo "# Last updated: $timestamp"
-            echo ""
           } > Rook.m3u
 
-          # ───────────────
-          # SOURCE LIST
-          # ───────────────
+          # Explicit source list
           cat <<EOF > "$tmpdir/sources.txt"
           Bishop/P1js.m3u
           Bishop/P1s.m3u
@@ -62,37 +56,20 @@ jobs:
             printf -v idx "%03d" "$i"
 
             echo "✅ Adding $file"
-
-            # ───────────────
-            # STRIP ALL SOURCE HEADERS COMPLETELY
-            # ───────────────
-            grep -vi -E \
-            '^#EXTM3U|\
-            ^#\s*(pushed|coded|scripted).*maintained|\
-            ^#\s*last\s*updated|\
-            ^#\s*channels\s*:|\
-            join\s*telegram' \
-            "$file" > "$tmpdir/part_$idx.m3u" || true
-
+            grep -vi -E '^#EXTM3U|pushed and updated by|scripted & maintained|join telegram|^# Channels\s*:' \
+              "$file" > "$tmpdir/part_$idx.m3u" || true
           done < "$tmpdir/sources.txt"
 
-          # ───────────────
-          # COMBINE CLEAN PARTS
-          # ───────────────
+          # Combine parts
           for part in "$tmpdir"/part_*.m3u; do
-            [ -s "$part" ] || continue
-            cat "$part" >> Rook.m3u
             echo "" >> Rook.m3u
+            cat "$part" >> Rook.m3u
           done
 
-          # ───────────────
-          # COUNT CHANNELS
-          # ───────────────
+          # Count Rook channels
           total_channels=$(grep -c '^#EXTINF' Rook.m3u || true)
 
-          # ───────────────
-          # UPDATE HEADER COUNT
-          # ───────────────
+          # Update header count
           sed -i "s/# Channels : Total - 0 | Updated - 0/# Channels : Total - $total_channels | Updated - $total_channels/" Rook.m3u
 
           echo "✅ Rook.m3u built with $total_channels channels."
@@ -101,7 +78,6 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-
           git add Rook.m3u
 
           if ! git diff --cached --quiet; then
