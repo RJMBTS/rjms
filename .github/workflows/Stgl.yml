@@ -71,7 +71,7 @@ jobs:
 
           total=$(grep -c '^#EXTINF' "$tmpdir/all_unique.m3u" || echo 0)
 
-          # ===== ADVANCED GROUPING LOGIC =====
+          # ===== SMART GROUPING (POSIX SAFE) =====
           echo "📂 Smart grouping → ETV vs Telugu Local"
 
           awk -v IGNORECASE=1 '
@@ -92,15 +92,8 @@ jobs:
               # Normalize text
               text = tolower(name " " tvgid " " tvglogo)
 
-              # ===== SMART ETV DETECTION =====
-              if (
-                   text ~ /\betv\b/ ||
-                   text ~ /\betv hd\b/ ||
-                   text ~ /\betv telugu\b/ ||
-                   text ~ /\betv plus\b/ ||
-                   text ~ /\betv cinema\b/ ||
-                   text ~ /\betv win\b/
-                 ) {
+              # ===== ETV DETECTION =====
+              if (text ~ /\betv\b/ || text ~ /\betv hd\b/ || text ~ /\betv telugu\b/ || text ~ /\betv plus\b/ || text ~ /\betv cinema\b/ || text ~ /\betv win\b/) {
                 group="RJM | ETV Win"
               } else {
                 group="Telugu | Local"
