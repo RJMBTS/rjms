@@ -28,6 +28,7 @@ jobs:
         shell: bash
         env:
           TZ: "Asia/Kolkata"
+          SRC_URL: ${{ secrets.SMLY_URL }}
         run: |
           set -euxo pipefail
 
@@ -39,9 +40,7 @@ jobs:
           mkdir -p Bishop
           out_file="Bishop/Smly.m3u"
 
-          SRC_URL="https://raw.githubusercontent.com/usernameplay/playlistghd.m3u/refs/heads/main/mallutv.m3u"
-
-          echo "🌐 Fetching source:"
+          echo "🌐 Fetching source from secret:"
           echo "$SRC_URL"
 
           # ===== FETCH & CLEAN SOURCE =====
