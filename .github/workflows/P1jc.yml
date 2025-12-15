@@ -21,16 +21,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build P1jc.m3u (OTT Navigator Compatible Grouping)
-        id: buildfile
+      - name: Build P1jc.m3u
+        env:
+          SRC_URL: ${{ secrets.JCINEMA_URL }}
         run: |
           set -e
+          
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
           tmpdir=$(mktemp -d)
 
           mkdir -p Bishop
           OUTPUT="Bishop/P1jc.m3u"
-          JC_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jcinema.m3u"
 
           echo "🌐 Fetching playlist..."
           curl -fsSL "$JC_URL" -o "$tmpdir/jc_raw.m3u"
