@@ -23,10 +23,9 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Merge Live (master) + Media Library (Queen)
+      - name: Merge Live + Media Library (TV Series fully removed)
         run: |
           set -e
-
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
 
           {
@@ -35,58 +34,42 @@ jobs:
             echo "# Last updated: $timestamp"
           } > King.m3u
 
-          # ==========================
-          # 🔴 LIVE STREAMS (MASTER)
-          # Remove TV Series only
-          # ==========================
-          echo "🔴 Adding Live Streams (TV Series removed)"
-
+          # 🔴 LIVE STREAMS (MASTER) – remove TV Series
           curl -fs "https://raw.githubusercontent.com/RJMBTS/Rjms/refs/heads/main/master.m3u" \
             | sed '1{/^#EXTM3U/d}' \
             | awk '
-                BEGIN { skip=0 }
-
-                /group-title="TV Series"/ {
-                  skip=1; next
-                }
-
-                skip==1 && /^[^#]/ {
-                  skip=0; next
-                }
-
-                skip==0 { print }
-              ' >> King.m3u
+              BEGIN { IGNORECASE=1; skip=0 }
+              /^#EXTINF/ && /group-title=.*tv.*series/ { skip=1; next }
+              skip==1 && /^[^#]/ { skip=0; next }
+              skip==0 { print }
+            ' >> King.m3u
 
           echo "" >> King.m3u
 
-          # ==========================
-          # 🎬 MEDIA LIBRARY (QUEEN)
-          # ==========================
-          echo "🎬 Adding Media Library (Queen)"
-
+          # 🎬 MEDIA LIBRARY (QUEEN) – remove TV Series completely
           curl -fs "https://raw.githubusercontent.com/RJMBTS/Xfpl/refs/heads/main/Queen.m3u" \
             | sed '1{/^#EXTM3U/d}' \
             | awk '
-                /^#EXTINF/ {
-                  if ($0 !~ /tvg-type="vod"/) {
-                    sub(/^#EXTINF:/, "#EXTINF:-1 tvg-type=\"vod\" ", $0)
-                  }
+              BEGIN { IGNORECASE=1; skip=0 }
+              /^#EXTINF/ && /group-title=.*tv.*series/ { skip=1; next }
+              skip==1 && /^[^#]/ { skip=0; next }
+              /^#EXTINF/ {
+                if ($0 !~ /tvg-type="vod"/) {
+                  sub(/^#EXTINF:/, "#EXTINF:-1 tvg-type=\"vod\" ", $0)
                 }
-                { print }
-              ' >> King.m3u
+              }
+              skip==0 { print }
+            ' >> King.m3u
 
-          echo "✅ Merge completed (TV Series removed from Live only)"
+          echo "✅ TV Series removed from Live + Media Library"
 
-      - name: Commit and push King.m3u
+      - name: Commit and push
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add King.m3u
-
           if ! git diff --cached --quiet; then
-            git commit -m "Remove TV Series from Live Streams only"
+            git commit -m "Remove TV Series completely (Live + VOD)"
             git pull --rebase origin main || true
             git push origin main
-          else
-            echo "No changes detected"
           fi
