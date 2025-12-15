@@ -21,19 +21,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build P1z.m3u (Z5 Source → group-title "RJM | Z5")
+      - name: Build P1z.m3u (Z5 → RJM | Z5)
         id: buildfile
+        env:
+          SRC_URL: ${{ secrets.Z5_URL }}
         run: |
           set -e
+
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
           tmpdir=$(mktemp -d)
 
           mkdir -p Bishop
           OUTPUT="Bishop/P1z.m3u"
-          Z5_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/z5.m3u"
 
-          echo "🌐 Fetching Z5 playlist..."
-          curl -fs "$Z5_URL" > "$tmpdir/z5_raw.m3u"
+          echo "🌐 Fetching Z5 playlist from secret..."
+          curl -fsSL "$SRC_URL" -o "$tmpdir/z5_raw.m3u"
 
           # Remove unwanted header lines
           grep -v -E '^#EXTM3U|# Pushed and updated by|# Join Telegram' \
@@ -42,14 +44,13 @@ jobs:
           # 1️⃣ Remove ANY existing group-title
           sed -E 's/group-title="[^"]*"//g' "$tmpdir/clean.m3u" > "$tmpdir/no_group.m3u"
 
-          # 2️⃣ Add ONLY one group-title="RJM | Z5" using safe delimiter ~
+          # 2️⃣ Force ALL channels into: RJM | Z5
           sed -E 's~^#EXTINF[^,]*~& group-title="RJM | Z5"~' \
             "$tmpdir/no_group.m3u" > "$tmpdir/final.m3u"
 
           UPDATED=$(grep -c '^#EXTINF' "$tmpdir/final.m3u" || true)
           TOTAL="$UPDATED"
 
-          # Build final P1z.m3u file
           {
             echo '#EXTM3U billed-msg="RJMS - An RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
@@ -62,9 +63,9 @@ jobs:
 
           cat "$tmpdir/final.m3u" >> "$OUTPUT"
 
-          echo "UPDATED=$UPDATED" >> $GITHUB_ENV
-          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
-          echo "file-ready=true" >> $GITHUB_OUTPUT
+          echo "TOTAL=$TOTAL" >> "$GITHUB_ENV"
+          echo "UPDATED=$UPDATED" >> "$GITHUB_ENV"
+          echo "file-ready=true" >> "$GITHUB_OUTPUT"
 
           echo "📁 Output generated at: $OUTPUT"
           echo "📊 Total Channels: $TOTAL"
@@ -76,21 +77,16 @@ jobs:
           git config user.email "actions@github.com"
 
           git add Bishop/P1z.m3u
+          git diff --cached --quiet && echo "No changes — skipping commit." && exit 0
 
-          if ! git diff --cached --quiet; then
-            git commit -m "P1z Update | Total:${TOTAL} Updated:${UPDATED}"
-            git pull --rebase origin main || true
+          git commit -m "P1z Update | Total:${TOTAL} Updated:${UPDATED}"
+          git pull --rebase origin main || true
 
-            n=0
-            until [ "$n" -ge 3 ]; do
-              git push origin main && break
-              n=$((n+1))
-              echo "⚠️ Push failed, retrying in 10s... ($n/3)"
-              sleep 10
-            done
-          else
-            echo "No changes — skipping commit."
-          fi
+          for i in 1 2 3; do
+            git push origin main && break
+            echo "⚠️ Push failed, retrying in 10s... ($i/3)"
+            sleep 10
+          done
 
       - name: Summary
-        run: echo "✅ P1z.m3u build completed successfully at $(date)"
+        run: echo "✅ P1z.m3u build completed successfully"
