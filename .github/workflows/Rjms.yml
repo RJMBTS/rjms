@@ -35,24 +35,32 @@ jobs:
           COUNT=$(grep -c '^#EXTINF' "$TMP" || true)
           TIMESTAMP=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
 
-          TOTAL_CHANNELS="$COUNT"
-          UPDATED_CHANNELS="$COUNT"
-
           echo "🧱 Writing RJMS header..."
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
             echo "# Pushed & Updated by Kittujk"
             echo "# Scripted & Maintained by @RJMBTS"
             echo "# Last updated on : $TIMESTAMP"
-            echo "# Channels : Total - $TOTAL_CHANNELS | Updated - $UPDATED_CHANNELS"
-            echo "# 💝 By Telugu 💝 For Telugu 💝"
+            echo "# Channels : Total - $COUNT | Updated - $COUNT"
+            echo "# Made with ❤ in India"
             echo ""
           } > "$OUTPUT"
 
-          echo "🧹 Removing old headers & appending channels..."
+          echo "🧹 Appending channels only..."
           awk 'BEGIN{start=0} /^#EXTINF/{start=1} start{print}' "$TMP" >> "$OUTPUT"
 
-          echo "✅ master.m3u generated successfully"
+          echo "🔁 Updating ONLY non-RJM group titles..."
+
+          sed -i \
+            -e 's/group-title="Extra"/group-title="RJM | Others"/g' \
+            -e 's/group-title="Bengali"/group-title="RJM | Others"/g' \
+            -e 's/group-title="SunNxt"/group-title="RJM | SunNxt"/g' \
+            -e 's/group-title="Star"/group-title="RJM | Star"/g' \
+            -e 's/group-title="Sony Liv"/group-title="RJM | SLiv"/g' \
+            -e 's/group-title="Tamil"/group-title="RJM | Entertainment"/g' \
+            "$OUTPUT"
+
+          echo "✅ Done. Existing RJM groups untouched."
 
       - name: Commit & Push Playlist
         run: |
@@ -62,5 +70,5 @@ jobs:
           git add master.m3u
           git diff --cached --quiet && echo "ℹ️ No changes to commit" && exit 0
 
-          git commit -m "Auto update master.m3u (RJMS)"
+          git commit -m "Auto update master.m3u (safe group merge)"
           git push
