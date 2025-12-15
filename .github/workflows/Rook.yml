@@ -1,0 +1,87 @@
+name: Rook Data
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: rook-m3u
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Rook.m3u from Bishop folder
+        run: |
+          set -e
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
+          tmpdir=$(mktemp -d)
+
+          echo "🔹 Building Rook.m3u at $timestamp"
+
+          # Header with placeholder counts
+          {
+            echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
+            echo "# Pushed and Updated by Kittujk"
+            echo "# Scripted & Maintained by @RJMBTS"
+            echo "# Channels : Total - 0 | Updated - 0"
+            echo "# Last updated: $timestamp"
+          } > Rook.m3u
+
+          # Collect Bishop sources (exclude ONLY P1j.m3u and P1jc.m3u)
+          find Bishop -type f -name "*.m3u" \
+            ! -name "P1j.m3u" \
+            ! -name "P1jc.m3u" \
+            | sort > "$tmpdir/sources.txt"
+
+          i=0
+          while read -r file; do
+            i=$((i+1))
+            printf -v idx "%03d" "$i"
+
+            echo "✅ Adding $file"
+            grep -vi -E '^#EXTM3U|pushed and updated by|scripted & maintained|join telegram' \
+              "$file" > "$tmpdir/part_$idx.m3u" || true
+          done < "$tmpdir/sources.txt"
+
+          # Combine all parts
+          for part in "$tmpdir"/part_*.m3u; do
+            echo "" >> Rook.m3u
+            cat "$part" >> Rook.m3u
+          done
+
+          # Count channels (#EXTINF)
+          total_channels=$(grep -c '^#EXTINF' Rook.m3u || true)
+
+          # Update header counts
+          sed -i "s/# Channels : Total - 0 | Updated - 0/# Channels : Total - $total_channels | Updated - $total_channels/" Rook.m3u
+
+          echo "✅ Rook.m3u built with $total_channels channels."
+
+      - name: Commit and push Rook.m3u
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add Rook.m3u
+
+          if ! git diff --cached --quiet; then
+            git pull --rebase origin main || true
+            git commit -m "Auto-update Rook.m3u"
+            git push origin main
+          else
+            echo "No changes detected — skipping commit."
+          fi
+
+      - name: Summary
+        run: |
+          echo "✅ Rook.m3u updated successfully"
