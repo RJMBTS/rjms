@@ -1,0 +1,73 @@
+name: King 👑
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # Runs every 15 minutes
+  workflow_dispatch:
+
+concurrency:
+  group: king-m3u
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge M3U sources into King.m3u
+        run: |
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
+          tmpdir=$(mktemp -d)
+
+          echo "🔹 Merging started at $timestamp"
+
+          {
+            echo '#EXTM3U billed-msg="RJMS OTT - RJMBTS Network"'
+            echo "# Coded & Maintained @RJMBTS"
+            echo "# Last updated: $timestamp"
+          } > King.m3u
+
+          SOURCES=(
+            "https://raw.githubusercontent.com/RJMBTS/Rjms/refs/heads/main/master.m3u"
+            "https://raw.githubusercontent.com/RJMBTS/Xfpl/refs/heads/main/Queen.m3u"
+          )
+
+          i=0
+          for url in "${SOURCES[@]}"; do
+            i=$((i+1))
+            if curl -fs "$url" | grep -v -E '^#EXTM3U' > "$tmpdir/part_$i.m3u"; then
+              echo "✅ Added: $url"
+            else
+              echo "⚠️ Failed: $url"
+            fi
+          done
+
+          for part in $(ls -v "$tmpdir"/part_*.m3u 2>/dev/null); do
+            echo "" >> King.m3u
+            cat "$part" >> King.m3u
+          done
+
+          echo "✅ King.m3u merged successfully."
+
+      - name: Commit and push King.m3u
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add King.m3u
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update King.m3u"
+            git pull --rebase origin main || true
+            git push origin main
+          else
+            echo "No changes detected."
+          fi
