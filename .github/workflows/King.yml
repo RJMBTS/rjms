@@ -23,7 +23,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Merge & Clean M3U → King.m3u
+      - name: Merge, Clean & Lock 24x7 → King.m3u
         run: |
           set -e
 
@@ -32,9 +32,9 @@ jobs:
 
           {
             echo '#EXTM3U billed-msg="RJMS OTT - RJMBTS Network"'
-            echo "Pushed & Updated by Kittujk"
+            echo "# Pushed & Updated by Kittujk"
             echo "# Scripted & Maintained by @RJMBTS"
-            echo "# Last updated on : $timestamp"
+            echo "# Last updated: $timestamp"
           } > King.m3u
 
           SOURCES=(
@@ -42,47 +42,60 @@ jobs:
             "https://raw.githubusercontent.com/RJMBTS/Xfpl/refs/heads/main/Queen.m3u"
           )
 
-          i=0
           for url in "${SOURCES[@]}"; do
-            i=$((i+1))
-            curl -fs "$url" | grep -v '^#EXTM3U' > "$tmpdir/src_$i.m3u"
+            curl -fs "$url" | grep -v '^#EXTM3U' >> "$tmpdir/all.m3u"
           done
 
+          # 🔥 CLEAN PLAYLIST (CORRECT)
           awk '
           BEGIN { skip=0 }
 
-          # 🔁 Rename Movies → RJM | 24x7 (only branded ones survive)
+          # ✅ Rename Movies → RJM | 24x7
           /group-title="Movies"/ {
             gsub(/group-title="Movies"/, "group-title=\"RJM | 24x7\"")
           }
 
-          # ❌ Remove Star & Gemini movie channels
+          # ❌ REMOVE ONLY "Telugu Movies" (Local | Telugu Movies card)
+          /#EXTINF/ && /Telugu Movies/ && /group-title="RJM \| 24x7"/ {
+            skip=1; next
+          }
+
+          # ❌ Remove Star & Gemini Movies
           /Star Maa Movies HD|Star Maa Movie|Gemini Movies HD|Gemini Movie/ {
             skip=1; next
           }
 
-          # ❌ Remove TV Series group
+          # ❌ Remove TV Series
           /group-title="TV Series"/ {
             skip=1; next
           }
 
-          # ❌ Remove ONLY Local | Telugu Movies group
-          /Telugu Movies/ && /group-title="RJM \| 24x7"/ {
-            skip=1; next
-          }
-
-          # Skip stream URL after EXTINF
-          skip==1 && /^[^#]/ {
-            skip=0; next
-          }
-
+          skip==1 && /^[^#]/ { skip=0; next }
           skip==0 { print }
-          ' "$tmpdir"/src_*.m3u >> King.m3u
+          ' "$tmpdir/all.m3u" > "$tmpdir/clean.m3u"
+
+          # 🔒 LOCK RJM | 24x7 AT TOP
+          awk '
+          BEGIN { top=""; rest="" }
+
+          /group-title="RJM \| 24x7"/ {
+            top = top $0 ORS
+            getline; top = top $0 ORS
+            next
+          }
+
+          { rest = rest $0 ORS }
+
+          END {
+            printf "%s", top
+            printf "%s", rest
+          }
+          ' "$tmpdir/clean.m3u" >> King.m3u
 
           rm -rf "$tmpdir"
 
-          echo "✅ Only Movies removed from Local | Telugu"
-          echo "✅ RJM | 24x7 kept intact"
+          echo "✅ Telugu Movies (Local | Telugu) REMOVED"
+          echo "🔒 RJM | 24x7 LOCKED AT TOP"
 
       - name: Commit and push King.m3u
         run: |
@@ -91,7 +104,7 @@ jobs:
           git add King.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "Remove Movies from Local | Telugu only"
+            git commit -m "Fix: remove Telugu Movies from Local Telugu"
             git pull --rebase origin main || true
             git push origin main
           else
