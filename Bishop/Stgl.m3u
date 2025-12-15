@@ -1,8 +1,8 @@
 #EXTM3U billed-msg="RJM Tv - RJMBTS Network"
 # Pushed & Updated by — Kittujk
 # Coded & Maintained by @RJMBTS
-# Last updated on : 2025-12-15 12:58:57 IST
-# Channels : Total unique - 275 | Processed - 275
+# Last updated on : 2025-12-15 13:36:21 IST
+# Channels : Total unique - 275 | Processed - 273
 
 #EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", MTV Local 
 https://amigofx.com:1936/mtv/mtv/playlist.m3u8
@@ -212,7 +212,7 @@ http://cache.internode.co.in:6081/S9News/index.m3u8
 http://cache.internode.co.in:6081/BCTNews/index.m3u8
 #EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local",Shreyas TV
 http://cache.internode.co.in:6081/ShreyasTV/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", GeeTV
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", GeeTV
 http://cache.internode.co.in:6081/GeeTV/index.m3u8
 #EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", Tirumala HD
 http://cache.internode.co.in:6081/TirumalaHD/index.m3u8
@@ -432,19 +432,19 @@ https://live.mythrimediaindia.com/knrchannel/knrchannel/index.m3u8
 https://manatv.akamaized.net/120723/smil:manatv2.smil/playlist.m3u8
 #EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", Mana tv international
 https://manatv.akamaized.net/090823/smil:manatvint.smil/playlist.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Plus
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", ETV Plus
 https://d2pk5pedkyu2d0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_PLUS_H264_cloud_in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Cinema
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", ETV Cinema
 https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Life
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", ETV Life
 https://d2cj1h11htct8o.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_LIFE_H264_cloud_in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Telugu
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", ETV Telugu
 https://d1rznlx03muoan.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_HD_H264_cloud_in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Abhiruchi
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", ETV Abhiruchi
 https://dg3721c3ez5m0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_ABHIRUCHI_H264_cloud-in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Telangana
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", ETV Telangana
 https://d37d7pfp7vjqhh.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_TS_H264_cloud_in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Andhra Pradesh
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", ETV Andhra Pradesh
 https://d1g35elx8qnif3.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_AP_H264_cloud_in/index.m3u8
 #EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", Indian Yoga & Wellness TV Telugu
 https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/indian-yoga-and-wellness-tv-telugu/b1c19878-ebfe-4eab-9545-f7eae7636188/2.m3u8
@@ -464,7 +464,7 @@ https://live.drmlive-02.workers.dev/yupptv/fta/t-sat-nipuna.m3u8
 https://keralive.com/yupp/tv.php?c=mahaa-bhakti&e=.m3u8|Referer=https://keralive.com/
 #EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", Mango TV Telugu
 https://amg01911-mangotv-amg01911c1-xiaomi-in-1270.playouts.now.amagi.tv/playlist/amg01911-mangomassmedia-mangotv-xiaomiin/playlist.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ToneTV
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", ToneTV
 https://amg02821-amg02821c1-samsung-in-4717.playouts.now.amagi.tv/playlist/amg02821-objectone-teluguone-samsungin/cb563f0072727b8c9bc92167d5f56294855936d44524dc3567fe06c57494025d84b9a2deec4ab96841cd4e8b3417380008609d1e8d2e07c3882ba2710e454620d986e12499d9432b81e23e2a2090402900aa4d0b847c0700b1837c13b50e9c5d184990630957369ef30df33270f8ba31c01b58e9daa805461d3e12954d67dbf10ae0e1b01d05b738feec4d11cb0d7bddbe09b8b47cd4f4ab26ef3af83bfb38a7aea1df900ed3c6d10cf706ef317b34481782a149a3f67397f7bf740b7210423e76d44d3ef1842c09b5052e69f6f6dfba61bf20da8831847345c36afa61a54047ef376bdd8c60afbfafd7026034a1d6526226da8bc84c56f451cf01dab1e1df666e97b46710f74bf0ba50490eb187a3228dd1129fb82a84fe0e775d92c114cfc4e0c98738ea3bff3da183bc7e1e623723078cbc7f9ca9cd9bb6be32d8ef1e244e4447acd57bc191e6673f7044bcea34b01d14bddef9e3a56e31a9314e0cf001393ad2d52d960adcf60ccf3a294ddc95f48c780ccead7d/156/1920x1080_5129264/index.m3u8
 #EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", Saaksyam TV
 https://live.kpsnetwork.in/kps/kps/index.m3u8
@@ -504,13 +504,13 @@ https://5dd3981940faa.streamlock.net/snewsnpt/snewsnpt/playlist.m3u8
 https://f15f7fbdcd084ff3abb9dc148b69d8b4.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/RUNTHR/index.m3u8
 #EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", Runn Action
 https://d75f61259af04d9ea002d5429c934854.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/RUNACT/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win",ETV Comedy
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local",ETV Comedy
 https://jmp2.uk/stvp-IN4900003U3
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win",ETV News
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local",ETV News
 https://jmp2.uk/stvp-IN4900001AQ
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win",ETV Josh
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local",ETV Josh
 https://jmp2.uk/stvp-IN4900004LP
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win",ETV Music
+#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local",ETV Music
 https://jmp2.uk/stvp-IN4900002RV
 #EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", Bheem Tv
 https://login.bheem.tv/bpk-tv/22094/output/index.mpd
@@ -550,5 +550,3 @@ https://live20.bozztv.com/giatvplayout7/giatv-210787/playlist.m3u8
 http://103.161.31.77:1935/tr9tv/myStream/playlist.m3u8
 #EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", A1 TV
 http://183.82.119.7:1935/a1tv/a1tv/playlist.m3u8
-#EXTINF:-1 group-title="Telugu | Local" tvg-category="Telugu | Local", 
-#EXTINF:-1group-title="TeluguLocalChannel"tvg-logo="",
