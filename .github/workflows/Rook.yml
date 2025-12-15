@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build Rook.m3u from selected Bishop sources
+      - name: Build Rook.m3u (clean sources, Rook stats only)
         run: |
           set -e
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
@@ -29,7 +29,7 @@ jobs:
 
           echo "🔹 Building Rook.m3u at $timestamp"
 
-          # Rook header (ONLY Rook channel count)
+          # Rook header (ONLY Rook statistics)
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
@@ -38,7 +38,7 @@ jobs:
             echo "# Last updated: $timestamp"
           } > Rook.m3u
 
-          # Explicit source list
+          # Explicit allowed sources ONLY
           cat <<EOF > "$tmpdir/sources.txt"
           Bishop/P1js.m3u
           Bishop/P1s.m3u
@@ -54,25 +54,36 @@ jobs:
 
             i=$((i+1))
             printf -v idx "%03d" "$i"
-
             echo "✅ Adding $file"
-            grep -vi -E '^#EXTM3U|pushed and updated by|scripted & maintained|join telegram|^# Channels\s*:' \
-              "$file" > "$tmpdir/part_$idx.m3u" || true
+
+            # 🔥 Strip ALL headers/comments from sources
+            # Keep ONLY:
+            #   - #EXTINF lines
+            #   - Their immediate stream URL lines
+            awk '
+              /^#EXTINF/ {
+                print
+                getline
+                if ($0 !~ /^#/) print
+                next
+              }
+            ' "$file" > "$tmpdir/part_$idx.m3u"
+
           done < "$tmpdir/sources.txt"
 
-          # Combine parts
+          # Combine cleaned parts
           for part in "$tmpdir"/part_*.m3u; do
             echo "" >> Rook.m3u
             cat "$part" >> Rook.m3u
           done
 
-          # Count Rook channels
+          # Count Rook channels ONLY
           total_channels=$(grep -c '^#EXTINF' Rook.m3u || true)
 
-          # Update header count
+          # Update Rook statistics in header
           sed -i "s/# Channels : Total - 0 | Updated - 0/# Channels : Total - $total_channels | Updated - $total_channels/" Rook.m3u
 
-          echo "✅ Rook.m3u built with $total_channels channels."
+          echo "✅ Rook.m3u built cleanly with $total_channels channels."
 
       - name: Commit and push Rook.m3u
         run: |
@@ -82,7 +93,7 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git pull --rebase origin main || true
-            git commit -m "Auto-update Rook.m3u"
+            git commit -m "Auto-update Rook.m3u ♟"
             git push origin main
           else
             echo "No changes detected — skipping commit."
@@ -90,4 +101,4 @@ jobs:
 
       - name: Summary
         run: |
-          echo "✅ Rook ♟ updated successfully"
+          echo "✅ Rook ♟ updated — source headers stripped, Rook stats only"
