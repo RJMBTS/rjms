@@ -46,6 +46,9 @@ jobs:
             echo "# Channels : Total - $TOTAL | Updated - $UPDATED"
             echo ""
           } > "$OUTPUT"
+          
+          # ✅ Append playlist (no deduplication)
+          grep -v '^#Generated on ' "$tmpdir/raw.m3u" >> "$OUTPUT"
 
           awk '
           BEGIN { IGNORECASE=1 }
