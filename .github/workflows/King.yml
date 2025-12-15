@@ -23,7 +23,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Merge Live + Media Library (TV Series fully removed)
+      - name: Merge Live (master) + Media Library (Queen)
         run: |
           set -e
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
@@ -34,34 +34,50 @@ jobs:
             echo "# Last updated: $timestamp"
           } > King.m3u
 
-          # 🔴 LIVE STREAMS (MASTER) – remove TV Series
+          # ==========================
+          # 🔴 LIVE STREAMS (MASTER)
+          # ==========================
           curl -fs "https://raw.githubusercontent.com/RJMBTS/Rjms/refs/heads/main/master.m3u" \
             | sed '1{/^#EXTM3U/d}' \
             | awk '
-              BEGIN { IGNORECASE=1; skip=0 }
-              /^#EXTINF/ && /group-title=.*tv.*series/ { skip=1; next }
-              skip==1 && /^[^#]/ { skip=0; next }
+              BEGIN { skip=0 }
+
+              # Rename Movies → RJM | 24x7
+              /group-title="Movies"/ {
+                gsub(/group-title="Movies"/, "group-title=\"RJM | 24x7\"")
+              }
+
+              # Remove Star Maa & Gemini Movies
+              /Star Maa Movies HD|Star Maa Movie|Gemini Movies HD|Gemini Movie/ {
+                skip=1; next
+              }
+
+              # Skip stream URL after EXTINF
+              skip==1 && /^[^#]/ {
+                skip=0; next
+              }
+
               skip==0 { print }
             ' >> King.m3u
 
           echo "" >> King.m3u
 
-          # 🎬 MEDIA LIBRARY (QUEEN) – remove TV Series completely
+          # ==========================
+          # 🎬 MEDIA LIBRARY (QUEEN)
+          # ==========================
           curl -fs "https://raw.githubusercontent.com/RJMBTS/Xfpl/refs/heads/main/Queen.m3u" \
             | sed '1{/^#EXTM3U/d}' \
             | awk '
-              BEGIN { IGNORECASE=1; skip=0 }
-              /^#EXTINF/ && /group-title=.*tv.*series/ { skip=1; next }
-              skip==1 && /^[^#]/ { skip=0; next }
               /^#EXTINF/ {
                 if ($0 !~ /tvg-type="vod"/) {
                   sub(/^#EXTINF:/, "#EXTINF:-1 tvg-type=\"vod\" ", $0)
                 }
               }
-              skip==0 { print }
+              { print }
             ' >> King.m3u
 
-          echo "✅ TV Series removed from Live + Media Library"
+          echo "✅ Movies renamed to RJM | 24x7"
+          echo "❌ Star Maa & Gemini Movies removed from Live"
 
       - name: Commit and push
         run: |
@@ -69,7 +85,7 @@ jobs:
           git config user.email "actions@github.com"
           git add King.m3u
           if ! git diff --cached --quiet; then
-            git commit -m "Remove TV Series completely (Live + VOD)"
+            git commit -m "Rename Movies to RJM | 24x7 & remove Star/Gemini Movies"
             git pull --rebase origin main || true
             git push origin main
           fi
