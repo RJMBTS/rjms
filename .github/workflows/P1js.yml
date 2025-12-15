@@ -33,13 +33,11 @@ jobs:
           SRC_URL="https://raw.githubusercontent.com/alex8875/m3u/refs/heads/main/jstar.m3u"
 
           echo "⬇️ Downloading source playlist..."
-          curl -fsSL "$SRC_URL" -o "$tmpdir/raw.m3u"
+          curl --retry 3 --retry-delay 5 -fsSL "$SRC_URL" -o "$tmpdir/raw.m3u"
 
-          # ✅ Count channels (NO dedupe → Total = Updated)
           UPDATED=$(grep -c '^#EXTINF' "$tmpdir/raw.m3u" || true)
           TOTAL="$UPDATED"
 
-          # ✅ Write FINAL HEADER with COUNTS
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
@@ -49,10 +47,41 @@ jobs:
             echo ""
           } > "$OUTPUT"
 
-          # ✅ Append playlist (no deduplication)
-          grep -v '^#Generated on ' "$tmpdir/raw.m3u" >> "$OUTPUT"
+          awk '
+          BEGIN { IGNORECASE=1 }
 
-          echo "✅ P1js.m3u created successfully."
+          /^#EXTINF/ {
+            line=$0
+
+            # 🔥 SUN NETWORK → RJM | SunNxt
+            if (line ~ /sun tv|sun network|sun music|sun movies|sun life|k tv|ktv|chutti tv|adithya|sirippoli|gemini|udaya|surya/) {
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | SunNxt\"", line)
+            }
+
+            # ⭐ STAR CHANNELS → RJM | Star
+            else if (line ~ /star/) {
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | Star\"", line)
+            }
+
+            # 🧒 KIDS CHANNELS → RJM | Kids
+            else if (line ~ /kids|disney|nick|pogo|hungama|cartoon/) {
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | Kids\"", line)
+            }
+
+            # 🌐 ALL OTHER GROUPS → RJM | <Original>
+            else if (line ~ /group-title="/) {
+              match(line, /group-title="([^"]*)"/, arr)
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | " arr[1] "\"", line)
+            }
+
+            print line
+            next
+          }
+
+          { print }
+          ' "$tmpdir/raw.m3u" | grep -v '^#EXTM3U' >> "$OUTPUT"
+
+          echo "✅ P1js.m3u created successfully"
           echo "📊 Total: $TOTAL | Updated: $UPDATED"
 
       - name: Commit and push changes
@@ -61,5 +90,6 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add Bishop/P1js.m3u
-          git commit -m "Auto update P1js.m3u" || echo "No changes to commit"
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Auto update P1js.m3u (RJM grouping)"
           git push
