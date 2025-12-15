@@ -23,79 +23,44 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Merge, Clean & Lock 24x7 → King.m3u
+      - name: Merge Master (Live) + Queen (Media Library)
         run: |
           set -e
 
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
-          tmpdir=$(mktemp -d)
 
           {
             echo '#EXTM3U billed-msg="RJMS OTT - RJMBTS Network"'
-            echo "# Pushed & Updated by Kittujk"
-            echo "# Scripted & Maintained by @RJMBTS"
+            echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated: $timestamp"
           } > King.m3u
 
-          SOURCES=(
-            "https://raw.githubusercontent.com/RJMBTS/Rjms/refs/heads/main/master.m3u"
-            "https://raw.githubusercontent.com/RJMBTS/Xfpl/refs/heads/main/Queen.m3u"
-          )
+          # ==========================
+          # LIVE TV → MASTER.M3U
+          # ==========================
+          echo "🔴 Adding Live TV (master.m3u)"
+          curl -fs "https://raw.githubusercontent.com/RJMBTS/Rjms/refs/heads/main/master.m3u" \
+            | sed '1{/^#EXTM3U/d}' >> King.m3u
 
-          for url in "${SOURCES[@]}"; do
-            curl -fs "$url" | grep -v '^#EXTM3U' >> "$tmpdir/all.m3u"
-          done
+          echo "" >> King.m3u
 
-          # 🔥 CLEAN PLAYLIST (CORRECT)
-          awk '
-          BEGIN { skip=0 }
+          # ==========================
+          # MEDIA LIBRARY → QUEEN.M3U
+          # ==========================
+          echo "🎬 Adding Media Library (Queen.m3u)"
 
-          # ✅ Rename Movies → RJM | 24x7
-          /group-title="Movies"/ {
-            gsub(/group-title="Movies"/, "group-title=\"RJM | 24x7\"")
-          }
+          curl -fs "https://raw.githubusercontent.com/RJMBTS/Xfpl/refs/heads/main/Queen.m3u" \
+            | sed '1{/^#EXTM3U/d}' \
+            | awk '
+              /^#EXTINF/ {
+                if ($0 !~ /tvg-type="vod"/) {
+                  sub(/^#EXTINF:/, "#EXTINF:-1 tvg-type=\"vod\" ", $0)
+                }
+              }
+              { print }
+            ' >> King.m3u
 
-          # ❌ REMOVE ONLY "Telugu Movies" (Local | Telugu Movies card)
-          /#EXTINF/ && /Telugu Movies/ && /group-title="RJM \| 24x7"/ {
-            skip=1; next
-          }
-
-          # ❌ Remove Star & Gemini Movies
-          /Star Maa Movies HD|Star Maa Movie|Gemini Movies HD|Gemini Movie/ {
-            skip=1; next
-          }
-
-          # ❌ Remove TV Series
-          /group-title="TV Series"/ {
-            skip=1; next
-          }
-
-          skip==1 && /^[^#]/ { skip=0; next }
-          skip==0 { print }
-          ' "$tmpdir/all.m3u" > "$tmpdir/clean.m3u"
-
-          # 🔒 LOCK RJM | 24x7 AT TOP
-          awk '
-          BEGIN { top=""; rest="" }
-
-          /group-title="RJM \| 24x7"/ {
-            top = top $0 ORS
-            getline; top = top $0 ORS
-            next
-          }
-
-          { rest = rest $0 ORS }
-
-          END {
-            printf "%s", top
-            printf "%s", rest
-          }
-          ' "$tmpdir/clean.m3u" >> King.m3u
-
-          rm -rf "$tmpdir"
-
-          echo "✅ Telugu Movies (Local | Telugu) REMOVED"
-          echo "🔒 RJM | 24x7 LOCKED AT TOP"
+          echo "✅ Merge completed (Live + Media Library separated)"
 
       - name: Commit and push King.m3u
         run: |
@@ -104,7 +69,7 @@ jobs:
           git add King.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "Fix: remove Telugu Movies from Local Telugu"
+            git commit -m "Separate Queen as Media Library (VOD only)"
             git pull --rebase origin main || true
             git push origin main
           else
