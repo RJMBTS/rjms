@@ -2,7 +2,7 @@ name: Rook ♟
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 concurrency:
@@ -21,7 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build Rook.m3u from Bishop folder
+      - name: Build Rook.m3u from selected Bishop sources
         run: |
           set -e
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
@@ -29,7 +29,7 @@ jobs:
 
           echo "🔹 Building Rook.m3u at $timestamp"
 
-          # Header with placeholder counts
+          # Rook header (ONLY Rook channel count)
           {
             echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
             echo "# Pushed and Updated by Kittujk"
@@ -38,32 +38,38 @@ jobs:
             echo "# Last updated: $timestamp"
           } > Rook.m3u
 
-          # Collect Bishop sources (exclude ONLY P1j.m3u and P1jc.m3u)
-          find Bishop -type f -name "*.m3u" \
-            ! -name "P1j.m3u" \
-            ! -name "P1jc.m3u" \
-            | sort > "$tmpdir/sources.txt"
+          # Explicit source list
+          cat <<EOF > "$tmpdir/sources.txt"
+          Bishop/P1js.m3u
+          Bishop/P1s.m3u
+          Bishop/P1z.m3u
+          Bishop/Stnl.m3u
+          Bishop/Stgl.m3u
+          Bishop/Smly.m3u
+          EOF
 
           i=0
           while read -r file; do
+            [ ! -f "$file" ] && echo "⚠️ Missing: $file" && continue
+
             i=$((i+1))
             printf -v idx "%03d" "$i"
 
             echo "✅ Adding $file"
-            grep -vi -E '^#EXTM3U|pushed and updated by|scripted & maintained|join telegram' \
+            grep -vi -E '^#EXTM3U|pushed and updated by|scripted & maintained|join telegram|^# Channels\s*:' \
               "$file" > "$tmpdir/part_$idx.m3u" || true
           done < "$tmpdir/sources.txt"
 
-          # Combine all parts
+          # Combine parts
           for part in "$tmpdir"/part_*.m3u; do
             echo "" >> Rook.m3u
             cat "$part" >> Rook.m3u
           done
 
-          # Count channels (#EXTINF)
+          # Count Rook channels
           total_channels=$(grep -c '^#EXTINF' Rook.m3u || true)
 
-          # Update header counts
+          # Update header count
           sed -i "s/# Channels : Total - 0 | Updated - 0/# Channels : Total - $total_channels | Updated - $total_channels/" Rook.m3u
 
           echo "✅ Rook.m3u built with $total_channels channels."
@@ -84,4 +90,4 @@ jobs:
 
       - name: Summary
         run: |
-          echo "✅ Rook.m3u updated successfully"
+          echo "✅ Rook ♟ updated successfully"
