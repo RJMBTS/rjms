@@ -71,18 +71,37 @@ jobs:
 
           total=$(grep -c '^#EXTINF' "$tmpdir/all_unique.m3u" || echo 0)
 
-          # ===== GROUPING ETV vs LOCAL =====
-          echo "📂 Grouping all channels → ETV vs Telugu Local"
+          # ===== ADVANCED GROUPING LOGIC =====
+          echo "📂 Smart grouping → ETV vs Telugu Local"
 
           awk -v IGNORECASE=1 '
             /^#EXTINF/ {
-              # parse name after comma
-              split($0, a, ",")
+              raw=$0
+
+              # Channel name
+              split(raw, a, ",")
               name=a[2]
 
-              # choose group based on name match
-              if (name ~ /ETV/) {
-                group="RJM | ETv Win"
+              # Metadata
+              tvgid=""
+              tvglogo=""
+
+              if (match(raw, /tvg-id="([^"]+)"/, m)) tvgid=m[1]
+              if (match(raw, /tvg-logo="([^"]+)"/, n)) tvglogo=n[1]
+
+              # Normalize text
+              text = tolower(name " " tvgid " " tvglogo)
+
+              # ===== SMART ETV DETECTION =====
+              if (
+                   text ~ /\betv\b/ ||
+                   text ~ /\betv hd\b/ ||
+                   text ~ /\betv telugu\b/ ||
+                   text ~ /\betv plus\b/ ||
+                   text ~ /\betv cinema\b/ ||
+                   text ~ /\betv win\b/
+                 ) {
+                group="RJM | ETV Win"
               } else {
                 group="Telugu | Local"
               }
@@ -91,7 +110,9 @@ jobs:
 
               getline url
               gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", url)
-              if (url=="") next
+
+              # Skip invalid URLs
+              if (url=="" || url !~ /^https?:\/\//) next
 
               print info
               print url
@@ -129,7 +150,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes — skipping commit."
           else
-            git commit -m "🔄 Auto-update Bishop/Stgl.m3u (ETV & Telugu Local)"
+            git commit -m "🔄 Auto-update Bishop/Stgl.m3u (Smart Detection)"
             git pull --rebase origin main || git rebase --abort
             git push origin main || echo "⚠️ Push failed"
           fi
