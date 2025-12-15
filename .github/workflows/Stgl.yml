@@ -1,0 +1,135 @@
+name: Stgl 🌐
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs once every 24 hours (00:30 UTC = 06:00 IST)
+    - cron: "30 0 * * *"
+
+concurrency:
+  group: stgl-m3u
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🧩 Build Stgl.m3u (ETV & Telugu Local)
+        shell: bash
+        env:
+          TZ: "Asia/Kolkata"
+        run: |
+          set -euxo pipefail
+
+          tmpdir=$(mktemp -d)
+          trap 'rm -rf "$tmpdir"' EXIT
+
+          timestamp=$(date +"%Y-%m-%d %H:%M:%S %Z")
+          mkdir -p Bishop
+          out_file="Bishop/Stgl.m3u"
+
+          SRC_URL="https://raw.githubusercontent.com/RJMBTS/Rjms/main/Soutl.m3u"
+
+          echo "🌐 Fetching source:"
+          echo "$SRC_URL"
+
+          # ===== FETCH & CLEAN =====
+          if ! curl -fsSL --max-time 60 "$SRC_URL" \
+            | grep -v -E '^#EXTM3U|#Generated on' \
+            > "$tmpdir/all.m3u"; then
+            echo "❌ Failed to fetch source"
+            exit 1
+          fi
+
+          # ===== DEDUPLICATION =====
+          echo "🧹 Removing duplicates..."
+          awk '
+            /^#EXTINF/ {
+              info=$0
+              gsub(/[[:space:]]+/, " ", info)
+              getline url
+              gsub(/[[:space:]]+/, "", url)
+              if (url=="") next
+              key = info "|" url
+              if (!(key in seen)) {
+                seen[key]=1
+                print info
+                print url
+              }
+            }
+          ' "$tmpdir/all.m3u" > "$tmpdir/all_unique.m3u"
+
+          total=$(grep -c '^#EXTINF' "$tmpdir/all_unique.m3u" || echo 0)
+
+          # ===== GROUPING ETV vs LOCAL =====
+          echo "📂 Grouping all channels → ETV vs Telugu Local"
+
+          awk -v IGNORECASE=1 '
+            /^#EXTINF/ {
+              # parse name after comma
+              split($0, a, ",")
+              name=a[2]
+
+              # choose group based on name match
+              if (name ~ /ETV/) {
+                group="RJM | ETv Win"
+              } else {
+                group="Telugu | Local"
+              }
+
+              info="#EXTINF:-1 group-title=\"" group "\" tvg-category=\"" group "\"," name
+
+              getline url
+              gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", url)
+              if (url=="") next
+
+              print info
+              print url
+            }
+          ' "$tmpdir/all_unique.m3u" > "$tmpdir/grouped.m3u"
+
+          updated=$(grep -c '^#EXTINF' "$tmpdir/grouped.m3u" || echo 0)
+
+          # ===== FINAL HEADER =====
+          {
+            echo '#EXTM3U billed-msg="RJM Tv - RJMBTS Network"'
+            echo "# Pushed & Updated by — Kittujk"
+            echo "# Coded & Maintained by @RJMBTS"
+            echo "# Last updated on : $timestamp"
+            echo "# Channels : Total unique - $total | Processed - $updated"
+            echo ""
+          } > "$out_file"
+
+          # ===== MERGE =====
+          cat "$tmpdir/grouped.m3u" >> "$out_file"
+
+          echo "✅ Bishop/Stgl.m3u generated successfully"
+          echo "📺 Total: $total | ♻️ Updated: $updated"
+
+      - name: 🚀 Commit & Push Stgl.m3u
+        shell: bash
+        run: |
+          set -euxo pipefail
+
+          git config user.name "RJMBTS Auto Builder"
+          git config user.email "actions@github.com"
+
+          git add Bishop/Stgl.m3u || true
+
+          if git diff --cached --quiet; then
+            echo "No changes — skipping commit."
+          else
+            git commit -m "🔄 Auto-update Bishop/Stgl.m3u (ETV & Telugu Local)"
+            git pull --rebase origin main || git rebase --abort
+            git push origin main || echo "⚠️ Push failed"
+          fi
