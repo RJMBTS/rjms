@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🧩 Build Stgl.m3u (ETV & Telugu Local)
+      - name: 🧩 Build Stgl.m3u (STRICT ETV ONLY)
         shell: bash
         env:
           TZ: "Asia/Kolkata"
@@ -71,30 +71,19 @@ jobs:
 
           total=$(grep -c '^#EXTINF' "$tmpdir/all_unique.m3u" || echo 0)
 
-          # ===== SMART GROUPING (POSIX SAFE) =====
-          echo "📂 Smart grouping → ETV vs Telugu Local"
+          # ===== STRICT GROUPING =====
+          echo "📂 Grouping → EXACT 'ETV' only"
 
-          awk -v IGNORECASE=1 '
+          awk '
             /^#EXTINF/ {
-              raw=$0
-
-              # Channel name
-              split(raw, a, ",")
+              split($0, a, ",")
               name=a[2]
 
-              # Metadata
-              tvgid=""
-              tvglogo=""
+              name_uc = toupper(name)
 
-              if (match(raw, /tvg-id="([^"]+)"/, m)) tvgid=m[1]
-              if (match(raw, /tvg-logo="([^"]+)"/, n)) tvglogo=n[1]
-
-              # Normalize text
-              text = tolower(name " " tvgid " " tvglogo)
-
-              # ===== ETV DETECTION =====
-              if (text ~ /\betv\b/ || text ~ /\betv hd\b/ || text ~ /\betv telugu\b/ || text ~ /\betv plus\b/ || text ~ /\betv cinema\b/ || text ~ /\betv win\b/) {
-                group="RJM | ETV Win"
+              # EXACT standalone ETV ONLY
+              if (name_uc ~ /(^|[^A-Z0-9])ETV([^A-Z0-9]|$)/) {
+                group="RJM | ETv Win"
               } else {
                 group="Telugu | Local"
               }
@@ -104,7 +93,6 @@ jobs:
               getline url
               gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", url)
 
-              # Skip invalid URLs
               if (url=="" || url !~ /^https?:\/\//) next
 
               print info
@@ -143,7 +131,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes — skipping commit."
           else
-            git commit -m "🔄 Auto-update Bishop/Stgl.m3u (Smart Detection)"
+            git commit -m "🔄 Auto-update Bishop/Stgl.m3u (Exact ETV Only)"
             git pull --rebase origin main || git rebase --abort
             git push origin main || echo "⚠️ Push failed"
           fi
