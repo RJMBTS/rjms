@@ -57,26 +57,26 @@ jobs:
             line=$0
 
             # 🔥 SUN NETWORK / SUNNXT → RJM | SunNxt
-            if (line ~ /sun tv|sun network|sun music|sun movies|sun life|k tv|ktv|chutti tv|adithya|sirippoli|gemini|udaya|surya/) {
+            if (line ~ /group-title="[^"]*(sun tv|sun network|sun music|sun movies|sun life|ktv|k tv|chutti|adithya|sirippoli|gemini|udaya|surya)[^"]*"/) {
               gsub(/group-title="[^"]*"/, "group-title=\"RJM | SunNxt\"", line)
             }
 
-            # ⭐ STAR CHANNELS → RJM | Star
-            else if (line ~ /star/) {
+            # ⭐ STAR → RJM | Star
+            else if (line ~ /group-title="[^"]*star[^"]*"/) {
               gsub(/group-title="[^"]*"/, "group-title=\"RJM | Star\"", line)
             }
 
             # 📰 EXTRA + BENGALI → RJM | News
-            else if (line ~ /extra|bengali/) {
+            else if (line ~ /group-title="[^"]*(extra|bengali)[^"]*"/) {
               gsub(/group-title="[^"]*"/, "group-title=\"RJM | News\"", line)
             }
 
             # 🎬 TAMIL → RJM | Entertainment
-            else if (line ~ /tamil/) {
+            else if (line ~ /group-title="[^"]*tamil[^"]*"/) {
               gsub(/group-title="[^"]*"/, "group-title=\"RJM | Entertainment\"", line)
             }
 
-            # 🌐 ALL OTHER GROUPS → RJM | <Original>
+            # 🌐 EVERYTHING ELSE → RJM | <Original>
             else if (line ~ /group-title="/) {
               match(line, /group-title="([^"]*)"/, arr)
               gsub(/group-title="[^"]*"/, "group-title=\"RJM | " arr[1] "\"", line)
@@ -99,5 +99,5 @@ jobs:
 
           git add Bishop/P1js.m3u
           git diff --cached --quiet && echo "No changes to commit" && exit 0
-          git commit -m "Auto update P1js.m3u (RJM grouping)"
+          git commit -m "Auto update P1js.m3u (forced RJM grouping)"
           git push
