@@ -32,11 +32,12 @@ jobs:
 
           mkdir -p Bishop
           OUTPUT="Bishop/P1js.m3u"
-
+          
           echo "⬇️ Downloading source playlist..."
           curl --retry 3 --retry-delay 5 -fsSL "$SRC_URL" -o "$tmpdir/raw.m3u"
 
-          TOTAL=$(grep -c '^#EXTINF' "$tmpdir/raw.m3u" || true)
+          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/raw.m3u" || true)
+          TOTAL="$UPDATED"
 
           echo "🧱 Writing header..."
           {
@@ -44,48 +45,36 @@ jobs:
             echo "# Pushed and Updated by Kittujk"
             echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated on : $timestamp"
-            echo "# Channels : Total - $TOTAL"
+            echo "# Channels : Total - $TOTAL | Updated - $UPDATED"
             echo ""
           } > "$OUTPUT"
 
-          echo "🧩 Processing & forcing groups..."
+          echo "🧩 Processing & grouping channels..."
           awk '
           BEGIN { IGNORECASE=1 }
 
           /^#EXTINF/ {
             line=$0
 
-            # 🚫 REMOVE tvg-language (prevents auto groups)
-            gsub(/tvg-language="[^"]*"/, "", line)
-
             # 🔥 SUN NETWORK → RJM | SunNxt
-            if (line ~ /(sun tv|sun network|sun music|sun movies|sun life|ktv|k tv|chutti|adithya|sirippoli|gemini|udaya|surya)/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              line = line " group-title=\"RJM | SunNxt\""
+            if (line ~ /sun tv|sun network|sun music|sun movies|sun life|k tv|ktv|chutti tv|adithya|sirippoli|gemini|udaya|surya/) {
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | SunNxt\"", line)
             }
 
-            # ⭐ STAR → RJM | Star
+            # ⭐ STAR CHANNELS → RJM | Star
             else if (line ~ /star/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              line = line " group-title=\"RJM | Star\""
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | Star\"", line)
             }
 
-            # 📰 EXTRA + BENGALI → RJM | News
-            else if (line ~ /(extra|bengali)/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              line = line " group-title=\"RJM | News\""
+            # 🧒 KIDS CHANNELS → RJM | Kids
+            else if (line ~ /kids|disney|nick|pogo|hungama|cartoon/) {
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | Kids\"", line)
             }
 
-            # 🎬 TAMIL → RJM | Entertainment
-            else if (line ~ /tamil/) {
-              gsub(/group-title="[^"]*"/, "", line)
-              line = line " group-title=\"RJM | Entertainment\""
-            }
-
-            # 🌐 DEFAULT → RJM | General
-            else {
-              gsub(/group-title="[^"]*"/, "", line)
-              line = line " group-title=\"RJM | General\""
+            # 🌐 ALL OTHER GROUPS → RJM | <Original>
+            else if (line ~ /group-title="/) {
+              match(line, /group-title="([^"]*)"/, arr)
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | " arr[1] "\"", line)
             }
 
             print line
@@ -96,6 +85,7 @@ jobs:
           ' "$tmpdir/raw.m3u" | grep -v '^#EXTM3U' >> "$OUTPUT"
 
           echo "✅ P1js.m3u created successfully"
+          echo "📊 Total: $TOTAL | Updated: $UPDATED"
 
       - name: Commit and push changes
         run: |
@@ -104,5 +94,5 @@ jobs:
 
           git add Bishop/P1js.m3u
           git diff --cached --quiet && echo "No changes to commit" && exit 0
-          git commit -m "Auto update P1js.m3u (forced RJM groups)"
+          git commit -m "Auto update P1js.m3u (RJM grouping)"
           git push
