@@ -1,26 +1,26 @@
 #EXTM3U billed-msg="RJM Tv - RJMBTS Network"
 # Pushed & Updated by — Kittujk
 # Coded & Maintained by @RJMBTS
-# Last updated on : 2025-12-15 14:01:47 IST
-# Channels : Total unique - 275 | Processed - 273
+# Last updated on : 2025-12-16 07:57:08 IST
+# Channels : Total unique - 272 | Processed - 270
 
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", MTV Local 
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", MTv Local 
 https://amigofx.com:1936/mtv/mtv/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", B Channel
 https://amigofx.com:1936/bhavani/bhavani/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Local News NZ
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Local News Nizamabad
 https://amigofx.com:1936/localnews/localnews/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", ccc channel
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", CCC Channel
 https://amigofx.com:1936/ccchd/ccchd/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Harika Star
 https://amigofx.com:1936/harikastar/harikastar/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Yuva Tv
 https://amigofx.com:1936/yuvatv/yuvatv/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", WPN digital
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", WPN Digital
 https://amigofx.com:1936/wpndigital/wpndigital/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Siti Channel
 https://amigofx.com:1936/sitichannel/sitichannel/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", jkc city
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Jkc city
 https://amigofx.com:1936/jkccity/jkccity/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Y Channel
 https://amigofx.com:1936/ychannel/ychannel/playlist.m3u8
@@ -28,12 +28,10 @@ https://amigofx.com:1936/ychannel/ychannel/playlist.m3u8
 https://amigofx.com:1936/srkent/srkent/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",PCN HD
 https://amigofx.com:1936/pcnhd/pcnhd/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",KCF
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",KCF Tv
 https://amigofx.com:1936/kcf/kcf/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",SITI Telugu
 https://amigofx.com:1936/sititelugu/sititelugu/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Y channel
-https://amigofx.com:1936/ychannel/ychannel/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Sarkar TV
 https://amigofx.com:1936/sarkartv/sarkartv/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", C Plus 
@@ -60,7 +58,7 @@ https://www.schannels.in/pvpmovies/index.m3u8?token=nokshitha
 https://www.schannels.in/pvphd/index.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Raja TV HD 
 https://www.schannels.in/rajatv/index.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Nandyal News 9
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Nandyal News9
 https://www.schannels.in/ndlnews9/index.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Vinodam HD
 https://www.schannels.in/vinodam/index.m3u8?token=nokshitha
@@ -70,7 +68,7 @@ https://www.schannels.in/vvmovies/video.m3u8?token=nokshitha
 https://www.schannels.in/vvmusic/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", VV Comedy
 https://www.schannels.in/vvcomedy/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", RK TV
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", RK Tv
 https://www.schannels.in/rktv/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", RK Movies
 https://www.schannels.in/rkmovies/video.m3u8?token=nokshitha
@@ -82,25 +80,25 @@ https://www.schannels.in/rkgold/video.m3u8?token=nokshitha
 https://www.schannels.in/gsgrameena/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Santhosham Tv
 https://www.schannels.in/santhoshamtv/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Folk tv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Folk Tv
 https://www.schannels.in/folk/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Hollywood Telugu Movies
 https://www.schannels.in/hollywood/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Starway Janapadalu
 https://www.schannels.in/starwayjanapadalu/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", HRtv9
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", HR Tv9
 https://www.schannels.in/hrtv9/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Devi Cable
 https://www.schannels.in/devicable/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Veduka tv
 https://www.schannels.in/veduka/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Sv news
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Sv News
 https://www.schannels.in/harikasitymovies/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Harika palle
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Harika Palle
 https://www.schannels.in/harikapallepatalu/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Colorbar music
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Colorbar Music
 https://www.schannels.in/colorbarmusic/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", namitha tv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Namitha Tv
 https://www.schannels.in/namitha/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", TG5 News
 https://www.schannels.in/tg5/index.m3u8?token=nokshitha
@@ -108,8 +106,6 @@ https://www.schannels.in/tg5/index.m3u8?token=nokshitha
 https://www.schannels.in/folk/index.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Tirumal TV
 https://www.schannels.in/tirumalachannel/index.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", HR TV9
-https://www.schannels.in/hrtv9/index.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Colorbar Music Box
 https://www.schannels.in/colorbarmusic/index.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Santhosham TV
@@ -160,8 +156,6 @@ https://mumbai-edge.smartplaytv.in/SSLCGold/index.m3u8
 https://mumbai-edge.smartplaytv.in/SSLCMusic/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", ACN TV
 https://mumbai-edge.smartplaytv.in/acn/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", CVR Health
-https://mumbai-edge.smartplaytv.in/CVRHealth/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Rapid Media
 https://mumbai-edge.smartplaytv.in/RapidMedia/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", MY TV
@@ -188,7 +182,7 @@ http://cache.internode.co.in:6081/BCTMovies/index.m3u8
 http://cache.internode.co.in:6081/SSLCMultiplex/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", SSLC Kathalu
 http://cache.internode.co.in:6081/SSLCKathalu/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", SVC
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", SVC Tv
 http://cache.internode.co.in:6081/SVC/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", SSLC Gold
 http://cache.internode.co.in:6081/SSLCGold/index.m3u8
@@ -198,13 +192,13 @@ http://cache.internode.co.in:6081/SSLCCinemalu/index.m3u8
 http://cache.internode.co.in:6081/BCTClassic/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", SSLC2 Cinemalu
 http://cache.internode.co.in:6081/SSLC2Cinemalu/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Manavooru
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Manavooru Tv
 http://cache.internode.co.in:6081/Manavooru/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Vinodam HD
 http://cache.internode.co.in:6081/VinodamHD/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", 2Telugu
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", 2Telugu Tv
 http://cache.internode.co.in:6081/2Telugu/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", ds9e
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Ds9e Channel
 http://cache.internode.co.in:6081/ds9e/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", S9 News
 http://cache.internode.co.in:6081/S9News/index.m3u8
@@ -212,7 +206,7 @@ http://cache.internode.co.in:6081/S9News/index.m3u8
 http://cache.internode.co.in:6081/BCTNews/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Shreyas TV
 http://cache.internode.co.in:6081/ShreyasTV/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", GeeTV
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Gee Tv
 http://cache.internode.co.in:6081/GeeTV/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Tirumala HD
 http://cache.internode.co.in:6081/TirumalaHD/index.m3u8
@@ -226,37 +220,37 @@ http://cache.internode.co.in:6081/SV6/index.m3u8
 http://cache.internode.co.in:6081/FAndH/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", YLR9 News
 http://cache.internode.co.in:6081/YLR9/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", MaaCable
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Maa Cable
 http://cache.internode.co.in:6081/MaaCable/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", PCN HD
 http://cache.internode.co.in:6081/PCNHD/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", IRMedia
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", IR Media
 http://cache.internode.co.in:6081/IRMedia/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", AWAAZ NEWS
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Awaaz News
 http://cache.internode.co.in:6081/AWAAZNEWS/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", ReshyaTV
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Reshya TV
 http://cache.internode.co.in:6081/ReshyaTV/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", News9
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", News9 Channel
 http://cache.internode.co.in:6081/News9/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", ABNews
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", AB News
 http://cache.internode.co.in:6081/ABNews/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", V27
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", V27 Tv
 http://cache.internode.co.in:6081/V27/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Shakthi TV
 http://cache.internode.co.in:6081/ShakthiTV/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",BCT Keerthana
 http://cache.internode.co.in:6081/BCTKeerthana/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Publictv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Public Tv
 http://cache.internode.co.in:6081/Publictv/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", DS9
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", DS9 Channel
 http://cache.internode.co.in:6081/DS9/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", BCT Music
 http://cache.internode.co.in:6081/BCTMusic/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Rapid Media
 http://cache.internode.co.in:6081/RapidMedia/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Local TV News
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Local Tv News
 http://cache.internode.co.in:6081/LocalTVNews/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", SuperTv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Super Tv
 http://cache.internode.co.in:6081/SuperTv/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", MTV
 http://cache.internode.co.in:6081/MTV/index.m3u8
@@ -268,17 +262,17 @@ http://cache.internode.co.in:6081/SSLCBanjaraDolu/index.m3u8
 http://cache.internode.co.in:6081/SSLCMusic/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Shreyas Music
 http://cache.internode.co.in:6081/ShreyasMusic/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",KTV
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",K TV
 https://vvsolutions.in/ktimes/ktimes.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Sree News
 https://vvsolutions.in/sreenews/sreenews.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Orugallu T 
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Orugallu Tv
 https://vvsolutions.in/orugallu9/orugallu9.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",SLN News
 https://vvsolutions-server11.in/slnnews_2/video.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Reshya TV
 https://vvsolutions-server11.in/reshyatv_5/video.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Rk T 
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Rk Tv
 https://vvsolutions.in/rktv_347/rktv_347.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",PVP HD
 https://vvsolutions.in/pvphd/pvphd.m3u8
@@ -294,7 +288,7 @@ https://vvsolutions.in/ysrtv/ysrtv.m3u8
 https://vvsolutions-server10.in/hls/santhoshamtv_110.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",AP Local TV
 https://vvsolutions.in/aplocaltv/aplocaltv.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Tv8
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Tv8 Channel
 https://vvsolutions.in/tv8news/tv8news.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Sravya Tv
 https://vvsolutions.in/sravyatv/sravyatv.m3u8
@@ -304,9 +298,9 @@ https://vvsolutions.in/accesstv/accesstv.m3u8
 https://vvsolutions.in/aksharanews/aksharanews.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Yj TV
 https://vvsolutions.in/yjtv/yjtv.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Mtv channel
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", MTv channel
 https://vvsolutions.in/mtvchannel/mtvchannel.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", vpower news
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Vpower News
 https://vvsolutions.in/vpowernews_343/vpowernews_343.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", RK9 News
 https://vvsolutions.in/rk9news/rk9news.m3u8
@@ -318,11 +312,11 @@ https://vvsolutions.in/rk9news/rk9news.m3u8
 https://vvsolutions.in/cabletandur/cabletandur.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",KS TV
 https://vvsolutions.in/lmc/lmc.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", R5TV 
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", R5 Tv
 https://vvsolutions-server13.in/r5tv_28/video.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",JVR
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",JVR Tv
 https://vvsolution.in/hls/jvrnews_623.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", jvr news
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Jvr News
 https://vvsolution.in/hls/jvrnews_623.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Studio 18 Tv
 http://cloud.streamplay.in:1935/studio18/studio18/playlist.m3u8
@@ -348,21 +342,21 @@ http://decode.streamplay.in:1935/srisai/srisai/playlist.m3u8
 http://cloud.streamplay.in:1935/svc/svc/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Bhavya TV
 http://encode.streamplay.in:1935/bhavyatv/bhavyatv/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Brathakamma TV
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Brathukamma TV
 http://live.streamplay.in:1935/bkamma/bkamma/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Telugu TV
 http://live.streamplay.in:1935/telugutv/telugutv/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Gtpl nizambad
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Gtpl Nizambad
 http://cloud.streamplay.in:1935/gtpl/gtpl/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Gtpl karimnagar
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Gtpl Karimnagar
 http://cloud.streamplay.in:1935/samacomedy/samacomedy/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", K6 channel
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", K6 Channel
 http://cloud.streamplay.in:1935/roshni/roshni/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Sama music
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Sama Music
 http://cloud.streamplay.in:1935/samatv/samatv/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", amma news
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Amma News
 http://cloud.streamplay.in:1935/ammanews/ammanews/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Prime one news
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Prime One News
 http://live.streamplay.in:1935/prime1/prime1/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Vihari Tv
 http://viharitv.phoenixcreations.online:1935/viharitv/viharitv/chunklist_w714070156.m3u8
@@ -370,13 +364,13 @@ http://viharitv.phoenixcreations.online:1935/viharitv/viharitv/chunklist_w714070
 http://telanganatv.phoenixcreations.online:1935/telanganatv/telanganatv/chunklist_w1691683123.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",C news
 http://cnews.phoenixcreations.online/cnews/cnews/tracks-v1a1/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", d news
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", D news
 http://dnews.phoenixcreations.online:1935/dnews/dnews/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Bbrtv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", BBR Tv
 http://bbrtv.phoenixcreations.online/bbrtv/bbrtv/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", new tv telugu
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", New Tv Telugu
 http://newtvtelugu.phoenixcreations.online/newtvtelugu/newtvtelugu/tracks-v1a1/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", apts telugu news
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Apts Telugu News
 https://rtmp.streamwell.in/hls/aptstelugunewshd.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", D4 Channel
 https://server.streamwell.in/hls/d4.m3u8
@@ -390,11 +384,11 @@ https://server.streamwell.in/hls/srkcity.m3u8
 https://server.streamwell.in/hls/7hills.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", RMK TV
 https://account23.livebox.co.in/RMKTVhls/live.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Zilla vani Tv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Zilla Vani Tv
 https://streaming.livebox.co.in/vedhikahls/live.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Super TV
 http://mars.streambridge.cloud:1935/livetv/SuperTV/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", 4 sides tv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", 4Sides Tv
 https://mars.streambridge.cloud/4sidestv/telugu/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",VV Comedy HD
 http://allchannels.in:80/live/vvcomedy_100/tracks-v1a1/mono.m3u8
@@ -408,15 +402,15 @@ https://publictvtelugu.co.in/publictv_1/video.m3u8
 https://publictvtelugu.co.in/publictvfolkmusic_2/video.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",S9 Channel
 https://sharsolution.in/hls/s9tv/s9tv.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",mee tv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Mee Tv
 https://sharsolution.in/hls/meetv/meetv.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", D4 channel
 https://sharsolution.in/hls/d4.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Anjali TV
 https://sharsolution.in/hls/anjalitv.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",SS News Tv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",SS News
 http://streamcp.logosys.cloud:1935/snewsnpt/snewsnpt/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", bcn channel
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", BCN Channel
 http://streamcp.logosys.cloud:1935/bcnchannel/bcnchannel/chunklist_w1043016966.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Praja Tv
 http://prajatv.mythrimediaindia.com:1935/prajatv/prajatv/index.m3u8
@@ -426,11 +420,11 @@ http://gchannel.mythrimediaindia.com:1935/gchannel/gchannel/index.m3u8
 http://citynews.mythrimediaindia.com:1935/citynews/citynews/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Sri Chakra Tv
 http://srichakra.mythrimediaindia.com:1935/srichakra/srichakra/chunklist_w922956034.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", knr channel
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", KNR Channel
 https://live.mythrimediaindia.com/knrchannel/knrchannel/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Mana tv2
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Mana Tv
 https://manatv.akamaized.net/120723/smil:manatv2.smil/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Mana tv international
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Mana Tv International
 https://manatv.akamaized.net/090823/smil:manatvint.smil/playlist.m3u8
 #EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Plus
 https://d2pk5pedkyu2d0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_PLUS_H264_cloud_in/index.m3u8
@@ -456,15 +450,15 @@ https://95eryw39dwn4-hls-live.wmncdn.net/Ayushu/271ddf829afeece44d8732757fba1a66
 https://catchup.yuppcdn.net/amazonv2/36/preview/manatv/master/chunklist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Tolly Tv
 https://streams2.sofast.tv/ptnr-yupptv/title-TOLLY-TV-TEL_yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", PMC
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", PMC Tv
 https://live.drmlive-02.workers.dev/yupptv/fta/pmc.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Nipuna Tv
 https://live.drmlive-02.workers.dev/yupptv/fta/t-sat-nipuna.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Mahaa Bhakthi
 https://keralive.com/yupp/tv.php?c=mahaa-bhakti&e=.m3u8|Referer=https://keralive.com/
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Mango TV Telugu
 https://amg01911-mangotv-amg01911c1-xiaomi-in-1270.playouts.now.amagi.tv/playlist/amg01911-mangomassmedia-mangotv-xiaomiin/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", ToneTV
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Tone TV
 https://amg02821-amg02821c1-samsung-in-4717.playouts.now.amagi.tv/playlist/amg02821-objectone-teluguone-samsungin/cb563f0072727b8c9bc92167d5f56294855936d44524dc3567fe06c57494025d84b9a2deec4ab96841cd4e8b3417380008609d1e8d2e07c3882ba2710e454620d986e12499d9432b81e23e2a2090402900aa4d0b847c0700b1837c13b50e9c5d184990630957369ef30df33270f8ba31c01b58e9daa805461d3e12954d67dbf10ae0e1b01d05b738feec4d11cb0d7bddbe09b8b47cd4f4ab26ef3af83bfb38a7aea1df900ed3c6d10cf706ef317b34481782a149a3f67397f7bf740b7210423e76d44d3ef1842c09b5052e69f6f6dfba61bf20da8831847345c36afa61a54047ef376bdd8c60afbfafd7026034a1d6526226da8bc84c56f451cf01dab1e1df666e97b46710f74bf0ba50490eb187a3228dd1129fb82a84fe0e775d92c114cfc4e0c98738ea3bff3da183bc7e1e623723078cbc7f9ca9cd9bb6be32d8ef1e244e4447acd57bc191e6673f7044bcea34b01d14bddef9e3a56e31a9314e0cf001393ad2d52d960adcf60ccf3a294ddc95f48c780ccead7d/156/1920x1080_5129264/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Saaksyam TV
 https://live.kpsnetwork.in/kps/kps/index.m3u8
@@ -472,7 +466,7 @@ https://live.kpsnetwork.in/kps/kps/index.m3u8
 https://live.kpsnetwork.in/saaksyamtv/saaksyamtv/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Jai Telugu Thalli
 https://live.kpsnetwork.in/jtt/jtt/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", metro tv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Metro Tv
 https://mercury.streambridge.link:8042/telugu/metrotv/index.fmp4.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", TGN News
 https://venus.streambridge.link:8047/telugu/tgn/index.m3u8
@@ -480,7 +474,7 @@ https://venus.streambridge.link:8047/telugu/tgn/index.m3u8
 http://venus.streambridge.link:8045/telugu/anjalitv/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", INB TV
 https://ace.aplombtv.in/hls/INB/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Ncn Hd
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Ncn HD
 https://cloud.sundaylive.co.in/ncnhd/ncnhd/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Sashya TV
 https://cloud.sundaylive.co.in/sashyatv/sashyatv/index.m3u8
@@ -492,7 +486,7 @@ https://cloud.sundaylive.co.in/netisakshyam/netisakshyam/index.m3u8
 http://telugusolutions.com:8088/nanditv/nanditv.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",NSR News
 http://telugusolutions.com:8088/nsrnews/nsrnews.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", 69TV
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", 69 TV
 https://5dd3981940faa.streamlock.net/69tv/69tv/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",GS9 TV
 https://5dd3981940faa.streamlock.net/gs9tv/gs9tv/playlist.m3u8
@@ -514,13 +508,13 @@ https://jmp2.uk/stvp-IN4900004LP
 https://jmp2.uk/stvp-IN4900002RV
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Bheem Tv
 https://login.bheem.tv/bpk-tv/22094/output/index.mpd
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Telemax telugu
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Telemax Telugu
 https://login.bheem.tv/bpk-tv/22362/output/index.mpd
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Bcn news
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", BCN News
 https://login.bheem.tv/bpk-tv/22327/output/index.mpd
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Bcn TV
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", BCN Tv
 https://login.bheem.tv/bpk-tv/22302/output/index.mpd
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Bcn entertainment
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", BCN Entertainment
 https://login.bheem.tv/bpk-tv/22301/output/index.mpd
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Channel 9 News
 http://channel9hd.in:1935/hd/hd/chunklist_w1051485029.m3u8
@@ -532,21 +526,21 @@ http://103.146.170.102:1935/satya/satya/chunklist_w1792896619.m3u8
 http://richtv.stream.onecloudlive.in/richtv/richtvhd/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",The Way Tv
 http://198.144.149.206:8080/NOTV/THEWAYTV/index.m3u8?token=GTR
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", sntv telugu
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", SN Tv Telugu
 https://live.sntvtelugu.com/sntvtelugu/livetv/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", TR9
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", TR9 Tv
 https://live.tr9tv.com/tr9tv/myStream/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", DBR News
 http://telugusolutions.in:8088/dbr12/dbr12.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Vismaya
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Vismaya Tv
 https://cloud.dndcommunication.in/vismaya/vismaya/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", vizag local tv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Vizag Local Tv
 https://edmediahub.in/vizaglocaltv/video.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Famous Tv
 https://cloud.ganotech.in/vaavi/vaavi/video.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Telugu Musix
 https://live20.bozztv.com/giatvplayout7/giatv-210787/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", tr9 tv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Tr9 Tv
 http://103.161.31.77:1935/tr9tv/myStream/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", A1 TV
 http://183.82.119.7:1935/a1tv/a1tv/playlist.m3u8
