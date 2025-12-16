@@ -32,7 +32,7 @@ jobs:
 
           mkdir -p Bishop
           OUTPUT="Bishop/P1js.m3u"
-          
+
           echo "⬇️ Downloading source playlist..."
           curl --retry 3 --retry-delay 5 -fsSL "$SRC_URL" -o "$tmpdir/raw.m3u"
 
@@ -56,7 +56,7 @@ jobs:
           /^#EXTINF/ {
             line=$0
 
-            # 🔥 SUN NETWORK → RJM | SunNxt
+            # 🔥 SUN NETWORK / SUNNXT → RJM | SunNxt
             if (line ~ /sun tv|sun network|sun music|sun movies|sun life|k tv|ktv|chutti tv|adithya|sirippoli|gemini|udaya|surya/) {
               gsub(/group-title="[^"]*"/, "group-title=\"RJM | SunNxt\"", line)
             }
@@ -66,9 +66,14 @@ jobs:
               gsub(/group-title="[^"]*"/, "group-title=\"RJM | Star\"", line)
             }
 
-            # 🧒 KIDS CHANNELS → RJM | Kids
-            else if (line ~ /kids|disney|nick|pogo|hungama|cartoon/) {
-              gsub(/group-title="[^"]*"/, "group-title=\"RJM | Kids\"", line)
+            # 📰 EXTRA + BENGALI → RJM | News
+            else if (line ~ /extra|bengali/) {
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | News\"", line)
+            }
+
+            # 🎬 TAMIL → RJM | Entertainment
+            else if (line ~ /tamil/) {
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | Entertainment\"", line)
             }
 
             # 🌐 ALL OTHER GROUPS → RJM | <Original>
