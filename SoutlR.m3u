@@ -1,7 +1,8 @@
 #EXTM3U
-############################
-## Telugu | Devotional
-############################
+
+####################################
+## TELUGU | DEVOTIONAL RADIO
+####################################
 
 #EXTINF:-1 radio="true" group-title="Telugu | Devotional" tvg-logo="https://th.bing.com/th/id/OIP.YEyF68aeihyEkt24RpqNtQHaIm",SVBC Radio (TTD)
 https://radio.mslivecdn.com:6278/stream
@@ -15,10 +16,9 @@ https://stream-153.zeno.fm/389t877yxv8uv
 #EXTINF:-1 radio="true" group-title="Telugu | Devotional" tvg-logo="https://www.bhaktiworldmedia.com/upload/stream/3419B620-47B7-407E-8F36-33590B0DB904.png",Guru Raghavendra Radio
 https://cast5.asurahosting.com/proxy/gururayar/stream
 
-
-############################
-## Telugu | FM Radio
-############################
+####################################
+## TELUGU | FM RADIO
+####################################
 
 #EXTINF:-1 radio="true" group-title="Telugu | FM Radio" tvg-logo="https://onlineradiofm.in/assets/image/radio/180/AP-9-Fm-Radio-Telugu.png",AP 9 FM
 https://stream.ap9fm.in/radio/8000/radio.mp3
@@ -41,6 +41,9 @@ https://playerservices.streamtheworld.com/api/livestream-redirect/SAM02AAC10_SC
 #EXTINF:-1 radio="true" group-title="Telugu | FM Radio" tvg-logo="https://play-lh.googleusercontent.com/8APA7Qpr2dJCGcT9YvqzbD4dR4UP_d_x39-uOiNuKCY4KZNG-WVOhkl4Ssks1k_R-w",Swara Radio
 https://s3.radio.co/s162c52c51/listen
 
+#EXTINF:-1 radio="true" group-title="Telugu | FM Radio" tvg-logo="https://radiostar.in/wp-content/uploads/2022/09/mirchilove.jpg",Telugu Love
+https://c8.radioboss.fm/stream/33
+
 #EXTINF:-1 radio="true" group-title="Telugu | FM Radio" tvg-logo="https://i.ibb.co/31LkR8g/123.webp",KGF World Radio
 https://stream-155.zeno.fm/wk7hppypta0uv
 
@@ -56,10 +59,9 @@ https://stream-151.zeno.fm/tu66eh1xpnhvv
 #EXTINF:-1 radio="true" group-title="Telugu | FM Radio" tvg-logo="https://i.ibb.co/2P5xVcr/godavari-radio.webp",Godavari Radio
 https://stream-150.zeno.fm/xlgwsdncsdptv
 
-
-############################
-## Telugu | AIR Radio
-############################
+####################################
+## TELUGU | AIR RADIO (AKASHVANI)
+####################################
 
 #EXTINF:-1 radio="true" group-title="Telugu | AIR Radio" tvg-logo="https://onlineradiofm.in/assets/image/radio/100/air_live.webp",Akashvani Telugu
 https://air.pc.cdn.bitgravity.com/air/live/pbaudio032/playlist.m3u8
