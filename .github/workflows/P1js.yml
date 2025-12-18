@@ -27,17 +27,20 @@ jobs:
         run: |
           set -e
 
+          # ---------- SAFETY ----------
+          [ -z "$SRC_URL" ] && { echo "❌ SRC_URL missing"; exit 1; }
+
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
           tmpdir=$(mktemp -d)
 
           mkdir -p Bishop
           OUTPUT="Bishop/P1js.m3u"
-          
+
           echo "⬇️ Downloading source playlist..."
           curl --retry 3 --retry-delay 5 -fsSL "$SRC_URL" -o "$tmpdir/raw.m3u"
 
-          UPDATED=$(grep -c '^#EXTINF' "$tmpdir/raw.m3u" || true)
-          TOTAL="$UPDATED"
+          TOTAL=$(grep -c '^#EXTINF' "$tmpdir/raw.m3u" || true)
+          UPDATED="$TOTAL"
 
           echo "🧱 Writing header..."
           {
@@ -56,25 +59,35 @@ jobs:
           /^#EXTINF/ {
             line=$0
 
-            # 🔥 SUN NETWORK → RJM | SunNxt
-            if (line ~ /sun tv|sun network|sun music|sun movies|sun life|k tv|ktv|chutti tv|adithya|sirippoli|gemini|udaya|surya/) {
+            # ☀️ SUN NETWORK / SunNxt → RJM | SunNxt
+            if (line ~ /sun tv|sun network|sun music|sun movies|sun life|k tv|ktv|chutti tv|adithya|sirippoli|gemini|udaya|surya|sunnxt/) {
               gsub(/group-title="[^"]*"/, "group-title=\"RJM | SunNxt\"", line)
             }
 
             # ⭐ STAR CHANNELS → RJM | Star
-            else if (line ~ /star/) {
+            else if (line ~ /\bstar\b|hotstar|maa|asianet/) {
               gsub(/group-title="[^"]*"/, "group-title=\"RJM | Star\"", line)
             }
 
-            # 🧒 KIDS CHANNELS → RJM | Kids
-            else if (line ~ /kids|disney|nick|pogo|hungama|cartoon/) {
-              gsub(/group-title="[^"]*"/, "group-title=\"RJM | Kids\"", line)
+            # 🎬 TAMIL CHANNELS → RJM | Entertainment
+            else if (line ~ /tamil|vijay|zee tamil|colors tamil|raj tv|polimer/) {
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | Entertainment\"", line)
             }
 
-            # 🌐 ALL OTHER GROUPS → RJM | <Original>
+            # 📰 EXTRA + BENGALI → RJM | News
+            else if (line ~ /extra|bengali|bangla|abp ananda|zee 24 ghanta|news18 bangla/) {
+              gsub(/group-title="[^"]*"/, "group-title=\"RJM | News\"", line)
+            }
+
+            # 🌐 OTHER EXISTING GROUPS → RJM | <Original>
             else if (line ~ /group-title="/) {
               match(line, /group-title="([^"]*)"/, arr)
               gsub(/group-title="[^"]*"/, "group-title=\"RJM | " arr[1] "\"", line)
+            }
+
+            # 🆕 NO GROUP-TITLE
+            else {
+              line = line " group-title=\"RJM | Others\""
             }
 
             print line
@@ -83,6 +96,8 @@ jobs:
 
           { print }
           ' "$tmpdir/raw.m3u" | grep -v '^#EXTM3U' >> "$OUTPUT"
+
+          rm -rf "$tmpdir"
 
           echo "✅ P1js.m3u created successfully"
           echo "📊 Total: $TOTAL | Updated: $UPDATED"
