@@ -1,0 +1,120 @@
+#EXTM3U name="Pawn" playlist-name="RJM Tv – Pawn" billed-msg="RJM Tv - RJMBTS Network"
+# Coded & Maintained @RJMBTS
+# Last updated on : 2025-12-18 18:44:30 IST
+# Channels : Total - 53 | Updated - 53
+
+#EXTM3U billed-msg="RJM Radios - An RJMBTS Network"
+# Pushed and Updated by Kittujk
+# Scripted & Maintained by @RJMBTS
+
+#EXTM3U
+
+#EXTINF:1 tvg-type="radio" radio="true" group-title="Telugu | Devotional" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", SVBC Radio (TTD)
+https://radio.mslivecdn.com:6278/stream
+#EXTINF:1 tvg-type="radio" radio="true" group-title="Telugu | Devotional" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Radio Sai
+http://stream.radiosai.net:8020/
+#EXTINF:1 tvg-type="radio" radio="true" group-title="Telugu | Devotional" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Shirdi Sai Radio
+https://stream-153.zeno.fm/389t877yxv8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiIzODl0ODc3eXh2OHV2IiwiaG9zdCI6InN0cmVhbS0xNTMuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IkxrenEwNXQ0VHIybnZHU19XU0Q5YUEiLCJpYXQiOjE3Mjg1ODY4MzEsImV4cCI6MTcyODU4Njg5MX0.Nf6-kNBIhJe4Gq2SQwDeKwUrqwgB1Dn07msq_Zb7L4E&aw_0_req_lsid=0be3bccb712a1e0d7321dfa7addcaf7f&an-uid=1809878005412465723&dot-uid=0a90220400b5f4ced2e3aac8&triton-uid=cookie:36c162ac-572a-4f2c-a8d8-26902fe8e60c&amb-uid=7562584700509988129&dbm-uid=CAESEPybnu_4rWCEA7i8wEpNEq8&cto-uid=53d04d35-118e-4583-99b0-df8c8677b63c-6654ce5b-5553&bsw-uid=213f3dab-530f-41c1-a471-cf8cccfc8729&dyn-uid=5125802138451649812&ttd-uid=8ee138a6-df01-422d-bfbc-fea24d261826
+#EXTINF:1 tvg-type="radio" radio="true" group-title="Telugu | Devotional" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png"", Guru Raghavendra Radio
+https://cast5.asurahosting.com/proxy/gururayar/stream
+
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Ap9 FM
+https://stream.ap9fm.in/radio/8000/radio.mp3
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Myind Media
+http://52.200.24.222:8000/stream.mp3
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Melody Radio
+https://a1.asurahosting.com:9580/radio.mp3
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", London Radio Telugu
+https://c8.radioboss.fm/stream/33
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", FM Rainbow Vskp
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio081/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Radio Ala
+https://mahi.radioca.st/stream
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Virijallu Radio
+https://playerservices.streamtheworld.com/api/livestream-redirect/SAM02AAC10_SC
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Swara Radio
+https://s3.radio.co/s162c52c51/listen
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Telangana NRI Radio
+https://listen.radioking.com/radio/371251/stream/421342
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Telangana FM Siddipet
+https://www.liveradio.es/http://198.178.123.5:12682/;
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", KGF World Radio
+https://stream-155.zeno.fm/wk7hppypta0uv?zs=86zZvHSySuyzpcymjQdEVw
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", DO FM
+https://stream-157.zeno.fm/c44y7qz3vwzuv?zs=4Lrvm68mTKW_BW_A4vsh2g
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Flame FM
+https://stream-157.zeno.fm/9z2ra2brkxhvv?zs=9nBt5Nq9RmuA4OH1yMy6Kg
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Melody Masti
+https://stream-151.zeno.fm/tu66eh1xpnhvv?zs=A48ON1OGS0mPA5sqxti5Lg
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Godavari Radio
+https://stream-150.zeno.fm/xlgwsdncsdptv?zs=N0U9q30XQAeFgbEsGbPCsw
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Fidaa FM
+https://stream-172.zeno.fm/kvd13ixo31vvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJrdmQxM2l4bzMxdnZ2IiwiaG9zdCI6InN0cmVhbS0xNzIuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Ik1tRkxGMXkyUWoyQkFNTmVZR1FsTHciLCJpYXQiOjE3NDEyNjM3MDEsImV4cCI6MTc0MTI2Mzc2MX0.O692rHVnGRVXw4KiLFEtLaKL7gzbzgUEJsT7HiFvqFE&aw_0_req_lsid=94113dfaf82bd4f648a7e277e1c86aea
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Love Songs
+https://stream-176.zeno.fm/43cs967p6rhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI0M2NzOTY3cDZyaHZ2IiwiaG9zdCI6InN0cmVhbS0xNzYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Ik5vbFBHU2dqUU9PYWxiZVZJUjJ3emciLCJpYXQiOjE3NDEyNjE3NjcsImV4cCI6MTc0MTI2MTgyN30.FWpZQoX6R9VkYDFI2e9DtKiV_v83pwkmjHOgOvWS_Go
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Telugu Radio
+https://stream-172.zeno.fm/e0qd6cvkcottv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJlMHFkNmN2a2NvdHR2IiwiaG9zdCI6InN0cmVhbS0xNzIuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6InBzYXpQRFcwU0Z5NEhUNXFCUEk5OXciLCJpYXQiOjE3NDExNzA2OTgsImV4cCI6MTc0MTE3MDc1OH0.-biO0--AJme1ExOIoVqr9hfoMxAYP7tYuvSTDo3a1VA
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Eenadu FM
+https://d1l07mcd18xic4.cloudfront.net/audio/5c9015cb-fc72-49df-96f5-e92f38a58626.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Telugu Big Radio
+https://stream.zeno.fm/zuu89d1pgzzuv?adtonosListenerId=01JE2V5T77N353PZ2FKJKRZ9H7&aw_0_req_lsid=94113dfaf82bd4f648a7e277e1c86aea
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", NRI Telugu Radio
+https://www.liveradio.es/http://104.167.4.67:8332/;stream.mp3
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Vibe Sounds Telugu
+http://azuracast.vibesounds.in:8020/radio.mp3
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Telugu Hits Radio
+https://stream-159.zeno.fm/ysucrq37uwzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ5c3VjcnEzN3V3enV2IiwiaG9zdCI6InN0cmVhbS0xNTkuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IkRUdzVqRmFlVF8yckNtbS1rRDhWTWciLCJpYXQiOjE3NDEwNzYyODIsImV4cCI6MTc0MTA3NjM0Mn0.vcPLsI8BJ_5JMt2jf6Kz-LyzrzuvORadLfs_n2mD9xw
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Rainbow Husharu
+https://stream-173.zeno.fm/h0dddef7n98uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJoMGRkZGVmN245OHV2IiwiaG9zdCI6InN0cmVhbS0xNzMuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6InA5NU1lOHlqUVNlZ2laVmgzRjFoUHciLCJpYXQiOjE3NDExNzAxMDAsImV4cCI6MTc0MTE3MDE2MH0.K0KxH7am7vDXYfxMvUX31_KyzElIQ0tsGj_xMmrFBQc
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Hot Now Telugu
+https://stream-159.zeno.fm/ysucrq37uwzuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ5c3VjcnEzN3V3enV2IiwiaG9zdCI6InN0cmVhbS0xNTkuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IlI2N0d3ZFpDVERXR01DZVJmaHUyMEEiLCJpYXQiOjE3NDExNzA0ODIsImV4cCI6MTc0MTE3MDU0Mn0.qaGNjRWCjyqW7kx3dnFVxtVGp8m9O4qHbpRWqf8cpxA
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Music Masti Telugu
+https://stream-176.zeno.fm/bv9ccpufh5zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJidjljY3B1Zmg1enV2IiwiaG9zdCI6InN0cmVhbS0xNzYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IkplbGp4ZVVuUkR1UUlUbEJoRm1sTlEiLCJpYXQiOjE3NDExNzIyMzksImV4cCI6MTc0MTE3MjI5OX0.OrcBbpD-ev2lSWcFevKpVhEMi4IzBfFcuB4otJnEnh0
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Hello Telugu Radio
+https://listen.radioking.com/radio/503281/stream/560701
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Radio Kokila
+https://stream-172.zeno.fm/mchekv2irwnvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJtY2hla3YyaXJ3bnZ2IiwiaG9zdCI6InN0cmVhbS0xNzIuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IjI5eVZLWEJPU0hPalRWSHV5SkRvOHciLCJpYXQiOjE3NDEyNjM0NzQsImV4cCI6MTc0MTI2MzUzNH0.ocS3CMqMwe1wGcGnySuS_pmtka1r65RWL12q8CRbMrg&adtonosListenerId=01JE2SS2Z964Y524X7KKQ31FQX&aw_0_req_lsid=94113dfaf82bd4f648a7e277e1c86aea
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | FM's" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Eluru FM
+https://stream.zeno.fm/rqrox8eisxqvv
+
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Akashavani
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio032/playlist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Adilabad
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio218/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Anantapur
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio054/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Cuddapah
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio052/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Tirupati
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio144/playlist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Hyderabad
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio032/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Vijayawada
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio175/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Visakhapatnam
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio080/playlist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Warangal
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio154/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Nizamabad
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio222/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Markapur
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio039/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Kothagudem
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio116/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Hyderabad
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio034/chunklist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", FM Rainbow Hyd
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio031/playlist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", VB Hyderabad
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio034/playlist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", Simhapuri Nellore
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio168/playlist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", VB Andhrapradesh
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio175/playlist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", FM Rainbow Vja
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio174/playlist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", VB Vijayawada
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio176/playlist.m3u8
+#EXTINF:-1 tvg-type="radio" radio="true" group-title="Telugu | AIR" tvg-logo="https://i.ibb.co/DfcZwPMk/RJM-Radio-s-Logo.png", FM Rainbow Vskp
+https://air.pc.cdn.bitgravity.com/air/live/pbaudio081/playlist.m3u8
+#EXT-X-ENDLIST
