@@ -29,8 +29,11 @@ jobs:
 
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S %Z")
 
+          # ==========================
+          # PLAYLIST HEADER (BRANDING)
+          # ==========================
           {
-            echo '#EXTM3U billed-msg="RJMS OTT - RJMBTS Network"'
+            echo '#EXTM3U playlist-name="RJM OTT - An RJMBTS Network" billed-msg="RJM OTT - An RJMBTS Network"'
             echo "# Coded & Maintained @RJMBTS"
             echo "# Last updated: $timestamp"
           } > King.m3u
@@ -47,8 +50,8 @@ jobs:
           echo "" >> King.m3u
 
           # ==========================
-          # RADIO → PAWN.M3U
-          # (CONTENT UNTOUCHED)
+          # RADIO (PAWN.M3U)
+          # CONTENT UNTOUCHED
           # ==========================
           echo "# ===== RADIO =====" >> King.m3u
           curl -fs "https://rjmbts.github.io/Rjms/Pawn.m3u" \
@@ -71,7 +74,7 @@ jobs:
               { print }
             ' >> King.m3u
 
-          echo "✅ Merge completed (Pawn = Radio list)"
+          echo "✅ Merge completed (Live + Radio + VOD)"
 
       - name: Commit and push King.m3u
         run: |
@@ -80,7 +83,7 @@ jobs:
           git add King.m3u
 
           if ! git diff --cached --quiet; then
-            git commit -m "Classify Pawn as Radio list"
+            git commit -m "Build King.m3u (Live + Radio + VOD)"
             git pull --rebase origin main || true
             git push origin main
           else
