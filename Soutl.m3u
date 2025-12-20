@@ -4,7 +4,7 @@
 https://amigofx.com:1936/mtv/mtv/playlist.m3u8
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://play-lh.googleusercontent.com/GnoJwHZMqO9pGoZXjLyDNu1mTe0Q6ActMgWr77LBewx4d4qp7e7SzqjEeFe-rPXdfg=w240-h480-rw", B Channel
 https://amigofx.com:1936/bhavani/bhavani/playlist.m3u8
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Local News Nizamabad
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/7NKq8wqH/1000121239.jpg", Local News Nizamabad
 https://amigofx.com:1936/localnews/localnews/playlist.m3u8
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://yt3.googleusercontent.com/ytc/AIdro_lKovrVHvz0LyE-8egnreZsny51fMth5OsKXzkV7-lDTSU=s900-c-k-c0x00ffffff-no-rj", CCC Channel
 https://amigofx.com:1936/ccchd/ccchd/playlist.m3u8
