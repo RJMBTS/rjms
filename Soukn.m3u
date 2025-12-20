@@ -1,0 +1,36 @@
+#EXTINF:-1 tvg-name="Namma Bengaluru" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/HTkHV9Rz/1000139866.jpg",Namma Bengaluru
+https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/namma-bangalore/index.m3u8
+#EXTINF:-1 tvg-name="JK Tv" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/qY0RzYmx/1000122459.jpg",JK Tv
+http://account18.livebox.co.in/jktvkannadahls/live.m3u8
+#EXTINF:-1 tvg-name="Nam City" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/Fq5rcBFL/1000139847.png",Nam City
+https://guru.shashwatha.com/hls/live/namcity.m3u8
+#EXTINF:-1 tvg-name="Nam City Plus" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/B2cnMhMM/1000139846.png",Nam City Plus
+https://guru.shashwatha.com/hls/live/namcityplus.m3u8
+#EXTINF:-1 tvg-name="Metro Tv" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/sd6hxPdY/1000139848.jpg",Metro Tv
+https://guru.shashwatha.com/hls/live/metro.m3u8
+#EXTINF:-1 tvg-name="Siri Tv" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/W4p4chGy/1000139852.jpg",Siri Tv
+https://guru.shashwatha.com/hls/live/siri.m3u8
+#EXTINF:-1 tvg-name="Gurantee News" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/wF3P3wPK/1000139864.jpg",Gurantee News
+https://guaranteenews.in:8443/live/gnews/index.m3u8
+#EXTINF:-1 tvg-name="Sathyam Tv Kannada" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/H3zyNY3/1000122464.jpg",Sathyam Tv Kannada
+http://account31.livebox.co.in/satyamtvhls/live.m3u8
+#EXTINF:-1 tvg-name="E News" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/XkpHwGXK/1000122468.jpg",E News
+http://account10.livebox.co.in/enewstvnoonechannelomsairamhls/live.m3u8
+#EXTINF:-1 tvg-name="Kadamba Tv" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/gkZchXD/1000139784.jpg",Kadamba Tv
+https://guru.shashwatha.com/hls/live/kadamba.m3u8
+#EXTINF:-1 tvg-name="Swasthik Tv" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/NggsYMp8/1000139788.jpg",Swasthik Tv
+https://guru.shashwatha.com/hls/live/swastik.m3u8
+#EXTINF:-1 tvg-name="Kalki" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/jkDJ3C2b/1000139790.jpg",Kalki
+https://guru.shashwatha.com/hls/live/kalki.m3u8
+#EXTINF:-1 tvg-name="RR Tv" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/yBZQdcXZ/1000139791.jpg",RR Tv
+https://guru.shashwatha.com/hls/live/rrtv.m3u8
+#EXTINF:-1 tvg-name="SNE Tv" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/HLkbN7FL/1000139797.png",SNE Tv
+https://guru.shashwatha.com/hls/live/sne.m3u8
+#EXTINF:-1 tvg-name="Sity" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/vCRt1HYp/1000139800.png",Sity
+https://guru.shashwatha.com/hls/live/sity.m3u8
+#EXTINF:-1 tvg-name="Amoggh TV" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/7Jyp2xYs/1000139841.jpg",Amoggh TV
+https://guru.shashwatha.com/hls/live/amogha.m3u8
+#EXTINF:-1 tvg-name="Power Tv" group-title="Local | Kannada" tvg-logo="https://i.imgur.com/7wqqA1n.png" group-title="Local | Kannada",Power TV (576p)
+https://powertvkannada.com/hls/stream.m3u8
+
+
