@@ -12,7 +12,7 @@ https://guru.shashwatha.com/hls/live/metro.m3u8
 https://guru.shashwatha.com/hls/live/siri.m3u8
 #EXTINF:-1 tvg-name="Gurantee News" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/wF3P3wPK/1000139864.jpg",Gurantee News
 https://guaranteenews.in:8443/live/gnews/index.m3u8
-#EXTINF:-1 tvg-name="Sathyam Tv Kannada" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/H3zyNY3/1000122464.jpg",Sathyam Tv Kannada
+#EXTINF:-1 tvg-name="Sathyam Tv Kannada" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/H3zyNY3/1000122464.jpg",Sathyam Tv
 http://account31.livebox.co.in/satyamtvhls/live.m3u8
 #EXTINF:-1 tvg-name="E News" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/XkpHwGXK/1000122468.jpg",E News
 http://account10.livebox.co.in/enewstvnoonechannelomsairamhls/live.m3u8
@@ -20,17 +20,17 @@ http://account10.livebox.co.in/enewstvnoonechannelomsairamhls/live.m3u8
 https://guru.shashwatha.com/hls/live/kadamba.m3u8
 #EXTINF:-1 tvg-name="Swasthik Tv" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/NggsYMp8/1000139788.jpg",Swasthik Tv
 https://guru.shashwatha.com/hls/live/swastik.m3u8
-#EXTINF:-1 tvg-name="Kalki" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/jkDJ3C2b/1000139790.jpg",Kalki
+#EXTINF:-1 tvg-name="Kalki" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/jkDJ3C2b/1000139790.jpg",Kalki Tv
 https://guru.shashwatha.com/hls/live/kalki.m3u8
 #EXTINF:-1 tvg-name="RR Tv" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/yBZQdcXZ/1000139791.jpg",RR Tv
 https://guru.shashwatha.com/hls/live/rrtv.m3u8
 #EXTINF:-1 tvg-name="SNE Tv" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/HLkbN7FL/1000139797.png",SNE Tv
 https://guru.shashwatha.com/hls/live/sne.m3u8
-#EXTINF:-1 tvg-name="Sity" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/vCRt1HYp/1000139800.png",Sity
+#EXTINF:-1 tvg-name="Sity" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/vCRt1HYp/1000139800.png",Sity Channel
 https://guru.shashwatha.com/hls/live/sity.m3u8
 #EXTINF:-1 tvg-name="Amoggh TV" group-title="Local | Kannada" tvg-logo="https://i.ibb.co/7Jyp2xYs/1000139841.jpg",Amoggh TV
 https://guru.shashwatha.com/hls/live/amogha.m3u8
-#EXTINF:-1 tvg-name="Power Tv" group-title="Local | Kannada" tvg-logo="https://i.imgur.com/7wqqA1n.png" group-title="Local | Kannada",Power TV (576p)
+#EXTINF:-1 tvg-name="Power Tv" group-title="Local | Kannada" tvg-logo="https://i.imgur.com/7wqqA1n.png" group-title="Local | Kannada",Power Tv
 https://powertvkannada.com/hls/stream.m3u8
 
 
