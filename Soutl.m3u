@@ -61,11 +61,11 @@ https://www.schannels.in/rajatv/index.m3u8?token=nokshitha
 https://www.schannels.in/ndlnews9/index.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCn23K1Dr-TyT0uQ1etPBDXMmUfGyvkH-K7A&s", Vinodam HD
 https://www.schannels.in/vinodam/index.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", VV Movies
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/vxYnVT4J/1000151608.png", VV Movies
 https://www.schannels.in/vvmovies/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", VV Music
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/ttBWLRX/1000151606.png", VV Music
 https://www.schannels.in/vvmusic/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", VV Comedy
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/Mk5DHfQc/1000151610.png", VV Comedy
 https://www.schannels.in/vvcomedy/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", RK Tv
 https://www.schannels.in/rktv/video.m3u8?token=nokshitha
