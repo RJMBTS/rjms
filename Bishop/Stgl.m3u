@@ -1,8 +1,8 @@
 #EXTM3U billed-msg="RJM Tv - RJMBTS Network"
 # Pushed & Updated by — Kittujk
 # Coded & Maintained by @RJMBTS
-# Last updated on : 2025-12-20 07:49:04 IST
-# Channels : Total unique - 272 | Processed - 270
+# Last updated on : 2025-12-20 19:10:22 IST
+# Channels : Total unique - 261 | Processed - 259
 
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", MTv Local 
 https://amigofx.com:1936/mtv/mtv/playlist.m3u8
@@ -12,7 +12,7 @@ https://amigofx.com:1936/bhavani/bhavani/playlist.m3u8
 https://amigofx.com:1936/localnews/localnews/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", CCC Channel
 https://amigofx.com:1936/ccchd/ccchd/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Harika Star
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Harika SV News
 https://amigofx.com:1936/harikastar/harikastar/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Yuva Tv
 https://amigofx.com:1936/yuvatv/yuvatv/playlist.m3u8
@@ -20,7 +20,7 @@ https://amigofx.com:1936/yuvatv/yuvatv/playlist.m3u8
 https://amigofx.com:1936/wpndigital/wpndigital/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Siti Channel
 https://amigofx.com:1936/sitichannel/sitichannel/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Jkc city
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", JKC City
 https://amigofx.com:1936/jkccity/jkccity/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Y Channel
 https://amigofx.com:1936/ychannel/ychannel/playlist.m3u8
@@ -104,7 +104,7 @@ https://www.schannels.in/namitha/video.m3u8?token=nokshitha
 https://www.schannels.in/tg5/index.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Aadhya Sri Music
 https://www.schannels.in/folk/index.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Tirumal TV
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Tirumala TV
 https://www.schannels.in/tirumalachannel/index.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Colorbar Music Box
 https://www.schannels.in/colorbarmusic/index.m3u8?token=nokshitha
@@ -370,7 +370,7 @@ http://dnews.phoenixcreations.online:1935/dnews/dnews/index.m3u8
 http://bbrtv.phoenixcreations.online/bbrtv/bbrtv/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", New Tv Telugu
 http://newtvtelugu.phoenixcreations.online/newtvtelugu/newtvtelugu/tracks-v1a1/index.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",Apts Telugu News
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu",APTS Telugu News
 https://rtmp.streamwell.in/hls/aptstelugunewshd.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", D4 Channel
 https://server.streamwell.in/hls/d4.m3u8
@@ -426,20 +426,6 @@ https://live.mythrimediaindia.com/knrchannel/knrchannel/index.m3u8
 https://manatv.akamaized.net/120723/smil:manatv2.smil/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Mana Tv International
 https://manatv.akamaized.net/090823/smil:manatvint.smil/playlist.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Plus
-https://d2pk5pedkyu2d0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_PLUS_H264_cloud_in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Cinema
-https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Life
-https://d2cj1h11htct8o.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_LIFE_H264_cloud_in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Telugu
-https://d1rznlx03muoan.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_HD_H264_cloud_in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Abhiruchi
-https://dg3721c3ez5m0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_ABHIRUCHI_H264_cloud-in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Telangana
-https://d37d7pfp7vjqhh.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_TS_H264_cloud_in/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win", ETV Andhra Pradesh
-https://d1g35elx8qnif3.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_AP_H264_cloud_in/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Indian Yoga & Wellness TV Telugu
 https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/indian-yoga-and-wellness-tv-telugu/b1c19878-ebfe-4eab-9545-f7eae7636188/2.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Ayush TV
@@ -498,14 +484,6 @@ https://5dd3981940faa.streamlock.net/snewsnpt/snewsnpt/playlist.m3u8
 https://f15f7fbdcd084ff3abb9dc148b69d8b4.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/RUNTHR/index.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Runn Action
 https://d75f61259af04d9ea002d5429c934854.mediatailor.ap-south-1.amazonaws.com/v1/master/d367f9b863a7a04827f71ecab4cbeeb11f78a827/RUNACT/index.m3u8
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win",ETV Comedy
-https://jmp2.uk/stvp-IN4900003U3
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win",ETV News
-https://jmp2.uk/stvp-IN4900001AQ
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win",ETV Josh
-https://jmp2.uk/stvp-IN4900004LP
-#EXTINF:-1 group-title="RJM | ETv Win" tvg-category="RJM | ETv Win",ETV Music
-https://jmp2.uk/stvp-IN4900002RV
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Bheem Tv
 https://login.bheem.tv/bpk-tv/22094/output/index.mpd
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Telemax Telugu
@@ -540,7 +518,7 @@ https://edmediahub.in/vizaglocaltv/video.m3u8
 https://cloud.ganotech.in/vaavi/vaavi/video.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Telugu Musix
 https://live20.bozztv.com/giatvplayout7/giatv-210787/playlist.m3u8
-#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", Tr9 Tv
+#EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", TR9 Tv
 http://103.161.31.77:1935/tr9tv/myStream/playlist.m3u8
 #EXTINF:-1 group-title="Local | Telugu" tvg-category="Local | Telugu", A1 TV
 http://183.82.119.7:1935/a1tv/a1tv/playlist.m3u8
