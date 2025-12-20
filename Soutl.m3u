@@ -69,7 +69,7 @@ https://www.schannels.in/vvmusic/video.m3u8?token=nokshitha
 https://www.schannels.in/vvcomedy/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", RK Tv
 https://www.schannels.in/rktv/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", RK Movies
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/XZg28Dbc/1000151328.png", RK Movies
 https://www.schannels.in/rkmovies/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", RK Hollywood
 https://www.schannels.in/rkhollywood/video.m3u8?token=nokshitha
@@ -79,9 +79,9 @@ https://www.schannels.in/rkgold/video.m3u8?token=nokshitha
 https://www.schannels.in/gsgrameena/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/gbxVQD3r/1000153273.png", Santhosham Tv
 https://www.schannels.in/santhoshamtv/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Folk Tv
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/YBrFwBQ2/1000151623.png", Folk Tv
 https://www.schannels.in/folk/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Hollywood Telugu Movies
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/gMTmjcfB/1000158154.png", Hollywood Telugu Movies
 https://www.schannels.in/hollywood/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Starway Janapadalu
 https://www.schannels.in/starwayjanapadalu/video.m3u8?token=nokshitha
@@ -89,7 +89,7 @@ https://www.schannels.in/starwayjanapadalu/video.m3u8?token=nokshitha
 https://www.schannels.in/hrtv9/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/MxCYfKVm/1000149123.png", Devi Cable
 https://www.schannels.in/devicable/video.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Veduka tv
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/W4WwN7Lb/1000150082.png", Veduka tv
 https://www.schannels.in/veduka/video.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Sv News
 https://www.schannels.in/harikasitymovies/video.m3u8?token=nokshitha
@@ -109,7 +109,7 @@ https://www.schannels.in/tirumalachannel/index.m3u8?token=nokshitha
 https://www.schannels.in/colorbarmusic/index.m3u8?token=nokshitha
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Santhosham TV
 https://www.schannels.in/santhoshamtv/index.m3u8?token=nokshitha
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Orugallu 9 News
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/1ttdp1dV/1000151121.png", Orugallu 9 News
 https://www.schannels.in/orugallu9/index.m3u8?token=nokshitha
 
    -smartplaytv-
