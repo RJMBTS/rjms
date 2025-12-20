@@ -10,13 +10,13 @@ https://amigofx.com:1936/localnews/localnews/playlist.m3u8
 https://amigofx.com:1936/ccchd/ccchd/playlist.m3u8
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://i.ibb.co/ztbgRLV/1000151108.png", Harika SV News
 https://amigofx.com:1936/harikastar/harikastar/playlist.m3u8
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Yuva Tv
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCG-LjUkySfnxOP9ZJZqIJ3lROELyJ6-35HsApRqwBVg-Zzwvb_p8N6pd_&s=10", Yuva Tv
 https://amigofx.com:1936/yuvatv/yuvatv/playlist.m3u8
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", WPN Digital
 https://amigofx.com:1936/wpndigital/wpndigital/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://tataprime.files.wordpress.com/2024/04/20240406_0945173890061863052394982.png" group-title="Telugu Local Channel",Siti Channel
 https://amigofx.com:1936/sitichannel/sitichannel/playlist.m3u8
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", JKC City
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://play-lh.googleusercontent.com/yZS6AddNqEF4W7HW_NZTC0yBRF76uuJ5cPjhgpb0R5NlUg2mmm81as2sJR_31T-AGDI=w416-h235-rw", JKC City
 https://amigofx.com:1936/jkccity/jkccity/playlist.m3u8
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Y Channel
 https://amigofx.com:1936/ychannel/ychannel/playlist.m3u8
@@ -28,14 +28,14 @@ https://amigofx.com:1936/pcnhd/pcnhd/playlist.m3u8
 https://amigofx.com:1936/kcf/kcf/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://tataprime.wordpress.com/wp-content/uploads/2024/06/20240626_1103201845824597840970842.png" group-title="Telugu Local Channel",SITI Telugu
 https://amigofx.com:1936/sititelugu/sititelugu/playlist.m3u8
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="",Sarkar TV
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://www.sarkartv.com/assets/images/common/logo.png",Sarkar TV
 https://amigofx.com:1936/sarkartv/sarkartv/playlist.m3u8
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", C Plus 
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://yt3.googleusercontent.com/f6lmp0j06kugisE7L7YdxUCPbsayvmaKdQY-H78aFnpwwvdiOhEKPm1theJzb0poFkf4JBEsSg=s900-c-k-c0x00ffffff-no-rj", C Plus 
 https://amigofx.com:1936/gsgrameena/gsgrameena/playlist.m3u8
 
    -schannels.in-
 
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Siti 24×7 News
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://yt3.googleusercontent.com/q_9-469Z8aErwlMvghG-ZTpA0ljKOlGSqy39rV_dAhkeXFltuL5iuGvL6sXlVObY3AOsCQPy23Y=s900-c-k-c0x00ffffff-no-rj", Siti 24×7 News
 https://www.schannels.in/SITI24X7_1/index.m3u8
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIOoXIOPeh7j9QZrJafDb6_SvXRrQNi__pjQ&s", Vihari Music
 https://www.schannels.in/viharimusic/video.m3u8?token=nokshitha
