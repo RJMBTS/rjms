@@ -1,13 +1,13 @@
 name: Souknl 🌐
 
 on:
-  workflow_dispatch:   # ✅ Manual run enabled
+  workflow_dispatch:   # Manual run enabled
   schedule:
     # Runs once every 24 hours (00:30 UTC = 06:00 IST)
     - cron: "30 0 * * *"
 
 concurrency:
-  group: Sknl-m3u
+  group: souknl-m3u
   cancel-in-progress: false
 
 permissions:
