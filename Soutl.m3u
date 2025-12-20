@@ -600,17 +600,17 @@ https://live.tr9tv.com/tr9tv/myStream/playlist.m3u8
 http://telugusolutions.in:8088/dbr12/dbr12.m3u8
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Vismaya Tv
 https://cloud.dndcommunication.in/vismaya/vismaya/playlist.m3u8
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Vizag Local Tv
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://yt3.googleusercontent.com/LA3BCRiuZtWMwy0yDJlhmNOnm67wFSKYxvuUz32MoPc4v7NEneCHIPB2j0TF7wzeGhcuhYAuhA=s900-c-k-c0x00ffffff-no-rj", Vizag Local Tv
 https://edmediahub.in/vizaglocaltv/video.m3u8
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://play-lh.googleusercontent.com/q7yK0-RLFbZgjj2-jWcJdj2CiPwMl2fG1CKeDXTM2y-hykRF-Sg9fitgYuJ_tv3PtsI=w240-h480-rw", Famous Tv
 https://cloud.ganotech.in/vaavi/vaavi/video.m3u8
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Telugu Musix
 https://live20.bozztv.com/giatvplayout7/giatv-210787/playlist.m3u8
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", Tr9 Tv
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Z1-wP8z8zRQH5HMLY6RgW0LQjQ7ygHCQrs_rfCF0tMxwVy2qMxHGNJ1R&s=10", TR9 Tv
 http://103.161.31.77:1935/tr9tv/myStream/playlist.m3u8
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", VVD News Tv
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://play-lh.googleusercontent.com/AqTznGk7OiwEh1sHYnS6o_5tWkYmo_BWLCMIU9j4gZ6dqaw2WLN1c2_KOu5tXlx9ng=w600-h300-pc0xffffff-pd", VVD News Tv
 
-#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", A1 TV
+#EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="https://a1tvtelugu.com/wp-content/uploads/2024/07/cropped-cropped-cropped-New-Project1.jpg", A1 TV
 http://183.82.119.7:1935/a1tv/a1tv/playlist.m3u8
 
 #EXTINF:-1 group-title="Telugu Local Channel" tvg-logo="", 
