@@ -113,7 +113,7 @@ jobs:
             echo "# Pushed & Updated by — Kittujk"
             echo "# Coded & Maintained by @RJMBTS"
             echo "# Last updated on : $timestamp"
-            echo "# Channels : Total - $total | Upadted - $updated"
+            echo "# Channels : Total - $total | Updated - $updated"
             echo ""
           } > "$out_file"
 
